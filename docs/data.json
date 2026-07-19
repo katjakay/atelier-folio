@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T20:49:33.235Z",
+  "generated_at": "2026-07-19T20:49:56.024Z",
   "count": 31,
   "brands": 21,
   "items": [
@@ -13,9 +13,10 @@
       "color": "navy / brown",
       "size": "XS",
       "price": "239,00 €",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/361c8a35953ecff3.jpg"
     },
     {
@@ -28,9 +29,10 @@
       "color": "white",
       "size": "36",
       "price": "29,99 €",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/82b78f714b5c9cf5.jpg"
     },
     {
@@ -43,9 +45,10 @@
       "color": "black",
       "size": "1",
       "price": "165,00 €",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/fe5bb9a60eb27de7.jpg"
     },
     {
@@ -58,9 +61,10 @@
       "color": "coffee",
       "size": "",
       "price": "120,00 €",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/319d9ad4e1391a4a.jpg"
     },
     {
@@ -73,9 +77,10 @@
       "color": "dark blue",
       "size": "25",
       "price": "49,00 €",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/04007aed0ee12ad8.jpg"
     },
     {
@@ -88,9 +93,10 @@
       "color": "white",
       "size": "S",
       "price": "120,00 €",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/cfd95545363707fa.jpg"
     },
     {
@@ -103,9 +109,10 @@
       "color": "navy",
       "size": "XS",
       "price": "29,00 €",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/53adf7695790cecc.jpg"
     },
     {
@@ -118,9 +125,10 @@
       "color": "black",
       "size": "",
       "price": "",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Älter",
-      "source": "",
+      "worn": null,
       "image": "images/9476906bbe972495.jpg"
     },
     {
@@ -134,9 +142,10 @@
       "color": "stone / taupe",
       "size": "37",
       "price": "120,00 €",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Älter",
-      "source": "",
+      "worn": null,
       "image": "images/a224d76d797177fc.jpg"
     },
     {
@@ -150,9 +159,10 @@
       "color": "black / white calf hair",
       "size": "",
       "price": "90,00 €",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/441416217b324358.jpeg"
     },
     {
@@ -166,9 +176,10 @@
       "color": "sage",
       "size": "",
       "price": "120, 00 €",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/53d5305d678ceba7.jpg"
     },
     {
@@ -182,9 +193,10 @@
       "color": "cognac",
       "size": "36",
       "price": "",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/1e4072206943d1b0.jpg"
     },
     {
@@ -198,9 +210,10 @@
       "color": "honey, transluzent",
       "size": "37",
       "price": "24, 00 €",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/2697aafae6670839.jpg"
     },
     {
@@ -214,9 +227,10 @@
       "color": "white",
       "size": "",
       "price": "",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/3e2d6ad673287a9c.jpg"
     },
     {
@@ -231,9 +245,10 @@
       "color": "pale yellow / silver / blue",
       "size": "",
       "price": "80,00 €",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/4fedf3b519dfae47.jpg"
     },
     {
@@ -246,9 +261,10 @@
       "color": "white",
       "size": "34",
       "price": "79,00 €",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/582a911195b26498.jpg"
     },
     {
@@ -261,9 +277,10 @@
       "color": "black",
       "size": "37",
       "price": "90,00 €",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/a15825c4ad9246a8.avif"
     },
     {
@@ -277,9 +294,10 @@
       "color": "black",
       "size": "XS",
       "price": "49,95 €",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/4159769f790ac473.jpg"
     },
     {
@@ -292,9 +310,10 @@
       "color": "light greige",
       "size": "34",
       "price": "180,00 €",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/b59ccec8948eb7e0.jpg"
     },
     {
@@ -307,9 +326,10 @@
       "color": "black",
       "size": "S",
       "price": "¥30.800",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/fd288cc8adf9f487.jpg"
     },
     {
@@ -322,9 +342,10 @@
       "color": "orange",
       "size": "37",
       "price": "205,00 €",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Älter",
-      "source": "",
+      "worn": null,
       "image": "images/d17a953c506b3ff4.jpg"
     },
     {
@@ -337,9 +358,10 @@
       "color": "grey",
       "size": "XS",
       "price": "39,90 €",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/fc270b507f9948ee.jpg"
     },
     {
@@ -352,9 +374,10 @@
       "color": "black",
       "size": "37",
       "price": "170,00 €",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/bbb3c65f72976e80.jpg"
     },
     {
@@ -367,9 +390,10 @@
       "color": "dark brown",
       "size": "XS",
       "price": "",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/e7988bb04eedea6e.jpg"
     },
     {
@@ -382,9 +406,10 @@
       "color": "braun",
       "size": "S",
       "price": "50,00 €",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/1d343a73f59cf116.jpg"
     },
     {
@@ -397,9 +422,10 @@
       "color": "night indigo/white",
       "size": "30/32 (XS)",
       "price": "39,95 €",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/75b678258c1506e7.jpg"
     },
     {
@@ -412,9 +438,10 @@
       "color": "better scarlet/white",
       "size": "30/32 (XS)",
       "price": "39,95 €",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/d800032f81f95d47.jpg"
     },
     {
@@ -427,9 +454,10 @@
       "color": "Weiß",
       "size": "XS",
       "price": "29,00 €",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/9fabba17ebaca0a4.jpg"
     },
     {
@@ -443,9 +471,10 @@
       "color": "black",
       "size": "M",
       "price": "12,99 €",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/7289aa6b95ab1a6d.jpg"
     },
     {
@@ -458,9 +487,10 @@
       "color": "aurora coffee",
       "size": "S",
       "price": "44,95 €",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/2e9d47eeffeec424.jpg"
     },
     {
@@ -473,9 +503,10 @@
       "color": "scampi",
       "size": "37-38",
       "price": "15,00 €",
-      "retailer": "",
+      "seasons": [],
+      "formality": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "worn": null,
       "image": "images/f994abc95834f679.jpg"
     }
   ]

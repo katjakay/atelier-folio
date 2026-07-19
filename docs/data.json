@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-19T11:04:53.828Z",
-  "count": 25,
-  "brands": 18,
+  "generated_at": "2026-07-19T11:34:45.264Z",
+  "count": 24,
+  "brands": 19,
   "items": [
     {
       "id": "3a280662-348e-814d-a536-e7ac94b611cb",
@@ -216,21 +216,8 @@
       "image": "images/d17a953c506b3ff4.jpg"
     },
     {
-      "id": "3a280662-348e-8003-a0ee-fc49e2c9ee3b",
-      "name": "",
-      "brand": "",
-      "categories": [],
-      "color": "",
-      "size": "",
-      "price": "",
-      "retailer": "",
-      "acquired": "",
-      "source": "",
-      "image": ""
-    },
-    {
       "id": "3a280662-348e-814b-93e4-c4246e49e8c1",
-      "name": "1461 Mono",
+      "name": "Schnürschuhe Mono Smooth",
       "brand": "Dr. Martens",
       "categories": [
         "Shoes"
@@ -241,7 +228,7 @@
       "retailer": "",
       "acquired": "",
       "source": "Owned",
-      "image": ""
+      "image": "images/9476906bbe972495.jpg"
     },
     {
       "id": "3a280662-348e-815f-82a4-d9146ca5fea0",
@@ -253,15 +240,15 @@
       ],
       "color": "stone / taupe",
       "size": "37",
-      "price": "",
+      "price": "120,00 €",
       "retailer": "",
       "acquired": "",
       "source": "Owned",
-      "image": ""
+      "image": "images/a224d76d797177fc.jpg"
     },
     {
       "id": "3a280662-348e-8165-8927-c6d7ad642724",
-      "name": "Slip-On Kalbshaar — Modell offen",
+      "name": "Slip-On Kalbshaar",
       "brand": "Vans",
       "categories": [
         "Shoes",
@@ -269,15 +256,15 @@
       ],
       "color": "black / white calf hair",
       "size": "",
-      "price": "",
+      "price": "90,00 €",
       "retailer": "",
       "acquired": "",
       "source": "Owned",
-      "image": ""
+      "image": "images/441416217b324358.jpeg"
     },
     {
       "id": "3a280662-348e-816e-a7e4-c7e9b7548980",
-      "name": "Gewebter Slip-on — Modell offen",
+      "name": "Gewebter Slip-on",
       "brand": "Merrell",
       "categories": [
         "Shoes",
@@ -285,15 +272,15 @@
       ],
       "color": "sage",
       "size": "",
-      "price": "",
+      "price": "120, 00 €",
       "retailer": "",
       "acquired": "",
       "source": "Owned",
-      "image": ""
+      "image": "images/53d5305d678ceba7.jpg"
     },
     {
       "id": "3a280662-348e-8198-be60-c2bc2f1119e4",
-      "name": "Kreuzriemen-Sandale — Modell offen",
+      "name": "Kreuzriemen-Sandale",
       "brand": "Camper",
       "categories": [
         "Sandals",
@@ -305,27 +292,27 @@
       "retailer": "",
       "acquired": "",
       "source": "Owned",
-      "image": ""
+      "image": "images/1e4072206943d1b0.jpg"
     },
     {
       "id": "3a280662-348e-81ad-8621-e3f015d23f5a",
-      "name": "Jelly-Mule — Marke offen",
-      "brand": "",
+      "name": "Jelly-Mule",
+      "brand": "Plasticana",
       "categories": [
         "Shoes",
         "Sandals"
       ],
       "color": "honey, transluzent",
       "size": "37",
-      "price": "",
+      "price": "24, 00 €",
       "retailer": "",
       "acquired": "",
       "source": "Owned",
-      "image": ""
+      "image": "images/2697aafae6670839.jpg"
     },
     {
       "id": "3a280662-348e-81ed-82de-cafff333167b",
-      "name": "Klett-Sneaker — Modell offen",
+      "name": "Open Sandal",
       "brand": "Onitsuka Tiger",
       "categories": [
         "Shoes",
@@ -337,11 +324,11 @@
       "retailer": "",
       "acquired": "",
       "source": "Owned",
-      "image": ""
+      "image": "images/3e2d6ad673287a9c.jpg"
     },
     {
       "id": "3a280662-348e-81ef-8ce9-fd6af3c6465c",
-      "name": "Laufschuh — Modell offen",
+      "name": "Sneakers Gel-K 1011",
       "brand": "Asics",
       "categories": [
         "Shoes",
@@ -350,11 +337,11 @@
       ],
       "color": "pale yellow / silver / blue",
       "size": "",
-      "price": "",
+      "price": "80,00 €",
       "retailer": "",
       "acquired": "",
       "source": "Owned",
-      "image": ""
+      "image": "images/4fedf3b519dfae47.jpg"
     },
     {
       "id": "3a280662-348e-8178-988e-ccba113e0175",

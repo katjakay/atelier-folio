@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-19T10:41:10.318Z",
-  "count": 16,
-  "orders": 14,
+  "generated_at": "2026-07-19T10:53:50.132Z",
+  "count": 25,
+  "brands": 18,
   "items": [
     {
       "id": "3a280662-348e-814d-a536-e7ac94b611cb",
@@ -14,7 +14,8 @@
       "size": "30/32 (XS)",
       "price": "39,95 €",
       "retailer": "Zalando",
-      "order_date": "2026-07-14",
+      "acquired": "2026-07-14",
+      "source": "",
       "image": "images/d800032f81f95d47.jpg"
     },
     {
@@ -29,7 +30,8 @@
       "size": "M",
       "price": "12,99 €",
       "retailer": "Zalando",
-      "order_date": "2026-07-09",
+      "acquired": "2026-07-09",
+      "source": "",
       "image": "images/7289aa6b95ab1a6d.jpg"
     },
     {
@@ -43,7 +45,8 @@
       "size": "30/32 (XS)",
       "price": "39,95 €",
       "retailer": "Zalando",
-      "order_date": "2026-06-30",
+      "acquired": "2026-06-30",
+      "source": "",
       "image": "images/75b678258c1506e7.jpg"
     },
     {
@@ -57,7 +60,8 @@
       "size": "XS",
       "price": "29,00 €",
       "retailer": "Arket",
-      "order_date": "2026-06-09",
+      "acquired": "2026-06-09",
+      "source": "",
       "image": "images/9fabba17ebaca0a4.jpg"
     },
     {
@@ -71,7 +75,8 @@
       "size": "S",
       "price": "50,00 €",
       "retailer": "Massimo Dutti",
-      "order_date": "2026-05-31",
+      "acquired": "2026-05-31",
+      "source": "",
       "image": "images/1d343a73f59cf116.jpg"
     },
     {
@@ -85,7 +90,8 @@
       "size": "37",
       "price": "170,00 €",
       "retailer": "Zalando",
-      "order_date": "2026-03-19",
+      "acquired": "2026-03-19",
+      "source": "",
       "image": "images/bbb3c65f72976e80.jpg"
     },
     {
@@ -100,7 +106,8 @@
       "size": "XS",
       "price": "49,95 €",
       "retailer": "Zalando",
-      "order_date": "2026-03-01",
+      "acquired": "2026-03-01",
+      "source": "",
       "image": "images/4159769f790ac473.jpg"
     },
     {
@@ -114,7 +121,8 @@
       "size": "34",
       "price": "79,00 €",
       "retailer": "COS",
-      "order_date": "2026-01-19",
+      "acquired": "2026-01-19",
+      "source": "",
       "image": "images/582a911195b26498.jpg"
     },
     {
@@ -128,7 +136,8 @@
       "size": "S",
       "price": "44,95 €",
       "retailer": "Zalando",
-      "order_date": "2026-01-03",
+      "acquired": "2026-01-03",
+      "source": "",
       "image": "images/2e9d47eeffeec424.jpg"
     },
     {
@@ -142,7 +151,8 @@
       "size": "37-38",
       "price": "15,00 €",
       "retailer": "Zalando",
-      "order_date": "2026-01-03",
+      "acquired": "2026-01-03",
+      "source": "",
       "image": "images/f994abc95834f679.jpg"
     },
     {
@@ -156,7 +166,8 @@
       "size": "34",
       "price": "180,00 €",
       "retailer": "A Day's March",
-      "order_date": "2025-09-01",
+      "acquired": "2025-09-01",
+      "source": "",
       "image": "images/b59ccec8948eb7e0.jpg"
     },
     {
@@ -170,7 +181,8 @@
       "size": "37",
       "price": "90,00 €",
       "retailer": "Camper",
-      "order_date": "2025-07-19",
+      "acquired": "2025-07-19",
+      "source": "",
       "image": "images/a15825c4ad9246a8.avif"
     },
     {
@@ -184,7 +196,8 @@
       "size": "S",
       "price": "¥30.800",
       "retailer": "mix.tokyo",
-      "order_date": "2024-05-01",
+      "acquired": "2024-05-01",
+      "source": "",
       "image": "images/fd288cc8adf9f487.jpg"
     },
     {
@@ -198,8 +211,150 @@
       "size": "37",
       "price": "205,00 €",
       "retailer": "Miista",
-      "order_date": "2024-05-01",
+      "acquired": "2024-05-01",
+      "source": "",
       "image": "images/d17a953c506b3ff4.jpg"
+    },
+    {
+      "id": "3a280662-348e-8003-a0ee-fc49e2c9ee3b",
+      "name": "",
+      "brand": "",
+      "categories": [],
+      "color": "",
+      "size": "",
+      "price": "",
+      "retailer": "",
+      "acquired": "",
+      "source": "",
+      "image": ""
+    },
+    {
+      "id": "3a280662-348e-814b-93e4-c4246e49e8c1",
+      "name": "1461 Mono",
+      "brand": "Dr. Martens",
+      "categories": [
+        "Shoes"
+      ],
+      "color": "black",
+      "size": "",
+      "price": "",
+      "retailer": "",
+      "acquired": "",
+      "source": "Owned",
+      "image": ""
+    },
+    {
+      "id": "3a280662-348e-815f-82a4-d9146ca5fea0",
+      "name": "Boston Clog",
+      "brand": "Birkenstock",
+      "categories": [
+        "Clogs",
+        "Shoes"
+      ],
+      "color": "stone / taupe",
+      "size": "37",
+      "price": "",
+      "retailer": "",
+      "acquired": "",
+      "source": "Owned",
+      "image": ""
+    },
+    {
+      "id": "3a280662-348e-8165-8927-c6d7ad642724",
+      "name": "Slip-On Kalbshaar — Modell offen",
+      "brand": "Vans",
+      "categories": [
+        "Shoes",
+        "Sneakers"
+      ],
+      "color": "black / white calf hair",
+      "size": "",
+      "price": "",
+      "retailer": "",
+      "acquired": "",
+      "source": "Owned",
+      "image": ""
+    },
+    {
+      "id": "3a280662-348e-816e-a7e4-c7e9b7548980",
+      "name": "Gewebter Slip-on — Modell offen",
+      "brand": "Merrell",
+      "categories": [
+        "Shoes",
+        "Sneakers"
+      ],
+      "color": "sage",
+      "size": "",
+      "price": "",
+      "retailer": "",
+      "acquired": "",
+      "source": "Owned",
+      "image": ""
+    },
+    {
+      "id": "3a280662-348e-8198-be60-c2bc2f1119e4",
+      "name": "Kreuzriemen-Sandale — Modell offen",
+      "brand": "Camper",
+      "categories": [
+        "Sandals",
+        "Shoes"
+      ],
+      "color": "cognac",
+      "size": "36",
+      "price": "",
+      "retailer": "",
+      "acquired": "",
+      "source": "Owned",
+      "image": ""
+    },
+    {
+      "id": "3a280662-348e-81ad-8621-e3f015d23f5a",
+      "name": "Jelly-Mule — Marke offen",
+      "brand": "",
+      "categories": [
+        "Shoes",
+        "Sandals"
+      ],
+      "color": "honey, transluzent",
+      "size": "37",
+      "price": "",
+      "retailer": "",
+      "acquired": "",
+      "source": "Owned",
+      "image": ""
+    },
+    {
+      "id": "3a280662-348e-81ed-82de-cafff333167b",
+      "name": "Klett-Sneaker — Modell offen",
+      "brand": "Onitsuka Tiger",
+      "categories": [
+        "Shoes",
+        "Sneakers"
+      ],
+      "color": "white",
+      "size": "",
+      "price": "",
+      "retailer": "",
+      "acquired": "",
+      "source": "Owned",
+      "image": ""
+    },
+    {
+      "id": "3a280662-348e-81ef-8ce9-fd6af3c6465c",
+      "name": "Laufschuh — Modell offen",
+      "brand": "Asics",
+      "categories": [
+        "Shoes",
+        "Sneakers",
+        "Sports"
+      ],
+      "color": "pale yellow / silver / blue",
+      "size": "",
+      "price": "",
+      "retailer": "",
+      "acquired": "",
+      "source": "Owned",
+      "image": ""
     },
     {
       "id": "3a280662-348e-8178-988e-ccba113e0175",
@@ -212,7 +367,8 @@
       "size": "XS",
       "price": "39,90 €",
       "retailer": "Uniqlo",
-      "order_date": "",
+      "acquired": "",
+      "source": "",
       "image": "images/fc270b507f9948ee.jpg"
     },
     {
@@ -226,7 +382,8 @@
       "size": "XS",
       "price": "",
       "retailer": "Uniqlo",
-      "order_date": "",
+      "acquired": "",
+      "source": "",
       "image": "images/e7988bb04eedea6e.jpg"
     }
   ]

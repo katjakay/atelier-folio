@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-19T09:55:51.229Z",
-  "count": 18,
-  "orders": 6,
+  "generated_at": "2026-07-19T10:28:48.184Z",
+  "count": 25,
+  "orders": 12,
   "items": [
     {
       "id": "3a280662-348e-814d-a536-e7ac94b611cb",
@@ -188,6 +188,35 @@
       "image": "images/1d343a73f59cf116.jpg"
     },
     {
+      "id": "3a280662-348e-81d2-8b87-c554393b39e0",
+      "name": "DANA - Slipper",
+      "brand": "Camper",
+      "categories": [
+        "Shoes"
+      ],
+      "color": "black",
+      "size": "37",
+      "price": "170,00 €",
+      "retailer": "Zalando",
+      "order_date": "2026-03-19",
+      "image": "images/bbb3c65f72976e80.jpg"
+    },
+    {
+      "id": "3a280662-348e-8148-b2bb-d144337f46c7",
+      "name": "OPTIME WORKOUT STRAPPY LIGHT SUPPORT BRA",
+      "brand": "adidas Performance",
+      "categories": [
+        "Sports bra",
+        "Sports"
+      ],
+      "color": "black",
+      "size": "XS",
+      "price": "49,95 €",
+      "retailer": "Zalando",
+      "order_date": "2026-03-01",
+      "image": "images/4159769f790ac473.jpg"
+    },
+    {
       "id": "3a080662-348e-810f-80ff-f62f2bda0286",
       "name": "RUN Langarmshirt",
       "brand": "adidas Performance",
@@ -257,6 +286,76 @@
       "retailer": "Zalando",
       "order_date": "2026-01-03",
       "image": "images/f994abc95834f679.jpg"
+    },
+    {
+      "id": "3a280662-348e-8162-a57a-d1b8b2bb7a3c",
+      "name": "Whitney Cotton Lyocell Jacket",
+      "brand": "A Day's March",
+      "categories": [
+        "Jacket"
+      ],
+      "color": "light greige",
+      "size": "34",
+      "price": "180,00 €",
+      "retailer": "A Day's March",
+      "order_date": "2025-09-01",
+      "image": "images/b59ccec8948eb7e0.jpg"
+    },
+    {
+      "id": "3a280662-348e-816d-8652-d76d09049d9d",
+      "name": "crinkled nylon pants",
+      "brand": "and wander",
+      "categories": [
+        "Trousers"
+      ],
+      "color": "black",
+      "size": "S",
+      "price": "¥30.800",
+      "retailer": "mix.tokyo",
+      "order_date": "2024-05-01",
+      "image": "images/fd288cc8adf9f487.jpg"
+    },
+    {
+      "id": "3a280662-348e-8172-bc46-d3a0fea08be2",
+      "name": "Zooey Sandals",
+      "brand": "Miista",
+      "categories": [
+        "Shoes"
+      ],
+      "color": "orange",
+      "size": "37",
+      "price": "205,00 €",
+      "retailer": "Miista",
+      "order_date": "2024-05-01",
+      "image": "images/d17a953c506b3ff4.jpg"
+    },
+    {
+      "id": "3a280662-348e-8178-988e-ccba113e0175",
+      "name": "Uniqlo Barrel pants",
+      "brand": "Uniqlo",
+      "categories": [
+        "Trousers"
+      ],
+      "color": "grey",
+      "size": "XS",
+      "price": "39,90 €",
+      "retailer": "Uniqlo",
+      "order_date": "",
+      "image": "images/fc270b507f9948ee.jpg"
+    },
+    {
+      "id": "3a280662-348e-81fe-b6d7-dc497d1dfe59",
+      "name": "Jersey Barrel Pants",
+      "brand": "Uniqlo",
+      "categories": [
+        "Trousers"
+      ],
+      "color": "dark brown",
+      "size": "XS",
+      "price": "",
+      "retailer": "Uniqlo",
+      "order_date": "",
+      "image": "images/e7988bb04eedea6e.jpg"
     }
   ]
 }

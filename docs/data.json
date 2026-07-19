@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-07-19T00:00:00.000Z",
+  "generated_at": "2026-07-19T09:51:11.671Z",
   "count": 18,
   "orders": 6,
   "items": [
     {
+      "id": "3a280662-348e-814d-a536-e7ac94b611cb",
       "name": "FIREBIRD Shorts",
       "brand": "adidas Originals",
       "categories": [
@@ -14,49 +15,10 @@
       "price": "39,95 €",
       "retailer": "Zalando",
       "order_date": "2026-07-14",
-      "image": "https://img01.ztat.net/article/spp-media-p1/528077dac4454b82b0404700703c7e50/d71c37a7bca74f44b3be8b4fc2f54f2a.jpg"
+      "image": "images/d800032f81f95d47.jpg"
     },
     {
-      "name": "SPORTS SHORTS",
-      "brand": "Pull&Bear",
-      "categories": [
-        "Shorts",
-        "Sports"
-      ],
-      "color": "light grey",
-      "size": "M",
-      "price": "14,39 €",
-      "retailer": "Zalando",
-      "order_date": "2026-07-09",
-      "image": "https://img01.ztat.net/article/spp-media-p1/cffbb1da1c9c4363abef026a272fb837/acf32bc3f3734df6ab93b05798ee745d.jpg"
-    },
-    {
-      "name": "MINI Shorts",
-      "brand": "Stradivarius",
-      "categories": [
-        "Shorts"
-      ],
-      "color": "black",
-      "size": "S",
-      "price": "15,99 €",
-      "retailer": "Zalando",
-      "order_date": "2026-07-09",
-      "image": "https://img01.ztat.net/article/spp-media-p1/17fed0b16d4c4e9bbc1c6464e33d6371/1c1dddb4fc25486995885216f67fb270.jpg"
-    },
-    {
-      "name": "Shorts",
-      "brand": "adidas Originals",
-      "categories": [
-        "Shorts"
-      ],
-      "color": "black",
-      "size": "34/36 (S)",
-      "price": "34,95 €",
-      "retailer": "Zalando",
-      "order_date": "2026-07-09",
-      "image": "https://img01.ztat.net/article/spp-media-p1/cccc8def87cd4e44bdc7e881a97b1750/0a038e297de64b589ca8f62d95492403.jpg"
-    },
-    {
+      "id": "3a080662-348e-811e-bf18-d65f6f75129c",
       "name": "Body",
       "brand": "Pull&Bear",
       "categories": [
@@ -68,35 +30,24 @@
       "price": "12,99 €",
       "retailer": "Zalando",
       "order_date": "2026-07-09",
-      "image": "https://img01.ztat.net/article/spp-media-p1/3f9fad33ba19401b9dc6d48c77fc68f9/0ba6180e7fb848b4899062e613c86bb7.jpg"
+      "image": "images/7289aa6b95ab1a6d.jpg"
     },
     {
-      "name": "DOUBLE CONTRAST T-Shirt print",
+      "id": "3a080662-348e-8124-93d2-ff839d738055",
+      "name": "MINI Shorts",
       "brand": "Stradivarius",
       "categories": [
-        "T-Shirt"
+        "Shorts"
       ],
-      "color": "beige",
+      "color": "black",
       "size": "S",
-      "price": "17,99 €",
+      "price": "15,99 €",
       "retailer": "Zalando",
       "order_date": "2026-07-09",
-      "image": "https://img01.ztat.net/article/spp-media-p1/c92dd74562b646b5bba5135905b04548/cb71de6780784cd7b4ce57c9414d0c9e.jpg"
+      "image": "images/057ec2c536d6371c.jpg"
     },
     {
-      "name": "TANK Top",
-      "brand": "Weekday",
-      "categories": [
-        "Top"
-      ],
-      "color": "beige",
-      "size": "S",
-      "price": "16,00 €",
-      "retailer": "Zalando",
-      "order_date": "2026-07-09",
-      "image": "https://img01.ztat.net/article/spp-media-p1/520753332e644a1e8a14ec69d9a4d92c/edcc110460614d1a9c2d86ebd5188e43.jpg"
-    },
-    {
+      "id": "3a080662-348e-8124-9c01-e2434d425486",
       "name": "HALTER WRAP Top",
       "brand": "Weekday",
       "categories": [
@@ -107,22 +58,67 @@
       "price": "23,00 €",
       "retailer": "Zalando",
       "order_date": "2026-07-09",
-      "image": "https://img01.ztat.net/article/spp-media-p1/998cc748f90b41b0a1dc4f6e9b38d311/76d5b211d33f492ea7641e9ab953c0f8.jpg"
+      "image": "images/419f058030294c95.jpg"
     },
     {
-      "name": "RAY BOLERO T-Shirt basic",
-      "brand": "Weekday",
+      "id": "3a080662-348e-8150-951e-c06c4c2ba120",
+      "name": "DOUBLE CONTRAST T-Shirt print",
+      "brand": "Stradivarius",
       "categories": [
         "T-Shirt"
       ],
-      "color": "off white",
+      "color": "beige",
       "size": "S",
-      "price": "20,00 €",
+      "price": "17,99 €",
       "retailer": "Zalando",
       "order_date": "2026-07-09",
-      "image": "https://img01.ztat.net/article/spp-media-p1/120f6769609140cba87bed6126476a95/f2ff8f5a4b0746ac8458288ba3989d5c.jpg"
+      "image": "images/7a32312322188c79.jpg"
     },
     {
+      "id": "3a080662-348e-8172-b0d9-df98c6433a90",
+      "name": "TANK Top",
+      "brand": "Weekday",
+      "categories": [
+        "Top"
+      ],
+      "color": "beige",
+      "size": "S",
+      "price": "16,00 €",
+      "retailer": "Zalando",
+      "order_date": "2026-07-09",
+      "image": "images/515b37e7560bdceb.jpg"
+    },
+    {
+      "id": "3a080662-348e-8183-ad7f-d97a9ddab87d",
+      "name": "Shorts",
+      "brand": "adidas Originals",
+      "categories": [
+        "Shorts"
+      ],
+      "color": "black",
+      "size": "34/36 (S)",
+      "price": "34,95 €",
+      "retailer": "Zalando",
+      "order_date": "2026-07-09",
+      "image": "images/40e1e8657aa91e1e.jpg"
+    },
+    {
+      "id": "3a080662-348e-818e-a6db-d53f36032698",
+      "name": "SPORTS SHORTS",
+      "brand": "Pull&Bear",
+      "categories": [
+        "Shorts",
+        "Sports"
+      ],
+      "color": "light grey",
+      "size": "M",
+      "price": "14,39 €",
+      "retailer": "Zalando",
+      "order_date": "2026-07-09",
+      "image": "images/5f5cc3eaaf7e1456.jpg"
+    },
+    {
+      "id": "3a080662-348e-81a0-862c-fb231da3d8aa",
       "name": "LAYERED TANK Top",
       "brand": "Weekday",
       "categories": [
@@ -133,9 +129,24 @@
       "price": "25,00 €",
       "retailer": "Zalando",
       "order_date": "2026-07-09",
-      "image": "https://img01.ztat.net/article/spp-media-p1/7b4a8078cd9a4870bf451e8ecb2b4577/aafb7857a5d84a6f82722741e03bb6f9.jpg"
+      "image": "images/c01a2a220d7af8b3.jpg"
     },
     {
+      "id": "3a080662-348e-81b6-a0ad-eba7c15061ca",
+      "name": "RAY BOLERO T-Shirt basic",
+      "brand": "Weekday",
+      "categories": [
+        "T-Shirt"
+      ],
+      "color": "off white",
+      "size": "S",
+      "price": "20,00 €",
+      "retailer": "Zalando",
+      "order_date": "2026-07-09",
+      "image": "images/326620df8c36e913.jpg"
+    },
+    {
+      "id": "3a280662-348e-8188-b0e2-dcdd15507296",
       "name": "FIREBIRD Shorts",
       "brand": "adidas Originals",
       "categories": [
@@ -146,9 +157,10 @@
       "price": "39,95 €",
       "retailer": "Zalando",
       "order_date": "2026-06-30",
-      "image": "https://img01.ztat.net/article/spp-media-p1/3080c521c18f4c5396c561d06997146e/d2a1f99175a648e39b1ecff4f770244e.jpg"
+      "image": "images/75b678258c1506e7.jpg"
     },
     {
+      "id": "3a280662-348e-81c4-971f-e745eb649344",
       "name": "Neckholder-Top",
       "brand": "Arket",
       "categories": [
@@ -159,9 +171,10 @@
       "price": "29,00 €",
       "retailer": "Arket",
       "order_date": "2026-06-09",
-      "image": "https://media.arket.com/assets/006/8b/4b/8b4b06fd31751e3db6fd73947883b611b31972cf_m-1.jpg"
+      "image": "images/9fabba17ebaca0a4.jpg"
     },
     {
+      "id": "3a280662-348e-815e-961b-f6edd05383d0",
       "name": "Strick-Neckholder-Top",
       "brand": "Massimo Dutti",
       "categories": [
@@ -172,9 +185,10 @@
       "price": "50,00 €",
       "retailer": "Massimo Dutti",
       "order_date": "2026-05-31",
-      "image": "https://static.massimodutti.net/assets/public/aa7f/c563/ddac4dcb8ca6/9b03d20f477f/05620530700-c/05620530700-c.jpg"
+      "image": "images/1d343a73f59cf116.jpg"
     },
     {
+      "id": "3a080662-348e-810f-80ff-f62f2bda0286",
       "name": "RUN Langarmshirt",
       "brand": "adidas Performance",
       "categories": [
@@ -186,22 +200,10 @@
       "price": "34,95 €",
       "retailer": "Zalando",
       "order_date": "2026-01-03",
-      "image": "https://img01.ztat.net/article/spp-media-p1/b1247f2e1eb8444088f354e45e390d32/e3440d380f2d41cbb0aed696c341e16b.jpg"
+      "image": "images/7426cc48ac40862d.jpg"
     },
     {
-      "name": "ALL ME SCULPT Tights",
-      "brand": "adidas Performance",
-      "categories": [
-        "Leggings"
-      ],
-      "color": "black",
-      "size": "S",
-      "price": "31,65 €",
-      "retailer": "Zalando",
-      "order_date": "2026-01-03",
-      "image": "https://img01.ztat.net/article/spp-media-p1/77b5da08d5e9451f92518af4adf0c14b/20f2b826c1d24124acd9f598bec0967b.jpg"
-    },
-    {
+      "id": "3a080662-348e-8143-a8ba-ddd63a459833",
       "name": "Tights",
       "brand": "adidas Performance",
       "categories": [
@@ -212,9 +214,10 @@
       "price": "39,95 €",
       "retailer": "Zalando",
       "order_date": "2026-01-03",
-      "image": "https://img01.ztat.net/article/spp-media-p1/e0c0ad4b0a1b4e33b5d57c004ca4f534/a1b25a110c3a4bd79def1b9058ef6539.jpg"
+      "image": "images/9c04fd0ed07debda.jpg"
     },
     {
+      "id": "3a080662-348e-8182-a1d1-fcf445e2c979",
       "name": "Sport-BH mit mittlerer Stützkraft",
       "brand": "adidas Performance",
       "categories": [
@@ -225,9 +228,24 @@
       "price": "44,95 €",
       "retailer": "Zalando",
       "order_date": "2026-01-03",
-      "image": "https://img01.ztat.net/article/spp-media-p1/9994d557d9f4478d8ec886ae2803e084/0eb90f20b59e43bf81a7c4b6e79ba478.jpg"
+      "image": "images/2e9d47eeffeec424.jpg"
     },
     {
+      "id": "3a080662-348e-81a6-a540-f61205e50f16",
+      "name": "ALL ME SCULPT Tights",
+      "brand": "adidas Performance",
+      "categories": [
+        "Leggings"
+      ],
+      "color": "black",
+      "size": "S",
+      "price": "31,65 €",
+      "retailer": "Zalando",
+      "order_date": "2026-01-03",
+      "image": "images/6999dd702d05b56b.jpg"
+    },
+    {
+      "id": "3a080662-348e-81bc-88b6-f1f56e9a2009",
       "name": "RUN LIGHT CUSHIONING UNISEX Socken",
       "brand": "FALKE",
       "categories": [
@@ -238,7 +256,7 @@
       "price": "15,00 €",
       "retailer": "Zalando",
       "order_date": "2026-01-03",
-      "image": "https://img01.ztat.net/article/spp-media-p1/cfd5a498bbe148bea15481a8452db4e0/0369397e372a4b6fb8d57f36cc88a4de.jpg"
+      "image": "images/f994abc95834f679.jpg"
     }
   ]
 }

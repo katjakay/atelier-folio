@@ -1,68 +1,22 @@
 {
-  "generated_at": "2026-07-19T17:56:28.937Z",
+  "generated_at": "2026-07-19T17:57:54.430Z",
   "count": 26,
   "brands": 19,
   "items": [
     {
-      "id": "3a280662-348e-814d-a536-e7ac94b611cb",
-      "name": "FIREBIRD Shorts",
-      "brand": "adidas Originals",
+      "id": "3a280662-348e-80b1-be91-f04d0a808dd7",
+      "name": "All-weather Jacke",
+      "brand": "and wander",
       "categories": [
-        "Shorts"
+        "Jacket"
       ],
-      "color": "better scarlet/white",
-      "size": "30/32 (XS)",
-      "price": "39,95 €",
-      "retailer": "Zalando",
-      "acquired": "2026-07-14",
+      "color": "white",
+      "size": "S",
+      "price": "120,00 €",
+      "retailer": "and wander",
+      "era": "",
       "source": "",
-      "image": "images/d800032f81f95d47.jpg"
-    },
-    {
-      "id": "3a080662-348e-811e-bf18-d65f6f75129c",
-      "name": "Body",
-      "brand": "Pull&Bear",
-      "categories": [
-        "Bodysuit",
-        "Sports"
-      ],
-      "color": "black",
-      "size": "M",
-      "price": "12,99 €",
-      "retailer": "Zalando",
-      "acquired": "2026-07-09",
-      "source": "",
-      "image": "images/7289aa6b95ab1a6d.jpg"
-    },
-    {
-      "id": "3a280662-348e-8188-b0e2-dcdd15507296",
-      "name": "FIREBIRD Shorts",
-      "brand": "adidas Originals",
-      "categories": [
-        "Shorts"
-      ],
-      "color": "night indigo/white",
-      "size": "30/32 (XS)",
-      "price": "39,95 €",
-      "retailer": "Zalando",
-      "acquired": "2026-06-30",
-      "source": "",
-      "image": "images/75b678258c1506e7.jpg"
-    },
-    {
-      "id": "3a280662-348e-81c4-971f-e745eb649344",
-      "name": "Neckholder-Top",
-      "brand": "Arket",
-      "categories": [
-        "Top"
-      ],
-      "color": "Weiß",
-      "size": "XS",
-      "price": "29,00 €",
-      "retailer": "Arket",
-      "acquired": "2026-06-09",
-      "source": "",
-      "image": "images/9fabba17ebaca0a4.jpg"
+      "image": "images/cfd95545363707fa.jpg"
     },
     {
       "id": "3a280662-348e-808c-b6cc-f9f9a80f72f8",
@@ -75,175 +29,9 @@
       "size": "XS",
       "price": "29,00 €",
       "retailer": "Arket",
-      "acquired": "2026-06-01",
+      "era": "",
       "source": "Owned",
       "image": "images/53adf7695790cecc.jpg"
-    },
-    {
-      "id": "3a280662-348e-815e-961b-f6edd05383d0",
-      "name": "Strick-Neckholder-Top",
-      "brand": "Massimo Dutti",
-      "categories": [
-        "Top"
-      ],
-      "color": "braun",
-      "size": "S",
-      "price": "50,00 €",
-      "retailer": "Massimo Dutti",
-      "acquired": "2026-05-31",
-      "source": "",
-      "image": "images/1d343a73f59cf116.jpg"
-    },
-    {
-      "id": "3a280662-348e-81d2-8b87-c554393b39e0",
-      "name": "DANA - Slipper",
-      "brand": "Camper",
-      "categories": [
-        "Shoes"
-      ],
-      "color": "black",
-      "size": "37",
-      "price": "170,00 €",
-      "retailer": "Zalando",
-      "acquired": "2026-03-19",
-      "source": "",
-      "image": "images/bbb3c65f72976e80.jpg"
-    },
-    {
-      "id": "3a280662-348e-8148-b2bb-d144337f46c7",
-      "name": "OPTIME WORKOUT STRAPPY LIGHT SUPPORT BRA",
-      "brand": "adidas Performance",
-      "categories": [
-        "Sports bra",
-        "Sports"
-      ],
-      "color": "black",
-      "size": "XS",
-      "price": "49,95 €",
-      "retailer": "Zalando",
-      "acquired": "2026-03-01",
-      "source": "",
-      "image": "images/4159769f790ac473.jpg"
-    },
-    {
-      "id": "3a280662-348e-80bd-abf1-d9c72e70a455",
-      "name": "Boat-Neck Cotton Shirt",
-      "brand": "COS",
-      "categories": [
-        "Blouse"
-      ],
-      "color": "white",
-      "size": "34",
-      "price": "79,00 €",
-      "retailer": "COS",
-      "acquired": "2026-01-19",
-      "source": "",
-      "image": "images/582a911195b26498.jpg"
-    },
-    {
-      "id": "3a080662-348e-8182-a1d1-fcf445e2c979",
-      "name": "Sport-BH mit mittlerer Stützkraft",
-      "brand": "adidas Performance",
-      "categories": [
-        "Sports bra"
-      ],
-      "color": "aurora coffee",
-      "size": "S",
-      "price": "44,95 €",
-      "retailer": "Zalando",
-      "acquired": "2026-01-03",
-      "source": "",
-      "image": "images/2e9d47eeffeec424.jpg"
-    },
-    {
-      "id": "3a080662-348e-81bc-88b6-f1f56e9a2009",
-      "name": "RUN LIGHT CUSHIONING UNISEX Socken",
-      "brand": "FALKE",
-      "categories": [
-        "Socks"
-      ],
-      "color": "scampi",
-      "size": "37-38",
-      "price": "15,00 €",
-      "retailer": "Zalando",
-      "acquired": "2026-01-03",
-      "source": "",
-      "image": "images/f994abc95834f679.jpg"
-    },
-    {
-      "id": "3a280662-348e-8162-a57a-d1b8b2bb7a3c",
-      "name": "Whitney Cotton Lyocell Jacket",
-      "brand": "A Day's March",
-      "categories": [
-        "Jacket"
-      ],
-      "color": "light greige",
-      "size": "34",
-      "price": "180,00 €",
-      "retailer": "A Day's March",
-      "acquired": "2025-09-01",
-      "source": "",
-      "image": "images/b59ccec8948eb7e0.jpg"
-    },
-    {
-      "id": "3a280662-348e-8097-98bc-dcc92ea54e26",
-      "name": "Tasha Camper",
-      "brand": "Camper",
-      "categories": [
-        "Shoes"
-      ],
-      "color": "black",
-      "size": "37",
-      "price": "90,00 €",
-      "retailer": "Camper",
-      "acquired": "2025-07-19",
-      "source": "",
-      "image": "images/a15825c4ad9246a8.avif"
-    },
-    {
-      "id": "3a280662-348e-816d-8652-d76d09049d9d",
-      "name": "crinkled nylon pants",
-      "brand": "and wander",
-      "categories": [
-        "Trousers"
-      ],
-      "color": "black",
-      "size": "S",
-      "price": "¥30.800",
-      "retailer": "mix.tokyo",
-      "acquired": "2024-05-01",
-      "source": "",
-      "image": "images/fd288cc8adf9f487.jpg"
-    },
-    {
-      "id": "3a280662-348e-8172-bc46-d3a0fea08be2",
-      "name": "Zooey Sandals",
-      "brand": "Miista",
-      "categories": [
-        "Shoes"
-      ],
-      "color": "orange",
-      "size": "37",
-      "price": "205,00 €",
-      "retailer": "Miista",
-      "acquired": "2024-05-01",
-      "source": "",
-      "image": "images/d17a953c506b3ff4.jpg"
-    },
-    {
-      "id": "3a280662-348e-80b1-be91-f04d0a808dd7",
-      "name": "All-weather Jacke",
-      "brand": "and wander",
-      "categories": [
-        "Jacket"
-      ],
-      "color": "white",
-      "size": "S",
-      "price": "120,00 €",
-      "retailer": "and wander",
-      "acquired": "",
-      "source": "",
-      "image": "images/cfd95545363707fa.jpg"
     },
     {
       "id": "3a280662-348e-814b-93e4-c4246e49e8c1",
@@ -256,7 +44,7 @@
       "size": "",
       "price": "",
       "retailer": "",
-      "acquired": "",
+      "era": "",
       "source": "Owned",
       "image": "images/9476906bbe972495.jpg"
     },
@@ -272,7 +60,7 @@
       "size": "37",
       "price": "120,00 €",
       "retailer": "",
-      "acquired": "",
+      "era": "",
       "source": "Owned",
       "image": "images/a224d76d797177fc.jpg"
     },
@@ -288,7 +76,7 @@
       "size": "",
       "price": "90,00 €",
       "retailer": "",
-      "acquired": "",
+      "era": "",
       "source": "Owned",
       "image": "images/441416217b324358.jpeg"
     },
@@ -304,7 +92,7 @@
       "size": "",
       "price": "120, 00 €",
       "retailer": "",
-      "acquired": "",
+      "era": "",
       "source": "Owned",
       "image": "images/53d5305d678ceba7.jpg"
     },
@@ -320,7 +108,7 @@
       "size": "36",
       "price": "",
       "retailer": "",
-      "acquired": "",
+      "era": "",
       "source": "Owned",
       "image": "images/1e4072206943d1b0.jpg"
     },
@@ -336,7 +124,7 @@
       "size": "37",
       "price": "24, 00 €",
       "retailer": "",
-      "acquired": "",
+      "era": "",
       "source": "Owned",
       "image": "images/2697aafae6670839.jpg"
     },
@@ -352,7 +140,7 @@
       "size": "",
       "price": "",
       "retailer": "",
-      "acquired": "",
+      "era": "",
       "source": "Owned",
       "image": "images/3e2d6ad673287a9c.jpg"
     },
@@ -369,9 +157,100 @@
       "size": "",
       "price": "80,00 €",
       "retailer": "",
-      "acquired": "",
+      "era": "",
       "source": "Owned",
       "image": "images/4fedf3b519dfae47.jpg"
+    },
+    {
+      "id": "3a280662-348e-80bd-abf1-d9c72e70a455",
+      "name": "Boat-Neck Cotton Shirt",
+      "brand": "COS",
+      "categories": [
+        "Blouse"
+      ],
+      "color": "white",
+      "size": "34",
+      "price": "79,00 €",
+      "retailer": "COS",
+      "era": "",
+      "source": "",
+      "image": "images/582a911195b26498.jpg"
+    },
+    {
+      "id": "3a280662-348e-8097-98bc-dcc92ea54e26",
+      "name": "Tasha Camper",
+      "brand": "Camper",
+      "categories": [
+        "Shoes"
+      ],
+      "color": "black",
+      "size": "37",
+      "price": "90,00 €",
+      "retailer": "Camper",
+      "era": "",
+      "source": "",
+      "image": "images/a15825c4ad9246a8.avif"
+    },
+    {
+      "id": "3a280662-348e-8148-b2bb-d144337f46c7",
+      "name": "OPTIME WORKOUT STRAPPY LIGHT SUPPORT BRA",
+      "brand": "adidas Performance",
+      "categories": [
+        "Sports bra",
+        "Sports"
+      ],
+      "color": "black",
+      "size": "XS",
+      "price": "49,95 €",
+      "retailer": "Zalando",
+      "era": "",
+      "source": "",
+      "image": "images/4159769f790ac473.jpg"
+    },
+    {
+      "id": "3a280662-348e-8162-a57a-d1b8b2bb7a3c",
+      "name": "Whitney Cotton Lyocell Jacket",
+      "brand": "A Day's March",
+      "categories": [
+        "Jacket"
+      ],
+      "color": "light greige",
+      "size": "34",
+      "price": "180,00 €",
+      "retailer": "A Day's March",
+      "era": "",
+      "source": "",
+      "image": "images/b59ccec8948eb7e0.jpg"
+    },
+    {
+      "id": "3a280662-348e-816d-8652-d76d09049d9d",
+      "name": "crinkled nylon pants",
+      "brand": "and wander",
+      "categories": [
+        "Trousers"
+      ],
+      "color": "black",
+      "size": "S",
+      "price": "¥30.800",
+      "retailer": "mix.tokyo",
+      "era": "",
+      "source": "",
+      "image": "images/fd288cc8adf9f487.jpg"
+    },
+    {
+      "id": "3a280662-348e-8172-bc46-d3a0fea08be2",
+      "name": "Zooey Sandals",
+      "brand": "Miista",
+      "categories": [
+        "Shoes"
+      ],
+      "color": "orange",
+      "size": "37",
+      "price": "205,00 €",
+      "retailer": "Miista",
+      "era": "",
+      "source": "",
+      "image": "images/d17a953c506b3ff4.jpg"
     },
     {
       "id": "3a280662-348e-8178-988e-ccba113e0175",
@@ -384,9 +263,24 @@
       "size": "XS",
       "price": "39,90 €",
       "retailer": "Uniqlo",
-      "acquired": "",
+      "era": "",
       "source": "",
       "image": "images/fc270b507f9948ee.jpg"
+    },
+    {
+      "id": "3a280662-348e-81d2-8b87-c554393b39e0",
+      "name": "DANA - Slipper",
+      "brand": "Camper",
+      "categories": [
+        "Shoes"
+      ],
+      "color": "black",
+      "size": "37",
+      "price": "170,00 €",
+      "retailer": "Zalando",
+      "era": "",
+      "source": "",
+      "image": "images/bbb3c65f72976e80.jpg"
     },
     {
       "id": "3a280662-348e-81fe-b6d7-dc497d1dfe59",
@@ -399,9 +293,115 @@
       "size": "XS",
       "price": "",
       "retailer": "Uniqlo",
-      "acquired": "",
+      "era": "",
       "source": "",
       "image": "images/e7988bb04eedea6e.jpg"
+    },
+    {
+      "id": "3a280662-348e-815e-961b-f6edd05383d0",
+      "name": "Strick-Neckholder-Top",
+      "brand": "Massimo Dutti",
+      "categories": [
+        "Top"
+      ],
+      "color": "braun",
+      "size": "S",
+      "price": "50,00 €",
+      "retailer": "Massimo Dutti",
+      "era": "",
+      "source": "",
+      "image": "images/1d343a73f59cf116.jpg"
+    },
+    {
+      "id": "3a280662-348e-8188-b0e2-dcdd15507296",
+      "name": "FIREBIRD Shorts",
+      "brand": "adidas Originals",
+      "categories": [
+        "Shorts"
+      ],
+      "color": "night indigo/white",
+      "size": "30/32 (XS)",
+      "price": "39,95 €",
+      "retailer": "Zalando",
+      "era": "",
+      "source": "",
+      "image": "images/75b678258c1506e7.jpg"
+    },
+    {
+      "id": "3a280662-348e-814d-a536-e7ac94b611cb",
+      "name": "FIREBIRD Shorts",
+      "brand": "adidas Originals",
+      "categories": [
+        "Shorts"
+      ],
+      "color": "better scarlet/white",
+      "size": "30/32 (XS)",
+      "price": "39,95 €",
+      "retailer": "Zalando",
+      "era": "",
+      "source": "",
+      "image": "images/d800032f81f95d47.jpg"
+    },
+    {
+      "id": "3a280662-348e-81c4-971f-e745eb649344",
+      "name": "Neckholder-Top",
+      "brand": "Arket",
+      "categories": [
+        "Top"
+      ],
+      "color": "Weiß",
+      "size": "XS",
+      "price": "29,00 €",
+      "retailer": "Arket",
+      "era": "",
+      "source": "",
+      "image": "images/9fabba17ebaca0a4.jpg"
+    },
+    {
+      "id": "3a080662-348e-811e-bf18-d65f6f75129c",
+      "name": "Body",
+      "brand": "Pull&Bear",
+      "categories": [
+        "Bodysuit",
+        "Sports"
+      ],
+      "color": "black",
+      "size": "M",
+      "price": "12,99 €",
+      "retailer": "Zalando",
+      "era": "",
+      "source": "",
+      "image": "images/7289aa6b95ab1a6d.jpg"
+    },
+    {
+      "id": "3a080662-348e-8182-a1d1-fcf445e2c979",
+      "name": "Sport-BH mit mittlerer Stützkraft",
+      "brand": "adidas Performance",
+      "categories": [
+        "Sports bra"
+      ],
+      "color": "aurora coffee",
+      "size": "S",
+      "price": "44,95 €",
+      "retailer": "Zalando",
+      "era": "",
+      "source": "",
+      "image": "images/2e9d47eeffeec424.jpg"
+    },
+    {
+      "id": "3a080662-348e-81bc-88b6-f1f56e9a2009",
+      "name": "RUN LIGHT CUSHIONING UNISEX Socken",
+      "brand": "FALKE",
+      "categories": [
+        "Socks"
+      ],
+      "color": "scampi",
+      "size": "37-38",
+      "price": "15,00 €",
+      "retailer": "Zalando",
+      "era": "",
+      "source": "",
+      "image": "images/f994abc95834f679.jpg"
     }
   ]
 }

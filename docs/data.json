@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T17:57:54.430Z",
+  "generated_at": "2026-07-19T18:01:51.036Z",
   "count": 26,
   "brands": 19,
   "items": [
@@ -14,7 +14,7 @@
       "size": "S",
       "price": "120,00 €",
       "retailer": "and wander",
-      "era": "",
+      "era": "Letzte 2 Jahre",
       "source": "",
       "image": "images/cfd95545363707fa.jpg"
     },
@@ -29,7 +29,7 @@
       "size": "XS",
       "price": "29,00 €",
       "retailer": "Arket",
-      "era": "",
+      "era": "Letzte 2 Jahre",
       "source": "Owned",
       "image": "images/53adf7695790cecc.jpg"
     },
@@ -44,7 +44,7 @@
       "size": "",
       "price": "",
       "retailer": "",
-      "era": "",
+      "era": "Älter",
       "source": "Owned",
       "image": "images/9476906bbe972495.jpg"
     },
@@ -60,7 +60,7 @@
       "size": "37",
       "price": "120,00 €",
       "retailer": "",
-      "era": "",
+      "era": "Älter",
       "source": "Owned",
       "image": "images/a224d76d797177fc.jpg"
     },
@@ -76,7 +76,7 @@
       "size": "",
       "price": "90,00 €",
       "retailer": "",
-      "era": "",
+      "era": "Letzte 2 Jahre",
       "source": "Owned",
       "image": "images/441416217b324358.jpeg"
     },
@@ -92,7 +92,7 @@
       "size": "",
       "price": "120, 00 €",
       "retailer": "",
-      "era": "",
+      "era": "Letzte 2 Jahre",
       "source": "Owned",
       "image": "images/53d5305d678ceba7.jpg"
     },
@@ -108,7 +108,7 @@
       "size": "36",
       "price": "",
       "retailer": "",
-      "era": "",
+      "era": "Letzte 2 Jahre",
       "source": "Owned",
       "image": "images/1e4072206943d1b0.jpg"
     },
@@ -124,7 +124,7 @@
       "size": "37",
       "price": "24, 00 €",
       "retailer": "",
-      "era": "",
+      "era": "Letzte 2 Jahre",
       "source": "Owned",
       "image": "images/2697aafae6670839.jpg"
     },
@@ -140,7 +140,7 @@
       "size": "",
       "price": "",
       "retailer": "",
-      "era": "",
+      "era": "Letzte 2 Jahre",
       "source": "Owned",
       "image": "images/3e2d6ad673287a9c.jpg"
     },
@@ -157,7 +157,7 @@
       "size": "",
       "price": "80,00 €",
       "retailer": "",
-      "era": "",
+      "era": "Letzte 2 Jahre",
       "source": "Owned",
       "image": "images/4fedf3b519dfae47.jpg"
     },
@@ -172,7 +172,7 @@
       "size": "34",
       "price": "79,00 €",
       "retailer": "COS",
-      "era": "",
+      "era": "Letzte 2 Jahre",
       "source": "",
       "image": "images/582a911195b26498.jpg"
     },
@@ -187,7 +187,7 @@
       "size": "37",
       "price": "90,00 €",
       "retailer": "Camper",
-      "era": "",
+      "era": "Letzte 2 Jahre",
       "source": "",
       "image": "images/a15825c4ad9246a8.avif"
     },
@@ -203,7 +203,7 @@
       "size": "XS",
       "price": "49,95 €",
       "retailer": "Zalando",
-      "era": "",
+      "era": "Letzte 2 Jahre",
       "source": "",
       "image": "images/4159769f790ac473.jpg"
     },
@@ -218,7 +218,7 @@
       "size": "34",
       "price": "180,00 €",
       "retailer": "A Day's March",
-      "era": "",
+      "era": "Letzte 2 Jahre",
       "source": "",
       "image": "images/b59ccec8948eb7e0.jpg"
     },
@@ -233,7 +233,7 @@
       "size": "S",
       "price": "¥30.800",
       "retailer": "mix.tokyo",
-      "era": "",
+      "era": "Letzte 2 Jahre",
       "source": "",
       "image": "images/fd288cc8adf9f487.jpg"
     },
@@ -248,7 +248,7 @@
       "size": "37",
       "price": "205,00 €",
       "retailer": "Miista",
-      "era": "",
+      "era": "Älter",
       "source": "",
       "image": "images/d17a953c506b3ff4.jpg"
     },
@@ -263,7 +263,7 @@
       "size": "XS",
       "price": "39,90 €",
       "retailer": "Uniqlo",
-      "era": "",
+      "era": "Letzte 2 Jahre",
       "source": "",
       "image": "images/fc270b507f9948ee.jpg"
     },
@@ -278,7 +278,7 @@
       "size": "37",
       "price": "170,00 €",
       "retailer": "Zalando",
-      "era": "",
+      "era": "Letzte 2 Jahre",
       "source": "",
       "image": "images/bbb3c65f72976e80.jpg"
     },
@@ -293,7 +293,7 @@
       "size": "XS",
       "price": "",
       "retailer": "Uniqlo",
-      "era": "",
+      "era": "Letzte 2 Jahre",
       "source": "",
       "image": "images/e7988bb04eedea6e.jpg"
     },
@@ -308,7 +308,7 @@
       "size": "S",
       "price": "50,00 €",
       "retailer": "Massimo Dutti",
-      "era": "",
+      "era": "Letzte 2 Jahre",
       "source": "",
       "image": "images/1d343a73f59cf116.jpg"
     },
@@ -323,7 +323,7 @@
       "size": "30/32 (XS)",
       "price": "39,95 €",
       "retailer": "Zalando",
-      "era": "",
+      "era": "Letzte 2 Jahre",
       "source": "",
       "image": "images/75b678258c1506e7.jpg"
     },
@@ -338,7 +338,7 @@
       "size": "30/32 (XS)",
       "price": "39,95 €",
       "retailer": "Zalando",
-      "era": "",
+      "era": "Letzte 2 Jahre",
       "source": "",
       "image": "images/d800032f81f95d47.jpg"
     },
@@ -353,7 +353,7 @@
       "size": "XS",
       "price": "29,00 €",
       "retailer": "Arket",
-      "era": "",
+      "era": "Letzte 2 Jahre",
       "source": "",
       "image": "images/9fabba17ebaca0a4.jpg"
     },
@@ -369,7 +369,7 @@
       "size": "M",
       "price": "12,99 €",
       "retailer": "Zalando",
-      "era": "",
+      "era": "Letzte 2 Jahre",
       "source": "",
       "image": "images/7289aa6b95ab1a6d.jpg"
     },
@@ -384,7 +384,7 @@
       "size": "S",
       "price": "44,95 €",
       "retailer": "Zalando",
-      "era": "",
+      "era": "Letzte 2 Jahre",
       "source": "",
       "image": "images/2e9d47eeffeec424.jpg"
     },
@@ -399,7 +399,7 @@
       "size": "37-38",
       "price": "15,00 €",
       "retailer": "Zalando",
-      "era": "",
+      "era": "Letzte 2 Jahre",
       "source": "",
       "image": "images/f994abc95834f679.jpg"
     }

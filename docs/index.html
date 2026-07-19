@@ -170,6 +170,8 @@ footer{border-top:1px solid var(--line);padding:34px clamp(18px,5vw,56px);
   <div class="filterset" id="catset"><span class="flabel">Type</span></div>
   <div class="spacer"></div>
   <div class="filterset" id="brandset"><span class="flabel">House</span></div>
+  <div class="spacer"></div>
+  <div class="filterset" id="eraset"><span class="flabel">Era</span></div>
   <div class="views" role="group" aria-label="View">
     <button id="vIndex" aria-pressed="true">Index</button>
     <button id="vScatter" aria-pressed="false">Scatter</button>
@@ -200,7 +202,7 @@ const SWATCH={"light grey":"#c9c9c9","black":"#1c1c1c","beige":"#d8c7a8","off bl
 const swatch=c=>SWATCH[c]||"#bdb6a6";
 const esc=s=>String(s).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
 
-let state={cat:"All",brand:"All",view:"index"};
+let state={cat:"All",brand:"All",era:"All",view:"index"};
 const stage=document.getElementById('stage');
 
 /* build filter chips */
@@ -216,10 +218,11 @@ function chips(id,key,values){
 function buildChrome(){
   chips('catset','cat',[...new Set(DATA.flatMap(d=>d.categories))]);
   chips('brandset','brand',[...new Set(DATA.map(d=>d.brand).filter(Boolean))]);
+  chips('eraset','era',[...new Set(DATA.map(d=>d.era).filter(Boolean))]);
 }
 
 function filtered(){
-  return DATA.filter(d=>(state.cat==="All"||d.categories.includes(state.cat))&&(state.brand==="All"||d.brand===state.brand));
+  return DATA.filter(d=>(state.cat==="All"||d.categories.includes(state.cat))&&(state.brand==="All"||d.brand===state.brand)&&(state.era==="All"||d.era===state.era));
 }
 
 function cardEl(d,i){
@@ -290,7 +293,7 @@ function makeDraggable(el){
 const lb=document.getElementById('lb'),sheet=document.getElementById('sheet');
 function openSheet(d){
   const rows=[["Brand",d.brand],["Category",d.categories.join(" / ")],["Colour",d.color],["Size",d.size],
-    ["Price",d.price],["Retailer",d.retailer],["Acquired",d.acquired||"—"],["Source",d.source||"—"]];
+    ["Price",d.price],["Retailer",d.retailer],["Era",d.era||"—"],["Source",d.source||"—"]];
   sheet.innerHTML=`
     <div class="big">${d.image?`<img src="${d.image}" alt="${esc(d.brand)} ${esc(d.name)}">`:`<span class="mono" style="font-size:12px;color:var(--ink-soft);letter-spacing:.14em">NO IMAGE</span>`}</div>
     <div class="info">

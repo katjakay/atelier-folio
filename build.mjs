@@ -39,7 +39,6 @@ async function queryAll() {
         body: JSON.stringify({
           page_size: 100,
           start_cursor: cursor,
-          sorts: [{ property: "Acquired", direction: "descending" }],
         }),
       }
     );
@@ -62,7 +61,6 @@ const plain = (p) =>
   !p ? "" : (p.title ?? p.rich_text ?? []).map((t) => t.plain_text).join("").trim();
 const select = (p) => p?.select?.name ?? "";
 const multi = (p) => (p?.multi_select ?? []).map((o) => o.name);
-const date = (p) => p?.date?.start ?? "";
 const url = (p) => p?.url ?? "";
 
 function toItem(page) {
@@ -76,7 +74,7 @@ function toItem(page) {
     size: plain(p["Size"]),
     price: plain(p["Price"]),
     retailer: select(p["Retailer"]),
-    acquired: date(p["Acquired"]),
+    era: select(p["Era"]),
     source: select(p["Source"]),
     image: url(p["Image"]),
   };

@@ -1,0 +1,49 @@
+name: Build wardrobe
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+  repository_dispatch:
+    types: [notion-updated]
+  push:
+    branches: [main]
+    paths:
+      - "build.mjs"
+      - "docs/index.html"
+      - ".github/workflows/build.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-wardrobe
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build data.json from Notion
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DATA_SOURCE_ID: ${{ secrets.NOTION_DATA_SOURCE_ID }}
+        run: node build.mjs
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name  "wardrobe-bot"
+          git config user.email "actions@github.com"
+          git add docs/data.json docs/images
+          if git diff --staged --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Update wardrobe data ($(date -u +%Y-%m-%d\ %H:%M) UTC)"
+            git push
+          fi

@@ -52,7 +52,7 @@ header{position:sticky;top:0;z-index:60;background:rgba(237,235,228,.86);
 .hero .lede{max-width:44ch;margin:26px 0 0;color:var(--ink-soft);font-size:clamp(15px,1.5vw,18px)}
 
 /* controls */
-.controls{display:flex;flex-wrap:wrap;gap:10px 26px;align-items:center;
+.controls{display:flex;flex-wrap:wrap;row-gap:14px;flex-wrap:wrap;gap:10px 26px;align-items:center;
   padding:8px clamp(18px,5vw,56px) 4px;position:sticky;top:53px;z-index:50;
   background:rgba(237,235,228,.86);backdrop-filter:blur(8px)}
 .filterset{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
@@ -171,6 +171,10 @@ footer{border-top:1px solid var(--line);padding:34px clamp(18px,5vw,56px);
   <div class="spacer"></div>
   <div class="filterset" id="brandset"><span class="flabel">House</span></div>
   <div class="spacer"></div>
+  <div class="filterset" id="seasonset"><span class="flabel">Season</span></div>
+  <div class="spacer"></div>
+  <div class="filterset" id="formset"><span class="flabel">Wear</span></div>
+  <div class="spacer"></div>
   <div class="filterset" id="eraset"><span class="flabel">Era</span></div>
   <div class="views" role="group" aria-label="View">
     <button id="vIndex" aria-pressed="true">Index</button>
@@ -188,7 +192,7 @@ footer{border-top:1px solid var(--line);padding:34px clamp(18px,5vw,56px);
 </div>
 
 <footer>
-  <span id="stamp">sourced from order confirmations</span>
+  <span id="stamp">wardrobe inventory</span>
   <span>Images © their respective brands</span>
 </footer>
 
@@ -200,9 +204,12 @@ const SWATCH={"light grey":"#c9c9c9","black":"#1c1c1c","beige":"#d8c7a8","off bl
 "scampi":"#e8825f","better scarlet/white":"#c2352c","night indigo/white":"#2f3552",
 "Weiß":"#f2efe8","braun":"#7c5a3a"};
 const swatch=c=>SWATCH[c]||"#bdb6a6";
+const eur=s=>{const m=(s||"").replace(/\./g,"").match(/(\d+),(\d{2})/);return m?+m[1]+ +m[2]/100:null;};
+const cpw=d=>{const p=eur(d.price);if(p==null||!d.worn)return"—";
+  const v=p/d.worn;return(v<10?v.toFixed(2):Math.round(v))+" € / Tragen";};
 const esc=s=>String(s).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
 
-let state={cat:"All",brand:"All",era:"All",view:"index"};
+let state={cat:"All",brand:"All",season:"All",form:"All",era:"All",view:"index"};
 const stage=document.getElementById('stage');
 
 /* build filter chips */
@@ -218,11 +225,13 @@ function chips(id,key,values){
 function buildChrome(){
   chips('catset','cat',[...new Set(DATA.flatMap(d=>d.categories))]);
   chips('brandset','brand',[...new Set(DATA.map(d=>d.brand).filter(Boolean))]);
+  chips('seasonset','season',[...new Set(DATA.flatMap(d=>d.seasons||[]))]);
+  chips('formset','form',[...new Set(DATA.map(d=>d.formality).filter(Boolean))]);
   chips('eraset','era',[...new Set(DATA.map(d=>d.era).filter(Boolean))]);
 }
 
 function filtered(){
-  return DATA.filter(d=>(state.cat==="All"||d.categories.includes(state.cat))&&(state.brand==="All"||d.brand===state.brand)&&(state.era==="All"||d.era===state.era));
+  return DATA.filter(d=>(state.cat==="All"||d.categories.includes(state.cat))&&(state.brand==="All"||d.brand===state.brand)&&(state.season==="All"||(d.seasons||[]).includes(state.season))&&(state.form==="All"||d.formality===state.form)&&(state.era==="All"||d.era===state.era));
 }
 
 function cardEl(d,i){
@@ -293,7 +302,7 @@ function makeDraggable(el){
 const lb=document.getElementById('lb'),sheet=document.getElementById('sheet');
 function openSheet(d){
   const rows=[["Brand",d.brand],["Category",d.categories.join(" / ")],["Colour",d.color],["Size",d.size],
-    ["Price",d.price],["Retailer",d.retailer],["Era",d.era||"—"],["Source",d.source||"—"]];
+    ["Price",d.price],["Season",(d.seasons||[]).join(" / ")||"—"],["Wear",d.formality||"—"],["Era",d.era||"—"],["Worn",d.worn==null?"—":d.worn+"×"],["Per wear",cpw(d)]];
   sheet.innerHTML=`
     <div class="big">${d.image?`<img src="${d.image}" alt="${esc(d.brand)} ${esc(d.name)}">`:`<span class="mono" style="font-size:12px;color:var(--ink-soft);letter-spacing:.14em">NO IMAGE</span>`}</div>
     <div class="info">

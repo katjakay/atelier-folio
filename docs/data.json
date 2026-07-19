@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-19T15:43:49.389Z",
-  "count": 24,
+  "generated_at": "2026-07-19T16:41:44.801Z",
+  "count": 25,
   "brands": 19,
   "items": [
     {
@@ -63,6 +63,21 @@
       "acquired": "2026-06-09",
       "source": "",
       "image": "images/9fabba17ebaca0a4.jpg"
+    },
+    {
+      "id": "3a280662-348e-808c-b6cc-f9f9a80f72f8",
+      "name": "Drapiertes Tanktop",
+      "brand": "Arket",
+      "categories": [
+        "Top"
+      ],
+      "color": "navy",
+      "size": "XS",
+      "price": "29,00 €",
+      "retailer": "Arket",
+      "acquired": "2026-06-01",
+      "source": "Owned",
+      "image": "images/53adf7695790cecc.jpg"
     },
     {
       "id": "3a280662-348e-815e-961b-f6edd05383d0",

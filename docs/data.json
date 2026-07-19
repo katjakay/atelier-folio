@@ -1,8 +1,53 @@
 {
-  "generated_at": "2026-07-19T19:40:02.444Z",
-  "count": 28,
-  "brands": 19,
+  "generated_at": "2026-07-19T20:00:30.549Z",
+  "count": 31,
+  "brands": 21,
   "items": [
+    {
+      "id": "3a280662-348e-8075-b339-c2011e437b02",
+      "name": "Double-face Wool Coat",
+      "brand": "COS",
+      "categories": [
+        "Coat"
+      ],
+      "color": "navy / brown",
+      "size": "XS",
+      "price": "239,00 €",
+      "retailer": "COS",
+      "era": "Letzte 2 Jahre",
+      "source": "Order",
+      "image": "images/361c8a35953ecff3.jpg"
+    },
+    {
+      "id": "3a280662-348e-801c-b034-db93ae0779cd",
+      "name": "White Cropped Jeans",
+      "brand": "Mango",
+      "categories": [
+        "Trousers"
+      ],
+      "color": "white",
+      "size": "36",
+      "price": "29,99 €",
+      "retailer": "Mango",
+      "era": "Letzte 2 Jahre",
+      "source": "Owned",
+      "image": "images/82b78f714b5c9cf5.jpg"
+    },
+    {
+      "id": "3a280662-348e-80e9-b220-f661e834229e",
+      "name": "Black Linen Cardigan",
+      "brand": "Agnes B.",
+      "categories": [
+        "Knits"
+      ],
+      "color": "black",
+      "size": "1",
+      "price": "165,00 €",
+      "retailer": "Agnes B.",
+      "era": "Letzte 2 Jahre",
+      "source": "Owned",
+      "image": "images/fe5bb9a60eb27de7.jpg"
+    },
     {
       "id": "3a280662-348e-80e8-bc9d-f7e98c013ef5",
       "name": "Boiled Merino Sweater",
@@ -15,7 +60,7 @@
       "price": "120,00 €",
       "retailer": "",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "source": "Order",
       "image": "images/319d9ad4e1391a4a.jpg"
     },
     {

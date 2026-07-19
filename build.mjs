@@ -1,5 +1,5 @@
 /**
- * Reads the Fashion Orders data source from Notion and writes docs/data.json,
+ * Reads the Wardrobe data source from Notion and writes docs/data.json,
  * mirroring every product image into docs/images/ so the archive keeps working
  * after retailer CDN links rot.
  *
@@ -62,6 +62,7 @@ const plain = (p) =>
 const select = (p) => p?.select?.name ?? "";
 const multi = (p) => (p?.multi_select ?? []).map((o) => o.name);
 const url = (p) => p?.url ?? "";
+const num = (p) => (typeof p?.number === "number" ? p.number : null);
 
 function toItem(page) {
   const p = page.properties;
@@ -73,9 +74,10 @@ function toItem(page) {
     color: plain(p["Colour"]),
     size: plain(p["Size"]),
     price: plain(p["Price"]),
-    retailer: select(p["Retailer"]),
+    seasons: multi(p["Season"]),
+    formality: select(p["Formality"]),
     era: select(p["Era"]),
-    source: select(p["Source"]),
+    worn: num(p["Worn"]),
     image: url(p["Image"]),
   };
 }

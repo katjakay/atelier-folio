@@ -52,13 +52,6 @@ header{position:sticky;top:0;z-index:60;background:rgba(237,235,228,.86);
   font-size:clamp(44px,11vw,140px)}
 .hero h1 em{font-style:normal;color:var(--accent)}
 .hero .lede{max-width:44ch;margin:26px 0 0;color:var(--ink-soft);font-size:clamp(15px,1.5vw,18px)}
-.floaters{position:absolute;inset:0;pointer-events:none;overflow:hidden}
-.floaters img{position:absolute;width:120px;height:150px;object-fit:contain;
-  background:var(--panel);border:1px solid var(--line);padding:8px;
-  box-shadow:0 18px 40px -26px rgba(0,0,0,.5)}
-.floaters .f1{right:6vw;top:16%;transform:rotate(6deg)}
-.floaters .f2{right:20vw;top:52%;transform:rotate(-8deg);width:100px;height:128px}
-@media(max-width:820px){.floaters{display:none}}
 
 /* controls */
 .controls{display:flex;flex-wrap:wrap;gap:10px 26px;align-items:center;
@@ -171,10 +164,9 @@ footer{border-top:1px solid var(--line);padding:34px clamp(18px,5vw,56px);
 </header>
 
 <section class="hero">
-  <p class="eyebrow">Personal index — 2026</p>
-  <h1>Everything I<br>bought, laid <em>out flat.</em></h1>
-  <p class="lede">A live catalogue of every garment, shoe and accessory pulled from my order history — sortable, scatterable, and honest about the receipt.</p>
-  <div class="floaters" aria-hidden="true" id="floaters"></div>
+  <p class="eyebrow">Personal archive — 2026</p>
+  <h1>Apparel<br><em>Inventory</em></h1>
+  <p class="lede">Every garment, shoe and accessory I own.</p>
 </section>
 
 <div class="controls">
@@ -227,10 +219,6 @@ function chips(id,key,values){
 function buildChrome(){
   chips('catset','cat',[...new Set(DATA.flatMap(d=>d.categories))]);
   chips('brandset','brand',[...new Set(DATA.map(d=>d.brand).filter(Boolean))]);
-  const f=document.getElementById('floaters');
-  DATA.filter(d=>d.image).slice(3,5).forEach((d,i)=>{
-    const im=new Image();im.src=d.image;im.className='f'+(i+1);im.alt='';f.appendChild(im);
-  });
 }
 
 function filtered(){

@@ -1,8 +1,38 @@
 {
-  "generated_at": "2026-07-19T18:45:24.357Z",
-  "count": 26,
+  "generated_at": "2026-07-19T19:40:02.444Z",
+  "count": 28,
   "brands": 19,
   "items": [
+    {
+      "id": "3a280662-348e-80e8-bc9d-f7e98c013ef5",
+      "name": "Boiled Merino Sweater",
+      "brand": "A Day's March",
+      "categories": [
+        "Knits"
+      ],
+      "color": "coffee",
+      "size": "",
+      "price": "120,00 €",
+      "retailer": "",
+      "era": "Letzte 2 Jahre",
+      "source": "",
+      "image": "images/319d9ad4e1391a4a.jpg"
+    },
+    {
+      "id": "3a280662-348e-80ff-b07c-eadd5a27eeb2",
+      "name": "JWA dark jeans",
+      "brand": "Uniqlo",
+      "categories": [
+        "Trousers"
+      ],
+      "color": "dark blue",
+      "size": "25",
+      "price": "49,00 €",
+      "retailer": "Uniqlo",
+      "era": "Letzte 2 Jahre",
+      "source": "Owned",
+      "image": "images/04007aed0ee12ad8.jpg"
+    },
     {
       "id": "3a280662-348e-80b1-be91-f04d0a808dd7",
       "name": "All-weather Jacke",
@@ -15,7 +45,7 @@
       "price": "120,00 €",
       "retailer": "and wander",
       "era": "Letzte 2 Jahre",
-      "source": "",
+      "source": "Owned",
       "image": "images/cfd95545363707fa.jpg"
     },
     {

@@ -1,8 +1,28 @@
 {
-  "generated_at": "2026-07-19T20:54:48.653Z",
-  "count": 31,
+  "generated_at": "2026-07-19T21:11:39.538Z",
+  "count": 32,
   "brands": 21,
   "items": [
+    {
+      "id": "3a280662-348e-8030-ba55-c22acfea1de4",
+      "name": "Jersey Barrel Pants",
+      "brand": "Uniqlo",
+      "categories": [
+        "Trousers"
+      ],
+      "color": "white",
+      "size": "XS",
+      "price": "39,90 €",
+      "seasons": [
+        "Sommer",
+        "Übergang",
+        "Winter"
+      ],
+      "formality": "Smart",
+      "era": "Letzte 2 Jahre",
+      "worn": null,
+      "image": "images/0f374bc36db20856.jpg"
+    },
     {
       "id": "3a280662-348e-8075-b339-c2011e437b02",
       "name": "Double-face Wool Coat",
@@ -146,7 +166,7 @@
       ],
       "color": "black",
       "size": "",
-      "price": "",
+      "price": "150,00 €",
       "seasons": [
         "Sommer",
         "Übergang",
@@ -228,7 +248,7 @@
       ],
       "color": "cognac",
       "size": "36",
-      "price": "",
+      "price": "100,00 €",
       "seasons": [
         "Sommer"
       ],
@@ -460,7 +480,7 @@
       ],
       "color": "dark brown",
       "size": "XS",
-      "price": "",
+      "price": "39,90 €",
       "seasons": [
         "Sommer",
         "Übergang",

@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-19T10:28:48.184Z",
-  "count": 25,
-  "orders": 12,
+  "generated_at": "2026-07-19T10:41:10.318Z",
+  "count": 16,
+  "orders": 14,
   "items": [
     {
       "id": "3a280662-348e-814d-a536-e7ac94b611cb",
@@ -31,119 +31,6 @@
       "retailer": "Zalando",
       "order_date": "2026-07-09",
       "image": "images/7289aa6b95ab1a6d.jpg"
-    },
-    {
-      "id": "3a080662-348e-8124-93d2-ff839d738055",
-      "name": "MINI Shorts",
-      "brand": "Stradivarius",
-      "categories": [
-        "Shorts"
-      ],
-      "color": "black",
-      "size": "S",
-      "price": "15,99 €",
-      "retailer": "Zalando",
-      "order_date": "2026-07-09",
-      "image": "images/057ec2c536d6371c.jpg"
-    },
-    {
-      "id": "3a080662-348e-8124-9c01-e2434d425486",
-      "name": "HALTER WRAP Top",
-      "brand": "Weekday",
-      "categories": [
-        "Top"
-      ],
-      "color": "off black",
-      "size": "S",
-      "price": "23,00 €",
-      "retailer": "Zalando",
-      "order_date": "2026-07-09",
-      "image": "images/419f058030294c95.jpg"
-    },
-    {
-      "id": "3a080662-348e-8150-951e-c06c4c2ba120",
-      "name": "DOUBLE CONTRAST T-Shirt print",
-      "brand": "Stradivarius",
-      "categories": [
-        "T-Shirt"
-      ],
-      "color": "beige",
-      "size": "S",
-      "price": "17,99 €",
-      "retailer": "Zalando",
-      "order_date": "2026-07-09",
-      "image": "images/7a32312322188c79.jpg"
-    },
-    {
-      "id": "3a080662-348e-8172-b0d9-df98c6433a90",
-      "name": "TANK Top",
-      "brand": "Weekday",
-      "categories": [
-        "Top"
-      ],
-      "color": "beige",
-      "size": "S",
-      "price": "16,00 €",
-      "retailer": "Zalando",
-      "order_date": "2026-07-09",
-      "image": "images/515b37e7560bdceb.jpg"
-    },
-    {
-      "id": "3a080662-348e-8183-ad7f-d97a9ddab87d",
-      "name": "Shorts",
-      "brand": "adidas Originals",
-      "categories": [
-        "Shorts"
-      ],
-      "color": "black",
-      "size": "34/36 (S)",
-      "price": "34,95 €",
-      "retailer": "Zalando",
-      "order_date": "2026-07-09",
-      "image": "images/40e1e8657aa91e1e.jpg"
-    },
-    {
-      "id": "3a080662-348e-818e-a6db-d53f36032698",
-      "name": "SPORTS SHORTS",
-      "brand": "Pull&Bear",
-      "categories": [
-        "Shorts",
-        "Sports"
-      ],
-      "color": "light grey",
-      "size": "M",
-      "price": "14,39 €",
-      "retailer": "Zalando",
-      "order_date": "2026-07-09",
-      "image": "images/5f5cc3eaaf7e1456.jpg"
-    },
-    {
-      "id": "3a080662-348e-81a0-862c-fb231da3d8aa",
-      "name": "LAYERED TANK Top",
-      "brand": "Weekday",
-      "categories": [
-        "Top"
-      ],
-      "color": "mole dark",
-      "size": "S",
-      "price": "25,00 €",
-      "retailer": "Zalando",
-      "order_date": "2026-07-09",
-      "image": "images/c01a2a220d7af8b3.jpg"
-    },
-    {
-      "id": "3a080662-348e-81b6-a0ad-eba7c15061ca",
-      "name": "RAY BOLERO T-Shirt basic",
-      "brand": "Weekday",
-      "categories": [
-        "T-Shirt"
-      ],
-      "color": "off white",
-      "size": "S",
-      "price": "20,00 €",
-      "retailer": "Zalando",
-      "order_date": "2026-07-09",
-      "image": "images/326620df8c36e913.jpg"
     },
     {
       "id": "3a280662-348e-8188-b0e2-dcdd15507296",
@@ -217,33 +104,18 @@
       "image": "images/4159769f790ac473.jpg"
     },
     {
-      "id": "3a080662-348e-810f-80ff-f62f2bda0286",
-      "name": "RUN Langarmshirt",
-      "brand": "adidas Performance",
+      "id": "3a280662-348e-80bd-abf1-d9c72e70a455",
+      "name": "Boat-Neck Cotton Shirt",
+      "brand": "COS",
       "categories": [
-        "Long-sleeve top",
-        "Sports"
+        "Blouse"
       ],
-      "color": "crystal linen",
-      "size": "S",
-      "price": "34,95 €",
-      "retailer": "Zalando",
-      "order_date": "2026-01-03",
-      "image": "images/7426cc48ac40862d.jpg"
-    },
-    {
-      "id": "3a080662-348e-8143-a8ba-ddd63a459833",
-      "name": "Tights",
-      "brand": "adidas Performance",
-      "categories": [
-        "Leggings"
-      ],
-      "color": "black",
-      "size": "S",
-      "price": "39,95 €",
-      "retailer": "Zalando",
-      "order_date": "2026-01-03",
-      "image": "images/9c04fd0ed07debda.jpg"
+      "color": "white",
+      "size": "34",
+      "price": "79,00 €",
+      "retailer": "COS",
+      "order_date": "2026-01-19",
+      "image": "images/582a911195b26498.jpg"
     },
     {
       "id": "3a080662-348e-8182-a1d1-fcf445e2c979",
@@ -258,20 +130,6 @@
       "retailer": "Zalando",
       "order_date": "2026-01-03",
       "image": "images/2e9d47eeffeec424.jpg"
-    },
-    {
-      "id": "3a080662-348e-81a6-a540-f61205e50f16",
-      "name": "ALL ME SCULPT Tights",
-      "brand": "adidas Performance",
-      "categories": [
-        "Leggings"
-      ],
-      "color": "black",
-      "size": "S",
-      "price": "31,65 €",
-      "retailer": "Zalando",
-      "order_date": "2026-01-03",
-      "image": "images/6999dd702d05b56b.jpg"
     },
     {
       "id": "3a080662-348e-81bc-88b6-f1f56e9a2009",
@@ -300,6 +158,20 @@
       "retailer": "A Day's March",
       "order_date": "2025-09-01",
       "image": "images/b59ccec8948eb7e0.jpg"
+    },
+    {
+      "id": "3a280662-348e-8097-98bc-dcc92ea54e26",
+      "name": "Tasha Camper",
+      "brand": "Camper",
+      "categories": [
+        "Shoes"
+      ],
+      "color": "black",
+      "size": "37",
+      "price": "90,00 €",
+      "retailer": "Camper",
+      "order_date": "2025-07-19",
+      "image": "images/a15825c4ad9246a8.avif"
     },
     {
       "id": "3a280662-348e-816d-8652-d76d09049d9d",

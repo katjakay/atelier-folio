@@ -1,0 +1,148 @@
+/**
+ * Reads the Fashion Orders data source from Notion and writes docs/data.json,
+ * mirroring every product image into docs/images/ so the archive keeps working
+ * after retailer CDN links rot.
+ *
+ * Env: NOTION_TOKEN, NOTION_DATA_SOURCE_ID
+ */
+import fs from "node:fs/promises";
+import path from "node:path";
+import crypto from "node:crypto";
+
+const TOKEN = process.env.NOTION_TOKEN;
+const DATA_SOURCE_ID = process.env.NOTION_DATA_SOURCE_ID;
+const NOTION_VERSION = "2025-09-03";
+
+const OUT_DIR = "docs";
+const IMG_DIR = path.join(OUT_DIR, "images");
+
+if (!TOKEN || !DATA_SOURCE_ID) {
+  console.error("Missing NOTION_TOKEN or NOTION_DATA_SOURCE_ID.");
+  process.exit(1);
+}
+
+/* ---------- Notion ---------- */
+
+async function queryAll() {
+  const rows = [];
+  let cursor;
+  do {
+    const res = await fetch(
+      `https://api.notion.com/v1/data_sources/${DATA_SOURCE_ID}/query`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${TOKEN}`,
+          "Notion-Version": NOTION_VERSION,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          page_size: 100,
+          start_cursor: cursor,
+          sorts: [{ property: "Order date", direction: "descending" }],
+        }),
+      }
+    );
+
+    if (!res.ok) {
+      throw new Error(`Notion API ${res.status}: ${await res.text()}`);
+    }
+
+    const json = await res.json();
+    rows.push(...json.results);
+    cursor = json.has_more ? json.next_cursor : undefined;
+  } while (cursor);
+
+  return rows;
+}
+
+/* ---------- property readers ---------- */
+
+const plain = (p) =>
+  !p ? "" : (p.title ?? p.rich_text ?? []).map((t) => t.plain_text).join("").trim();
+const select = (p) => p?.select?.name ?? "";
+const multi = (p) => (p?.multi_select ?? []).map((o) => o.name);
+const date = (p) => p?.date?.start ?? "";
+const url = (p) => p?.url ?? "";
+
+function toItem(page) {
+  const p = page.properties;
+  return {
+    id: page.id,
+    name: plain(p["Name"]),
+    brand: select(p["Brand"]),
+    categories: multi(p["Category"]),
+    color: plain(p["Colour"]),
+    size: plain(p["Size"]),
+    price: plain(p["Price"]),
+    retailer: select(p["Retailer"]),
+    order_date: date(p["Order date"]),
+    image: url(p["Image"]),
+  };
+}
+
+/* ---------- image mirroring ---------- */
+
+async function mirrorImage(remote) {
+  if (!remote) return "";
+
+  const hash = crypto.createHash("sha1").update(remote).digest("hex").slice(0, 16);
+  const ext = (path.extname(new URL(remote).pathname) || ".jpg")
+    .split("?")[0]
+    .toLowerCase();
+  const file = `${hash}${ext}`;
+  const dest = path.join(IMG_DIR, file);
+  const rel = `images/${file}`;
+
+  // already mirrored on a previous run
+  try {
+    await fs.access(dest);
+    return rel;
+  } catch {}
+
+  try {
+    const res = await fetch(remote, {
+      headers: {
+        // some retailer CDNs reject requests without a browser-ish UA
+        "User-Agent":
+          "Mozilla/5.0 (compatible; wardrobe-archive/1.0; +https://github.com)",
+        Accept: "image/avif,image/webp,image/*,*/*;q=0.8",
+      },
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    await fs.writeFile(dest, Buffer.from(await res.arrayBuffer()));
+    console.log(`  mirrored ${file}`);
+    return rel;
+  } catch (err) {
+    console.warn(`  ! could not mirror ${remote} (${err.message}) — using remote URL`);
+    return remote;
+  }
+}
+
+/* ---------- main ---------- */
+
+const pages = await queryAll();
+console.log(`Fetched ${pages.length} rows from Notion.`);
+
+await fs.mkdir(IMG_DIR, { recursive: true });
+
+const items = [];
+for (const page of pages) {
+  const item = toItem(page);
+  item.image = await mirrorImage(item.image);
+  items.push(item);
+}
+
+const payload = {
+  generated_at: new Date().toISOString(),
+  count: items.length,
+  orders: new Set(items.map((i) => `${i.retailer}|${i.order_date}`)).size,
+  items,
+};
+
+await fs.writeFile(
+  path.join(OUT_DIR, "data.json"),
+  JSON.stringify(payload, null, 2) + "\n"
+);
+
+console.log(`Wrote ${OUT_DIR}/data.json — ${items.length} pieces, ${payload.orders} orders.`);

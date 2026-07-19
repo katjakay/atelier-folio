@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-19T16:41:44.801Z",
-  "count": 25,
+  "generated_at": "2026-07-19T17:45:57.916Z",
+  "count": 26,
   "brands": 19,
   "items": [
     {
@@ -229,6 +229,21 @@
       "acquired": "2024-05-01",
       "source": "",
       "image": "images/d17a953c506b3ff4.jpg"
+    },
+    {
+      "id": "3a280662-348e-80b1-be91-f04d0a808dd7",
+      "name": "All-weather Jacke",
+      "brand": "and wander",
+      "categories": [
+        "Jacket"
+      ],
+      "color": "white",
+      "size": "S",
+      "price": "120,00 €",
+      "retailer": "and wander",
+      "acquired": "",
+      "source": "",
+      "image": "images/cfd95545363707fa.jpg"
     },
     {
       "id": "3a280662-348e-814b-93e4-c4246e49e8c1",

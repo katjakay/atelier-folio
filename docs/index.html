@@ -198,7 +198,7 @@ footer{border-top:1px solid var(--line);padding:34px clamp(18px,5vw,56px);
 
 <footer>
   <span id="stamp">sourced from order confirmations</span>
-  <span>Images © their respective brands · Zalando, Arket, Massimo Dutti</span>
+  <span>Images © their respective brands</span>
 </footer>
 
 <script>
@@ -226,9 +226,9 @@ function chips(id,key,values){
 }
 function buildChrome(){
   chips('catset','cat',[...new Set(DATA.flatMap(d=>d.categories))]);
-  chips('brandset','brand',[...new Set(DATA.map(d=>d.brand))]);
+  chips('brandset','brand',[...new Set(DATA.map(d=>d.brand).filter(Boolean))]);
   const f=document.getElementById('floaters');
-  [DATA[5],DATA[3]].filter(Boolean).forEach((d,i)=>{
+  DATA.filter(d=>d.image).slice(3,5).forEach((d,i)=>{
     const im=new Image();im.src=d.image;im.className='f'+(i+1);im.alt='';f.appendChild(im);
   });
 }
@@ -244,7 +244,7 @@ function cardEl(d,i){
   el.style.animationDelay=(i*0.03)+'s';
   el.tabIndex=0;
   el.innerHTML=`
-    <div class="frame"><img loading="lazy" src="${d.image}" alt="${esc(d.brand)} ${esc(d.name)}"></div>
+    <div class="frame">${d.image?`<img loading="lazy" src="${d.image}" alt="${esc(d.brand)} ${esc(d.name)}">`:`<span class="mono" style="font-size:11px;color:var(--ink-soft);letter-spacing:.14em">NO IMAGE</span>`}</div>
     <div class="meta">
       <div class="l">
         <div class="brand">${esc(d.brand)}</div>
@@ -306,9 +306,9 @@ function makeDraggable(el){
 const lb=document.getElementById('lb'),sheet=document.getElementById('sheet');
 function openSheet(d){
   const rows=[["Brand",d.brand],["Category",d.categories.join(" / ")],["Colour",d.color],["Size",d.size],
-    ["Price",d.price],["Retailer",d.retailer],["Order date",d.order_date],["Order no.",d.order]];
+    ["Price",d.price],["Retailer",d.retailer],["Acquired",d.acquired||"—"],["Source",d.source||"—"]];
   sheet.innerHTML=`
-    <div class="big"><img src="${d.image}" alt="${esc(d.brand)} ${esc(d.name)}"></div>
+    <div class="big">${d.image?`<img src="${d.image}" alt="${esc(d.brand)} ${esc(d.name)}">`:`<span class="mono" style="font-size:12px;color:var(--ink-soft);letter-spacing:.14em">NO IMAGE</span>`}</div>
     <div class="info">
       <button class="close" aria-label="Close" id="x">×</button>
       <p class="eyebrow">${esc(d.brand)}</p>
@@ -345,7 +345,7 @@ fetch('data.json?v='+Date.now())
     render();
     const d=new Date(payload.generated_at);
     document.getElementById('stamp').textContent=
-      DATA.length+' pieces · '+payload.orders+' orders · updated '+
+      DATA.length+' pieces · '+payload.brands+' brands · updated '+
       d.toISOString().slice(0,10);
   })
   .catch(err=>{

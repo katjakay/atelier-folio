@@ -39,7 +39,7 @@ async function queryAll() {
         body: JSON.stringify({
           page_size: 100,
           start_cursor: cursor,
-          sorts: [{ property: "Order date", direction: "descending" }],
+          sorts: [{ property: "Acquired", direction: "descending" }],
         }),
       }
     );
@@ -76,7 +76,8 @@ function toItem(page) {
     size: plain(p["Size"]),
     price: plain(p["Price"]),
     retailer: select(p["Retailer"]),
-    order_date: date(p["Order date"]),
+    acquired: date(p["Acquired"]),
+    source: select(p["Source"]),
     image: url(p["Image"]),
   };
 }
@@ -136,7 +137,7 @@ for (const page of pages) {
 const payload = {
   generated_at: new Date().toISOString(),
   count: items.length,
-  orders: new Set(items.map((i) => `${i.retailer}|${i.order_date}`)).size,
+  brands: new Set(items.map((i) => i.brand).filter(Boolean)).size,
   items,
 };
 
@@ -145,4 +146,4 @@ await fs.writeFile(
   JSON.stringify(payload, null, 2) + "\n"
 );
 
-console.log(`Wrote ${OUT_DIR}/data.json — ${items.length} pieces, ${payload.orders} orders.`);
+console.log(`Wrote ${OUT_DIR}/data.json — ${items.length} pieces, ${payload.brands} brands.`);

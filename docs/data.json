@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T11:50:21.537Z",
+  "generated_at": "2026-07-20T11:52:23.132Z",
   "count": 37,
   "brands": 22,
   "items": [
@@ -38,7 +38,8 @@
       "formality": "Smart",
       "era": "Letzte 2 Jahre",
       "worn": 1,
-      "image": ""
+      "image": "images/ca5e8fab8fe9d20e.jpeg",
+      "own_photo": true
     },
     {
       "id": "3a380662-348e-8074-95e7-c85be6edf357",

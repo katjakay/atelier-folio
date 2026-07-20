@@ -52,7 +52,7 @@ Accept: application/vnd.github+json
 
 `build.mjs` reads these properties by name: `Name` (title), `Brand` (select),
 `Category` (multi-select), `Colour`, `Size`, `Price` (text), `Retailer` (select),
-`Order date` (date), `Image` (url). Renaming a property in Notion means renaming it in
+`Acquired` (date), `Source` (select), `Image` (url). Renaming a property in Notion means renaming it in
 `toItem()` too — the build will otherwise emit blank fields rather than failing loudly.
 
 ## Images

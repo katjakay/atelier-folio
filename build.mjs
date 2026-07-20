@@ -62,6 +62,10 @@ const plain = (p) =>
 const select = (p) => p?.select?.name ?? "";
 const multi = (p) => (p?.multi_select ?? []).map((o) => o.name);
 const url = (p) => p?.url ?? "";
+const file = (p) => {
+  const f = (p?.files ?? [])[0];
+  return f?.file?.url ?? f?.external?.url ?? "";
+};
 const num = (p) => (typeof p?.number === "number" ? p.number : null);
 
 function toItem(page) {
@@ -79,15 +83,18 @@ function toItem(page) {
     era: select(p["Era"]),
     worn: num(p["Worn"]),
     image: url(p["Image"]),
+    photo: file(p["Photo"]),
   };
 }
 
 /* ---------- image mirroring ---------- */
 
-async function mirrorImage(remote) {
+async function mirrorImage(remote, cacheKey) {
   if (!remote) return "";
 
-  const hash = crypto.createHash("sha1").update(remote).digest("hex").slice(0, 16);
+  // Notion-hosted files come back as signed URLs that change on every query,
+  // so hash a stable key instead — otherwise every run re-downloads the file.
+  const hash = crypto.createHash("sha1").update(cacheKey || remote).digest("hex").slice(0, 16);
   const ext = (path.extname(new URL(remote).pathname) || ".jpg")
     .split("?")[0]
     .toLowerCase();
@@ -130,7 +137,16 @@ await fs.mkdir(IMG_DIR, { recursive: true });
 const items = [];
 for (const page of pages) {
   const item = toItem(page);
-  item.image = await mirrorImage(item.image);
+
+  // Image (retailer URL) wins; own Photo is the fallback.
+  if (item.image) {
+    item.image = await mirrorImage(item.image, item.image);
+  } else if (item.photo) {
+    item.image = await mirrorImage(item.photo, `notion:${page.id}`);
+    item.own_photo = true;
+  }
+  delete item.photo;
+
   items.push(item);
 }
 

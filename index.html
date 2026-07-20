@@ -64,6 +64,8 @@ header{position:sticky;top:0;z-index:60;background:rgba(237,235,228,.86);
 .chip:hover{border-color:var(--ink)}
 .chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .spacer{flex:1 1 40px}
+.fitlink{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px}
+.fitlink:hover{border-bottom-color:var(--accent)}
 .views{display:flex;gap:4px;border:1px solid var(--line);border-radius:100px;padding:3px}
 .views button{font-family:"Space Mono",monospace;font-size:12px;border:0;background:transparent;
   color:var(--ink-soft);padding:5px 14px;border-radius:100px;cursor:pointer}
@@ -176,6 +178,7 @@ footer{border-top:1px solid var(--line);padding:34px clamp(18px,5vw,56px);
   <div class="filterset" id="formset"><span class="flabel">Wear</span></div>
   <div class="spacer"></div>
   <div class="filterset" id="eraset"><span class="flabel">Era</span></div>
+  <a class="fitlink" href="fitting.html">Fitting room →</a>
   <div class="views" role="group" aria-label="View">
     <button id="vIndex" aria-pressed="true">Index</button>
     <button id="vScatter" aria-pressed="false">Scatter</button>
@@ -336,7 +339,7 @@ addEventListener('resize',()=>{if(state.view==='scatter')render()});
 fetch('data.json?v='+Date.now())
   .then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
   .then(payload=>{
-    DATA=payload.items||[];
+    DATA=(payload.items||[]).filter(d=>d.status!=='Wishlist');
     buildChrome();
     render();
     const d=new Date(payload.generated_at);

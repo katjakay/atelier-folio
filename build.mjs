@@ -81,6 +81,8 @@ function toItem(page) {
     seasons: multi(p["Season"]),
     formality: select(p["Formality"]),
     era: select(p["Era"]),
+    status: select(p["Status"]) || "Owned",
+    link: url(p["Link"]),
     worn: num(p["Worn"]),
     image: url(p["Image"]),
     photo: file(p["Photo"]),
@@ -153,7 +155,11 @@ for (const page of pages) {
 const payload = {
   generated_at: new Date().toISOString(),
   count: items.length,
-  brands: new Set(items.map((i) => i.brand).filter(Boolean)).size,
+  brands: new Set(
+    items.filter((i) => i.status !== "Wishlist").map((i) => i.brand).filter(Boolean)
+  ).size,
+  owned: items.filter((i) => i.status !== "Wishlist").length,
+  wishlist: items.filter((i) => i.status === "Wishlist").length,
   items,
 };
 
@@ -162,4 +168,6 @@ await fs.writeFile(
   JSON.stringify(payload, null, 2) + "\n"
 );
 
-console.log(`Wrote ${OUT_DIR}/data.json — ${items.length} pieces, ${payload.brands} brands.`);
+console.log(
+  `Wrote ${OUT_DIR}/data.json — ${payload.owned} owned, ${payload.wishlist} wishlist, ${payload.brands} brands.`
+);

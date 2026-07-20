@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fitting Room — Atelier Folio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EDEBE4; --panel:#F6F5F1; --ink:#17140E; --ink-soft:#5B564C;
+  --line:#D8D3C7; --accent:#6E6CEB; --chip:#E3DFD5;
+  --good:#3F7D58; --warn:#B5762A; --bad:#A8443B;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Space Grotesk",system-ui,sans-serif;font-size:16px;line-height:1.45;
+  letter-spacing:-0.01em}
+a{color:inherit}
+.mono{font-family:"Space Mono",ui-monospace,monospace}
+.eyebrow{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--ink-soft)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(18px,4vw,54px)}
+
+header{display:flex;justify-content:space-between;align-items:center;
+  padding:26px 0;border-bottom:1px solid var(--line)}
+.wordmark{font-family:"Space Mono",monospace;font-size:15px;letter-spacing:.2em;
+  text-transform:uppercase;text-decoration:none}
+.wordmark span{color:var(--accent)}
+.back{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--accent);text-decoration:none}
+
+.hero{padding:clamp(46px,7vw,84px) 0 clamp(30px,4vw,48px)}
+h1{font-size:clamp(40px,8vw,86px);line-height:.94;letter-spacing:-0.045em;
+  margin:14px 0 0;font-weight:400}
+h1 em{font-style:normal;color:var(--accent)}
+.lede{max-width:52ch;margin:22px 0 0;color:var(--ink-soft);
+  font-size:clamp(15px,1.5vw,17px)}
+
+.baseline{display:flex;flex-wrap:wrap;gap:clamp(20px,4vw,54px);
+  padding:22px 0 34px;border-bottom:1px solid var(--line)}
+.stat .n{font-family:"Space Mono",monospace;font-size:clamp(24px,3vw,34px)}
+.stat .k{font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-soft);margin-top:4px}
+
+.item{padding:clamp(30px,4vw,52px) 0;border-bottom:1px solid var(--line);
+  display:grid;grid-template-columns:220px 1fr;gap:clamp(22px,3.5vw,48px)}
+.shot{background:var(--panel);border:1px solid var(--line);padding:14px;
+  display:flex;align-items:center;justify-content:center;min-height:200px}
+.shot img{width:100%;height:auto;display:block;mix-blend-mode:multiply}
+.shot .none{font-family:"Space Mono",monospace;font-size:11px;
+  letter-spacing:.14em;color:var(--ink-soft)}
+
+.title{font-size:clamp(21px,2.4vw,29px);letter-spacing:-0.02em;margin:6px 0 0;font-weight:500}
+.facts{font-family:"Space Mono",monospace;font-size:12px;color:var(--ink-soft);
+  margin-top:8px;display:flex;flex-wrap:wrap;gap:10px}
+.facts b{font-weight:400;color:var(--ink)}
+
+.verdict{display:inline-block;font-family:"Space Mono",monospace;font-size:11px;
+  letter-spacing:.16em;text-transform:uppercase;padding:6px 12px;margin-top:18px;
+  border:1px solid currentColor;border-radius:100px}
+.v-good{color:var(--good)} .v-warn{color:var(--warn)} .v-bad{color:var(--bad)}
+
+.metrics{margin-top:22px;display:grid;gap:16px}
+.metric{display:grid;grid-template-columns:150px 1fr auto;gap:16px;align-items:center}
+.metric .lab{font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-soft)}
+.bar{height:8px;background:var(--chip);position:relative;overflow:hidden}
+.bar i{position:absolute;inset:0 auto 0 0;background:var(--accent);display:block}
+.bar i.warn{background:var(--warn)} .bar i.bad{background:var(--bad)}
+.val{font-family:"Space Mono",monospace;font-size:13px;white-space:nowrap}
+.why{margin-top:20px;color:var(--ink-soft);font-size:14.5px;max-width:62ch}
+.why b{color:var(--ink);font-weight:500}
+.overlap{margin-top:12px;font-family:"Space Mono",monospace;font-size:11.5px;
+  color:var(--ink-soft)}
+
+.empty{padding:70px 0 90px;color:var(--ink-soft);max-width:56ch}
+.empty code{background:var(--chip);padding:2px 6px;font-size:13px}
+footer{padding:40px 0 70px;font-family:"Space Mono",monospace;font-size:11px;
+  color:var(--ink-soft)}
+@media(max-width:760px){
+  .item{grid-template-columns:1fr}
+  .shot{max-width:230px}
+  .metric{grid-template-columns:1fr;gap:6px}
+  .metric .val{justify-self:start}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <a class="wordmark" href="index.html">ATELIER <span>·</span> FOLIO</a>
+    <a class="back" href="index.html">← Inventory</a>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow">Before you buy</p>
+    <h1>Fitting<br><em>Room</em></h1>
+    <p class="lede">Jedes Teil auf der Wishlist, gerechnet gegen das, was schon im Schrank
+      hängt — wie viele neue Kombinationen es bringt, was es pro Outfit kostet, und
+      womit es sich überschneidet.</p>
+  </section>
+
+  <div class="baseline" id="baseline"></div>
+  <div id="list"></div>
+
+  <footer id="foot">wird geladen …</footer>
+</div>
+
+<script>
+/* ---------- Slot-Zuordnung ---------- */
+const TOP    = ["Top","Blouse","T-Shirt","Long-sleeve top","Bodysuit","Knits","Hoodie"];
+const BOTTOM = ["Trousers","Shorts","Skirt","Leggings"];
+const SHOE   = ["Shoes","Clogs","Sneakers","Sandals"];
+const OUTER  = ["Jacket","Coat"];
+const SEASONS = ["Sommer","Übergang","Winter"];
+
+const slotOf = d => {
+  const c = d.categories || [];
+  if (c.some(x=>TOP.includes(x)))    return "top";
+  if (c.some(x=>BOTTOM.includes(x))) return "bottom";
+  if (c.some(x=>SHOE.includes(x)))   return "shoe";
+  if (c.some(x=>OUTER.includes(x)))  return "outer";
+  return "other";
+};
+
+/* Sport mischt sich nicht mit Smart — alles andere darf kombinieren */
+const formOk = (a,b) => {
+  if(!a||!b) return true;
+  if(a==="Sport"||b==="Sport") return a===b;
+  return true;
+};
+const shareSeason = (a,b) => (a||[]).some(s=>(b||[]).includes(s));
+
+/* ---------- Farbfamilien ---------- */
+const FAM = [
+  [/wei|white|off.?white|ecru|cream/i,"weiß"],
+  [/schwarz|black|off.?black/i,"schwarz"],
+  [/braun|brown|coffee|taupe|stone|cognac|honey|greige|beige|camel|sand/i,"braun"],
+  [/navy|indigo|blau|blue/i,"blau"],
+  [/grau|grey|gray|silver/i,"grau"],
+  [/gr[üu]n|green|sage|olive/i,"grün"],
+];
+const family = c => { for(const [re,n] of FAM) if(re.test(c||"")) return n; return "akzent"; };
+
+/* ---------- Outfits zählen ---------- */
+function outfits(items){
+  const t = items.filter(d=>slotOf(d)==="top");
+  const b = items.filter(d=>slotOf(d)==="bottom");
+  const s = items.filter(d=>slotOf(d)==="shoe");
+  let n = 0;
+  for(const x of t) for(const y of b){
+    if(!formOk(x.formality,y.formality) || !shareSeason(x.seasons,y.seasons)) continue;
+    const both = (x.seasons||[]).filter(v=>(y.seasons||[]).includes(v));
+    for(const z of s){
+      if(!formOk(x.formality,z.formality) || !formOk(y.formality,z.formality)) continue;
+      if(!both.some(v=>(z.seasons||[]).includes(v))) continue;
+      n++;
+    }
+  }
+  return n;
+}
+
+const eur = s => {
+  const m = (s||"").replace(/\s/g,"").replace(/\./g,"").match(/(\d+),(\d{2})/);
+  return m ? +m[1] + (+m[2])/100 : null;
+};
+const esc = s => String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const bar = (pct,cls="") =>
+  `<div class="bar"><i class="${cls}" style="width:${Math.max(2,Math.min(100,pct))}%"></i></div>`;
+
+/* ---------- Rendern ---------- */
+fetch("data.json?v="+Date.now())
+  .then(r=>{ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); })
+  .then(p=>{
+    const all   = p.items || [];
+    const owned = all.filter(d=>d.status!=="Wishlist");
+    const wish  = all.filter(d=>d.status==="Wishlist");
+    const base  = outfits(owned);
+
+    const perSeason = {};
+    SEASONS.forEach(s=>{
+      perSeason[s] = outfits(owned.filter(d=>(d.seasons||[]).includes(s)));
+    });
+
+    document.getElementById("baseline").innerHTML =
+      `<div class="stat"><div class="n">${owned.length}</div><div class="k">Teile im Schrank</div></div>
+       <div class="stat"><div class="n">${base}</div><div class="k">mögliche Outfits</div></div>` +
+      SEASONS.map(s=>`<div class="stat"><div class="n">${perSeason[s]}</div>
+        <div class="k">davon ${s}</div></div>`).join("");
+
+    const list = document.getElementById("list");
+
+    if(!wish.length){
+      list.innerHTML = `<div class="empty">
+        <p>Noch nichts auf der Wishlist.</p>
+        <p>Leg in Notion eine Zeile an und setz <code>Status</code> auf <code>Wishlist</code>.
+        Je mehr davon gefüllt ist — <code>Category</code>, <code>Colour</code>,
+        <code>Season</code>, <code>Formality</code>, <code>Price</code> — desto schärfer
+        rechnet diese Seite. Ohne Kategorie kann sie gar nichts sagen.</p></div>`;
+    } else {
+      list.innerHTML = wish.map(w=>{
+        const slot  = slotOf(w);
+        const delta = outfits(owned.concat([w])) - base;
+        const price = eur(w.price);
+        const cpo   = (price!=null && delta>0) ? price/delta : null;
+
+        // Redundanz: gleiche Slot-Ebene UND gleiche Farbfamilie
+        const fam = family(w.colour);
+        const twins = owned.filter(d=>slotOf(d)===slot && family(d.colour)===fam);
+        const sameSlot = owned.filter(d=>slotOf(d)===slot).length;
+
+        // Saison-Beitrag: wo ist der Schrank am dünnsten?
+        const seasonGain = SEASONS
+          .filter(s=>(w.seasons||[]).includes(s))
+          .map(s=>({s, before: perSeason[s]}))
+          .sort((a,b)=>a.before-b.before)[0];
+
+        // Bewertung
+        let verdict, cls, why;
+        if(slot==="other"||slot==="outer"){
+          verdict = "nicht berechenbar"; cls="v-warn";
+          why = `Fällt nicht in die Rechnung Oberteil × Unterteil × Schuh — die Zahl wäre
+                 irreführend. Bei Mänteln und Jacken zählt eher, ob die Saison abgedeckt ist.`;
+        } else if(delta===0){
+          verdict = "bringt nichts Neues"; cls="v-bad";
+          why = `Erzeugt <b>keine einzige</b> neue Kombination. Meist heißt das: Saison oder
+                 Anlass passen nicht zu dem, was du sonst besitzt.`;
+        } else if(twins.length>=3){
+          verdict = "stark redundant"; cls="v-bad";
+          why = `Du besitzt bereits <b>${twins.length} Teile</b> derselben Art in
+                 ${fam}. Die neuen Kombinationen entstehen rechnerisch, im Schrank
+                 wäre es aber austauschbar.`;
+        } else if(cpo!=null && cpo<2){
+          verdict = "starker Kandidat"; cls="v-good";
+          why = `Verteilt sich auf viele neue Kombinationen — der Preis pro Outfit liegt
+                 unter zwei Euro. Genau das Muster, das Basisteile haben.`;
+        } else if(twins.length===0){
+          verdict = "schließt eine Lücke"; cls="v-good";
+          why = `Kein vergleichbares Teil in ${fam} im Bestand. Neue Kategorie oder neuer
+                 Ton — beides erweitert echt statt zu verdoppeln.`;
+        } else {
+          verdict = "solide Ergänzung"; cls="v-warn";
+          why = `Ordentlicher Zuwachs, aber ${twins.length} ähnliche${twins.length===1?"s":""}
+                 Teil${twins.length===1?"":"e"} in ${fam} vorhanden. Die Frage ist,
+                 ob es etwas ersetzt oder nur dazukommt.`;
+        }
+
+        const rel = Math.round(delta / Math.max(base,1) * 100);
+        const redPct = sameSlot ? twins.length / sameSlot * 100 : 0;
+
+        return `<article class="item">
+          <div class="shot">${ w.image
+            ? `<img src="${esc(w.image)}" alt="${esc(w.name)}">`
+            : `<span class="none">NO IMAGE</span>` }</div>
+          <div>
+            <p class="eyebrow">${esc(w.brand||"—")}</p>
+            <h2 class="title">${esc(w.name)}</h2>
+            <div class="facts">
+              <span><b>${esc((w.categories||[]).join(" / ")||"ohne Kategorie")}</b></span>
+              <span>${esc(w.colour||"—")}</span>
+              <span>${esc((w.seasons||[]).join(" · ")||"keine Saison")}</span>
+              <span>${esc(w.formality||"—")}</span>
+              <span><b>${esc(w.price||"kein Preis")}</b></span>
+            </div>
+            <span class="verdict ${cls}">${verdict}</span>
+
+            <div class="metrics">
+              <div class="metric">
+                <span class="lab">Neue Outfits</span>
+                ${bar(rel*3, delta===0?"bad":"")}
+                <span class="val">+${delta} &nbsp;<span style="color:var(--ink-soft)">(${rel}%)</span></span>
+              </div>
+              <div class="metric">
+                <span class="lab">Preis pro Outfit</span>
+                ${bar(cpo==null?0:Math.min(100,cpo*12), cpo!=null&&cpo>8?"warn":"")}
+                <span class="val">${cpo==null?"—":(cpo<10?cpo.toFixed(2):Math.round(cpo))+" €"}</span>
+              </div>
+              <div class="metric">
+                <span class="lab">Redundanz</span>
+                ${bar(redPct, redPct>50?"bad":redPct>25?"warn":"")}
+                <span class="val">${twins.length} von ${sameSlot} ähnlich</span>
+              </div>
+            </div>
+
+            <p class="why">${why}</p>
+            ${ seasonGain ? `<p class="overlap">Dünnste abgedeckte Saison:
+                ${seasonGain.s} — dort bisher ${seasonGain.before} Outfits.</p>` : "" }
+            ${ twins.length ? `<p class="overlap">Überschneidet sich mit:
+                ${twins.slice(0,4).map(d=>esc(d.name)).join(" · ")}${twins.length>4?" …":""}</p>` : "" }
+            ${ w.link ? `<p class="overlap"><a href="${esc(w.link)}" target="_blank"
+                rel="noopener">Produktseite →</a></p>` : "" }
+          </div>
+        </article>`;
+      }).join("");
+    }
+
+    document.getElementById("foot").textContent =
+      `${owned.length} Teile · ${wish.length} auf der Wishlist · `
+      + `Outfit = Oberteil × Unterteil × Schuh, gefiltert nach Saison und Anlass`;
+  })
+  .catch(e=>{
+    document.getElementById("list").innerHTML =
+      `<div class="empty"><p>Daten konnten nicht geladen werden. Läuft gerade ein Build?</p></div>`;
+    console.error(e);
+  });
+</script>
+</body>
+</html>

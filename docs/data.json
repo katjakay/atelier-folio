@@ -1,8 +1,102 @@
 {
-  "generated_at": "2026-07-20T08:57:44.805Z",
-  "count": 32,
-  "brands": 21,
+  "generated_at": "2026-07-20T11:50:21.537Z",
+  "count": 37,
+  "brands": 22,
   "items": [
+    {
+      "id": "3a380662-348e-8091-b40b-dafe9c2e1f21",
+      "name": "Oversized Hoodie",
+      "brand": "HM",
+      "categories": [
+        "Hoodie"
+      ],
+      "color": "grey",
+      "size": "XS",
+      "price": "29,00 €",
+      "seasons": [
+        "Übergang",
+        "Winter"
+      ],
+      "formality": "Casual",
+      "era": "Letzte 2 Jahre",
+      "worn": null,
+      "image": "images/3fd3774ab1fc4252.jpg"
+    },
+    {
+      "id": "3a380662-348e-808d-bc5f-f5ec246949b8",
+      "name": "Smart Culotte",
+      "brand": "Uniqlo",
+      "categories": [
+        "Trousers"
+      ],
+      "color": "white",
+      "size": "XS",
+      "price": "39,90 €",
+      "seasons": [
+        "Sommer"
+      ],
+      "formality": "Smart",
+      "era": "Letzte 2 Jahre",
+      "worn": 1,
+      "image": ""
+    },
+    {
+      "id": "3a380662-348e-8074-95e7-c85be6edf357",
+      "name": "Ärmelloses Top",
+      "brand": "Massimo Dutti",
+      "categories": [
+        "Top"
+      ],
+      "color": "white",
+      "size": "XS",
+      "price": "30,00 €",
+      "seasons": [
+        "Sommer",
+        "Übergang"
+      ],
+      "formality": "Casual",
+      "era": "Letzte 2 Jahre",
+      "worn": null,
+      "image": "images/09128d4cce01da13.jpg"
+    },
+    {
+      "id": "3a380662-348e-80b7-b169-c0c12692d5d3",
+      "name": "Soft Ribbed Vest Top",
+      "brand": "Uniqlo",
+      "categories": [
+        "Top"
+      ],
+      "color": "white",
+      "size": "XS",
+      "price": "12,90 €",
+      "seasons": [
+        "Sommer",
+        "Übergang"
+      ],
+      "formality": "Casual",
+      "era": "Letzte 2 Jahre",
+      "worn": null,
+      "image": "images/6c1efe9cc3b7a028.jpg"
+    },
+    {
+      "id": "3a380662-348e-8016-9a7d-f627f392c782",
+      "name": "Soft Ribbed Vest Top",
+      "brand": "Uniqlo",
+      "categories": [
+        "Top"
+      ],
+      "color": "brown",
+      "size": "XS",
+      "price": "12,90 €",
+      "seasons": [
+        "Sommer",
+        "Übergang"
+      ],
+      "formality": "Casual",
+      "era": "Letzte 2 Jahre",
+      "worn": 1,
+      "image": "images/a6493143b29f2aa2.jpg"
+    },
     {
       "id": "3a280662-348e-8030-ba55-c22acfea1de4",
       "name": "Jersey Barrel Pants",

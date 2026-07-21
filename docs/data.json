@@ -1,10 +1,31 @@
 {
-  "generated_at": "2026-07-21T08:51:12.304Z",
-  "count": 39,
+  "generated_at": "2026-07-21T10:45:46.682Z",
+  "count": 40,
   "brands": 22,
   "owned": 37,
-  "wishlist": 2,
+  "wishlist": 3,
   "items": [
+    {
+      "id": "3a480662-348e-8031-92ed-ebc8fb745167",
+      "name": "Cotton Pants Oversized",
+      "brand": "Arket",
+      "categories": [
+        "Trousers"
+      ],
+      "color": "White",
+      "size": "34",
+      "price": "79,00 €",
+      "seasons": [
+        "Sommer",
+        "Übergang"
+      ],
+      "formality": "Casual",
+      "era": "",
+      "status": "Wishlist",
+      "link": "https://www.arket.com/de-at/product/cotton-pleat-knee-trousers-white-1347990002/",
+      "worn": null,
+      "image": "images/3b647144e18fe8dc.jpg"
+    },
     {
       "id": "3a380662-348e-8061-b0f1-dbc2c8b5c550",
       "name": "Utility Shorts",

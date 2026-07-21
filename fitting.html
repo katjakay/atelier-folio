@@ -208,8 +208,8 @@ fetch("data.json?v="+Date.now())
         const cpo   = (price!=null && delta>0) ? price/delta : null;
 
         // Redundanz: gleiche Slot-Ebene UND gleiche Farbfamilie
-        const fam = family(w.colour);
-        const twins = owned.filter(d=>slotOf(d)===slot && family(d.colour)===fam);
+        const fam = family(w.color);
+        const twins = owned.filter(d=>slotOf(d)===slot && family(d.color)===fam);
         const sameSlot = owned.filter(d=>slotOf(d)===slot).length;
 
         // Saison-Beitrag: wo ist der Schrank am dünnsten?
@@ -260,7 +260,7 @@ fetch("data.json?v="+Date.now())
             <h2 class="title">${esc(w.name)}</h2>
             <div class="facts">
               <span><b>${esc((w.categories||[]).join(" / ")||"ohne Kategorie")}</b></span>
-              <span>${esc(w.colour||"—")}</span>
+              <span>${esc(w.color||"—")}</span>
               <span>${esc((w.seasons||[]).join(" · ")||"keine Saison")}</span>
               <span>${esc(w.formality||"—")}</span>
               <span><b>${esc(w.price||"kein Preis")}</b></span>

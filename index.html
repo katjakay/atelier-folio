@@ -42,6 +42,8 @@ header{position:sticky;top:0;z-index:60;background:rgba(237,235,228,.86);
 .wordmark{font-weight:600;font-size:15px;letter-spacing:.02em}
 .wordmark span{color:var(--accent)}
 .count{font-family:"Space Mono",monospace;font-size:12px;color:var(--ink-soft)}
+.hdr-r{display:flex;align-items:center;gap:clamp(14px,2vw,26px)}
+@media(max-width:560px){.count{display:none}}
 
 /* hero */
 .hero{padding:clamp(46px,10vw,120px) clamp(18px,5vw,56px) clamp(28px,5vw,60px);
@@ -158,7 +160,10 @@ footer{border-top:1px solid var(--line);padding:34px clamp(18px,5vw,56px);
 <header>
   <div class="bar">
     <div class="wordmark">ATELIER <span>·</span> FOLIO</div>
-    <div class="count mono" id="count">loading…</div>
+    <div class="hdr-r">
+      <a class="fitlink" href="fitting.html">Fitting room →</a>
+      <div class="count mono" id="count">loading…</div>
+    </div>
   </div>
 </header>
 
@@ -178,7 +183,6 @@ footer{border-top:1px solid var(--line);padding:34px clamp(18px,5vw,56px);
   <div class="filterset" id="formset"><span class="flabel">Wear</span></div>
   <div class="spacer"></div>
   <div class="filterset" id="eraset"><span class="flabel">Era</span></div>
-  <a class="fitlink" href="fitting.html">Fitting room →</a>
   <div class="views" role="group" aria-label="View">
     <button id="vIndex" aria-pressed="true">Index</button>
     <button id="vScatter" aria-pressed="false">Scatter</button>

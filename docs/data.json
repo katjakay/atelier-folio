@@ -1,10 +1,32 @@
 {
-  "generated_at": "2026-07-21T10:48:16.137Z",
-  "count": 40,
+  "generated_at": "2026-07-21T10:55:26.086Z",
+  "count": 41,
   "brands": 22,
   "owned": 37,
-  "wishlist": 3,
+  "wishlist": 4,
   "items": [
+    {
+      "id": "3a480662-348e-8062-88a3-f549445888fc",
+      "name": "Nylon Bag",
+      "brand": "Comptoire des Cotonniers",
+      "categories": [
+        "Bag"
+      ],
+      "color": "Black",
+      "size": "",
+      "price": "34,90 €",
+      "seasons": [
+        "Sommer",
+        "Übergang",
+        "Winter"
+      ],
+      "formality": "Smart",
+      "era": "",
+      "status": "Wishlist",
+      "link": "https://www.comptoirdescotonniers.com/on/demandware.static/-/Sites-cdc-master/default/dw0c0f278e/5WBA024P37_H091_AP1.jpg",
+      "worn": null,
+      "image": "images/dfab38d3ab17bd4c.jpg"
+    },
     {
       "id": "3a480662-348e-8031-92ed-ebc8fb745167",
       "name": "Cotton Pants Oversized",

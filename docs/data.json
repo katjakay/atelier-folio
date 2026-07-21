@@ -1,10 +1,52 @@
 {
-  "generated_at": "2026-07-20T13:48:50.056Z",
-  "count": 37,
+  "generated_at": "2026-07-21T06:25:23.965Z",
+  "count": 39,
   "brands": 22,
   "owned": 37,
-  "wishlist": 0,
+  "wishlist": 2,
   "items": [
+    {
+      "id": "3a380662-348e-8061-b0f1-dbc2c8b5c550",
+      "name": "Utility Shorts",
+      "brand": "Arket",
+      "categories": [
+        "Shorts"
+      ],
+      "color": "White",
+      "size": "34",
+      "price": "41,00 €",
+      "seasons": [
+        "Sommer",
+        "Übergang"
+      ],
+      "formality": "Casual",
+      "era": "Unbekannt",
+      "status": "Wishlist",
+      "link": "https://www.arket.com/de-at/product/soft-utility-shorts-white-1346679001/",
+      "worn": null,
+      "image": ""
+    },
+    {
+      "id": "3a380662-348e-8005-98a8-e1f46c180c4c",
+      "name": "Flore Basic",
+      "brand": "Flore Flore",
+      "categories": [
+        "Top"
+      ],
+      "color": "Azur Blue",
+      "size": "S",
+      "price": "90,00 €",
+      "seasons": [
+        "Übergang",
+        "Sommer"
+      ],
+      "formality": "Casual",
+      "era": "Unbekannt",
+      "status": "Wishlist",
+      "link": "https://flore-flore.com/products/esme-tank-azur-blue?variant=54657521844553",
+      "worn": null,
+      "image": ""
+    },
     {
       "id": "3a380662-348e-8091-b40b-dafe9c2e1f21",
       "name": "Oversized Hoodie",

@@ -1,10 +1,97 @@
 {
-  "generated_at": "2026-07-21T10:55:26.086Z",
-  "count": 41,
-  "brands": 22,
-  "owned": 37,
+  "generated_at": "2026-07-24T19:50:22.123Z",
+  "count": 45,
+  "brands": 23,
+  "owned": 41,
   "wishlist": 4,
   "items": [
+    {
+      "id": "3a780662-348e-80ae-bcde-de4b00c64fe7",
+      "name": "Sleeveless Top",
+      "brand": "Uniqlo",
+      "categories": [
+        "Top"
+      ],
+      "color": "White",
+      "size": "XS",
+      "price": "",
+      "seasons": [
+        "Sommer",
+        "Übergang",
+        "Winter"
+      ],
+      "formality": "Casual",
+      "era": "Älter",
+      "status": "Owned",
+      "link": "",
+      "worn": 1,
+      "image": "images/fdea9f2601bce832.jpeg",
+      "own_photo": true
+    },
+    {
+      "id": "3a780662-348e-80d1-b985-e7cd32d0588b",
+      "name": "Light Grey pants",
+      "brand": "Mango",
+      "categories": [
+        "Trousers"
+      ],
+      "color": "Grey",
+      "size": "34",
+      "price": "",
+      "seasons": [
+        "Sommer",
+        "Übergang"
+      ],
+      "formality": "Smart",
+      "era": "Letzte 2 Jahre",
+      "status": "Owned",
+      "link": "",
+      "worn": 1,
+      "image": "images/996c7b9f749c685a.jpeg",
+      "own_photo": true
+    },
+    {
+      "id": "3a580662-348e-8088-bae8-dbd94d392be7",
+      "name": "Light Black Pants",
+      "brand": "Uniqlo",
+      "categories": [
+        "Trousers"
+      ],
+      "color": "Black",
+      "size": "XS",
+      "price": "",
+      "seasons": [
+        "Übergang",
+        "Sommer"
+      ],
+      "formality": "Casual",
+      "era": "Älter",
+      "status": "Owned",
+      "link": "",
+      "worn": 1,
+      "image": "images/7e669f093bd02cc7.png",
+      "own_photo": true
+    },
+    {
+      "id": "3a480662-348e-801c-b9f1-efc0cee0c850",
+      "name": "Asymmetric Cupro Shirt",
+      "brand": "Paloma Wool",
+      "categories": [],
+      "color": "Navy",
+      "size": "",
+      "price": "",
+      "seasons": [
+        "Sommer",
+        "Übergang",
+        "Winter"
+      ],
+      "formality": "",
+      "era": "Letzte 2 Jahre",
+      "status": "Owned",
+      "link": "",
+      "worn": null,
+      "image": "images/98b0c24e4d37411b.jpg"
+    },
     {
       "id": "3a480662-348e-8062-88a3-f549445888fc",
       "name": "Nylon Bag",
@@ -646,7 +733,7 @@
       "era": "Letzte 2 Jahre",
       "status": "Owned",
       "link": "",
-      "worn": null,
+      "worn": 1,
       "image": "images/fd288cc8adf9f487.jpg"
     },
     {

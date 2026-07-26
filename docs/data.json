@@ -1,10 +1,75 @@
 {
-  "generated_at": "2026-07-24T19:50:22.123Z",
-  "count": 45,
-  "brands": 23,
-  "owned": 41,
+  "generated_at": "2026-07-26T06:33:07.854Z",
+  "count": 48,
+  "brands": 24,
+  "owned": 44,
   "wishlist": 4,
   "items": [
+    {
+      "id": "3a780662-348e-8033-b5d1-e35ce046420d",
+      "name": "White Long sleeve",
+      "brand": "Zara",
+      "categories": [
+        "Long-sleeve top"
+      ],
+      "color": "white",
+      "size": "S",
+      "price": "19,95 €",
+      "seasons": [
+        "Sommer",
+        "Übergang",
+        "Winter"
+      ],
+      "formality": "Casual",
+      "era": "Letzte 2 Jahre",
+      "status": "Owned",
+      "link": "https://static.zara.net/photos//assets/public/f965/a7ce/e2774cc584e6/a3f5788a6e18/00858752250-f1/00858752250-f1.jpg",
+      "worn": null,
+      "image": ""
+    },
+    {
+      "id": "3a780662-348e-804b-b04c-c8221e624289",
+      "name": "Azur T-shirt",
+      "brand": "Zara",
+      "categories": [
+        "T-Shirt"
+      ],
+      "color": "Blue",
+      "size": "S",
+      "price": "8,95 €",
+      "seasons": [
+        "Sommer",
+        "Übergang",
+        "Winter"
+      ],
+      "formality": "Casual",
+      "era": "Letzte 2 Jahre",
+      "status": "Owned",
+      "link": "https://static.zara.net/photos//assets/public/85fd/15f2/bab44f2c9a33/7b4a21927440/04424376400-f1/04424376400-f1.jpg",
+      "worn": null,
+      "image": ""
+    },
+    {
+      "id": "3a780662-348e-803c-bcbc-f24e5e83f9b9",
+      "name": "Black Cotton Shorts",
+      "brand": "Zara",
+      "categories": [
+        "Shorts"
+      ],
+      "color": "black",
+      "size": "S",
+      "price": "19,95 €",
+      "seasons": [
+        "Sommer",
+        "Übergang"
+      ],
+      "formality": "Casual",
+      "era": "Letzte 2 Jahre",
+      "status": "Owned",
+      "link": "https://static.zara.net/photos//assets/public/9ae7/22b5/40cb4f1c85a6/40bc81af6a13/00858733800-f1/00858733800-f1.jpg",
+      "worn": null,
+      "image": ""
+    },
     {
       "id": "3a780662-348e-80ae-bcde-de4b00c64fe7",
       "name": "Sleeveless Top",

@@ -1,10 +1,68 @@
 {
-  "generated_at": "2026-07-26T06:33:07.854Z",
-  "count": 48,
-  "brands": 24,
-  "owned": 44,
+  "generated_at": "2026-07-27T09:09:58.033Z",
+  "count": 51,
+  "brands": 25,
+  "owned": 47,
   "wishlist": 4,
   "items": [
+    {
+      "id": "3aa80662-348e-8033-b0ad-e717d1d738f4",
+      "name": "",
+      "brand": "",
+      "categories": [],
+      "color": "",
+      "size": "",
+      "price": "",
+      "seasons": [],
+      "formality": "",
+      "era": "",
+      "status": "Owned",
+      "link": "",
+      "worn": null,
+      "image": ""
+    },
+    {
+      "id": "3a980662-348e-80be-9ad2-d33ca896cb9c",
+      "name": "Cropped Wes T-shirt",
+      "brand": "Wes",
+      "categories": [
+        "T-Shirt"
+      ],
+      "color": "Beige",
+      "size": "S",
+      "price": "",
+      "seasons": [
+        "Sommer",
+        "Übergang"
+      ],
+      "formality": "Casual",
+      "era": "Letzte 2 Jahre",
+      "status": "Owned",
+      "link": "",
+      "worn": 1,
+      "image": ""
+    },
+    {
+      "id": "3a980662-348e-8014-aca7-caa405d806d2",
+      "name": "Wrap Skirt",
+      "brand": "Zara",
+      "categories": [
+        "Skirt"
+      ],
+      "color": "Beige",
+      "size": "S",
+      "price": "",
+      "seasons": [
+        "Sommer",
+        "Übergang"
+      ],
+      "formality": "Casual",
+      "era": "Letzte 2 Jahre",
+      "status": "Owned",
+      "link": "",
+      "worn": 1,
+      "image": ""
+    },
     {
       "id": "3a780662-348e-8033-b5d1-e35ce046420d",
       "name": "White Long sleeve",
@@ -735,7 +793,7 @@
       "era": "Letzte 2 Jahre",
       "status": "Owned",
       "link": "",
-      "worn": null,
+      "worn": 1,
       "image": "images/a15825c4ad9246a8.avif"
     },
     {
@@ -860,7 +918,7 @@
       "era": "Letzte 2 Jahre",
       "status": "Owned",
       "link": "",
-      "worn": null,
+      "worn": 2,
       "image": "images/bbb3c65f72976e80.jpg"
     },
     {
@@ -970,7 +1028,7 @@
       "era": "Letzte 2 Jahre",
       "status": "Owned",
       "link": "",
-      "worn": null,
+      "worn": 1,
       "image": "images/9fabba17ebaca0a4.jpg"
     },
     {

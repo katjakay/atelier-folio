@@ -1,47 +1,10 @@
 {
-  "generated_at": "2026-07-27T14:40:48.288Z",
-  "count": 51,
-  "brands": 25,
-  "owned": 47,
+  "generated_at": "2026-07-27T14:45:42.053Z",
+  "count": 49,
+  "brands": 24,
+  "owned": 45,
   "wishlist": 4,
   "items": [
-    {
-      "id": "3aa80662-348e-8033-b0ad-e717d1d738f4",
-      "name": "",
-      "brand": "",
-      "categories": [],
-      "color": "",
-      "size": "",
-      "price": "",
-      "seasons": [],
-      "formality": "",
-      "era": "",
-      "status": "Owned",
-      "link": "",
-      "worn": null,
-      "image": ""
-    },
-    {
-      "id": "3a980662-348e-80be-9ad2-d33ca896cb9c",
-      "name": "Cropped Wes T-shirt",
-      "brand": "Wes",
-      "categories": [
-        "T-Shirt"
-      ],
-      "color": "Beige",
-      "size": "S",
-      "price": "",
-      "seasons": [
-        "Sommer",
-        "Übergang"
-      ],
-      "formality": "Casual",
-      "era": "Letzte 2 Jahre",
-      "status": "Owned",
-      "link": "",
-      "worn": 1,
-      "image": ""
-    },
     {
       "id": "3a980662-348e-8014-aca7-caa405d806d2",
       "name": "Wrap Skirt",
@@ -81,9 +44,10 @@
       "formality": "Casual",
       "era": "Letzte 2 Jahre",
       "status": "Owned",
-      "link": "https://static.zara.net/photos//assets/public/f965/a7ce/e2774cc584e6/a3f5788a6e18/00858752250-f1/00858752250-f1.jpg",
+      "link": "",
       "worn": null,
-      "image": ""
+      "image": "images/bf21fa4c095c034c.jpg",
+      "own_photo": true
     },
     {
       "id": "3a780662-348e-804b-b04c-c8221e624289",
@@ -103,9 +67,10 @@
       "formality": "Casual",
       "era": "Letzte 2 Jahre",
       "status": "Owned",
-      "link": "https://static.zara.net/photos//assets/public/85fd/15f2/bab44f2c9a33/7b4a21927440/04424376400-f1/04424376400-f1.jpg",
+      "link": "",
       "worn": null,
-      "image": ""
+      "image": "images/e92260d20405890c.jpg",
+      "own_photo": true
     },
     {
       "id": "3a780662-348e-803c-bcbc-f24e5e83f9b9",
@@ -124,9 +89,10 @@
       "formality": "Casual",
       "era": "Letzte 2 Jahre",
       "status": "Owned",
-      "link": "https://static.zara.net/photos//assets/public/9ae7/22b5/40cb4f1c85a6/40bc81af6a13/00858733800-f1/00858733800-f1.jpg",
+      "link": "",
       "worn": null,
-      "image": ""
+      "image": "images/ad84a91eceaa7233.jpg",
+      "own_photo": true
     },
     {
       "id": "3a780662-348e-80ae-bcde-de4b00c64fe7",

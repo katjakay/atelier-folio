@@ -6,7 +6,7 @@
 <title>Atelier Folio — a wardrobe, catalogued</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#EDEBE4;
@@ -21,13 +21,13 @@
 html{-webkit-text-size-adjust:100%}
 body{
   margin:0;background:var(--paper);color:var(--ink);
-  font-family:"Space Grotesk",system-ui,sans-serif;
-  font-size:16px;line-height:1.4;letter-spacing:-0.01em;
+  font-family:"Roboto Mono",ui-monospace,monospace;
+  font-size:15px;line-height:1.55;letter-spacing:0;
   overflow-x:hidden;
 }
 a{color:inherit}
-.mono{font-family:"Space Mono",ui-monospace,monospace}
-.eyebrow{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft)}
+.mono{font-family:"Roboto Mono",ui-monospace,monospace}
+.eyebrow{font-family:"Roboto Mono",monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft)}
 
 /* cursor dot */
 .cursor{position:fixed;top:0;left:0;width:9px;height:9px;border-radius:50%;
@@ -41,14 +41,14 @@ header{position:sticky;top:0;z-index:60;background:rgba(237,235,228,.86);
   gap:20px;padding:16px clamp(18px,5vw,56px)}
 .wordmark{font-weight:400;font-size:14px;letter-spacing:.04em}
 .wordmark span{color:var(--accent)}
-.count{font-family:"Space Mono",monospace;font-size:12px;color:var(--ink-soft)}
+.count{font-family:"Roboto Mono",monospace;font-size:12px;color:var(--ink-soft)}
 .hdr-r{display:flex;align-items:center;gap:clamp(14px,2vw,26px)}
 @media(max-width:560px){.count{display:none}}
 
 /* hero — quiet, small, Paloma-Wool scale */
 .hero{padding:clamp(40px,7vw,72px) clamp(18px,5vw,56px) clamp(22px,3vw,34px);
   position:relative}
-.hero h1{margin:10px 0 0;font-weight:400;letter-spacing:-0.01em;line-height:1.05;
+.hero h1{margin:10px 0 0;font-weight:500;letter-spacing:0;line-height:1.2;
   font-size:clamp(23px,2.6vw,32px)}
 .hero h1 em{font-style:italic;color:var(--ink);font-weight:400}
 .hero .lede{max-width:46ch;margin:14px 0 0;color:var(--ink-soft);
@@ -61,21 +61,21 @@ header{position:sticky;top:0;z-index:60;background:rgba(237,235,228,.86);
   border-bottom:1px solid var(--line)}
 .filterbar .row{display:flex;align-items:center;justify-content:space-between;
   gap:20px;padding:11px clamp(18px,5vw,56px)}
-.filtertoggle{font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.18em;
+.filtertoggle{font-family:"Roboto Mono",monospace;font-size:12px;letter-spacing:.18em;
   text-transform:uppercase;color:var(--ink);background:transparent;border:0;
   cursor:pointer;display:flex;align-items:center;gap:9px;padding:6px 0}
 .filtertoggle .car{transition:transform .3s;display:inline-block}
 .filtertoggle[aria-expanded="true"] .car{transform:rotate(180deg)}
-.filtertoggle .n{font-family:"Space Mono",monospace;background:var(--accent);color:#fff;
+.filtertoggle .n{font-family:"Roboto Mono",monospace;background:var(--accent);color:#fff;
   border-radius:100px;min-width:19px;height:19px;display:none;align-items:center;
   justify-content:center;font-size:11px;padding:0 6px;letter-spacing:0}
 .filtertoggle.active .n{display:inline-flex}
 .viewswrap{display:flex;align-items:center;gap:clamp(14px,2vw,24px)}
 .views{display:flex;gap:4px;border:1px solid var(--line);border-radius:100px;padding:3px}
-.views button{font-family:"Space Mono",monospace;font-size:12px;border:0;background:transparent;
+.views button{font-family:"Roboto Mono",monospace;font-size:12px;border:0;background:transparent;
   color:var(--ink-soft);padding:5px 14px;border-radius:100px;cursor:pointer}
 .views button[aria-pressed="true"]{background:var(--accent);color:#fff}
-.fitlink{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.14em;
+.fitlink{font-family:"Roboto Mono",monospace;font-size:11px;letter-spacing:.14em;
   text-transform:uppercase;color:var(--accent);text-decoration:none;
   border-bottom:1px solid transparent;padding-bottom:2px}
 .fitlink:hover{border-bottom-color:var(--accent)}
@@ -86,7 +86,7 @@ header{position:sticky;top:0;z-index:60;background:rgba(237,235,228,.86);
 .panel.open{max-height:min(72vh,760px);overflow:auto;border-top:1px solid var(--line)}
 .panelinner{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(22px,3vw,44px);
   padding:clamp(20px,3vw,34px) clamp(18px,5vw,56px)}
-.fgroup .flabel{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.2em;
+.fgroup .flabel{font-family:"Roboto Mono",monospace;font-size:11px;letter-spacing:.2em;
   text-transform:uppercase;color:var(--ink-soft);margin:0 0 14px;
   padding-bottom:8px;border-bottom:1px solid var(--line)}
 .opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));
@@ -98,12 +98,12 @@ header{position:sticky;top:0;z-index:60;background:rgba(237,235,228,.86);
 .opt[aria-pressed="true"]{color:var(--accent);font-weight:500}
 .opt .dot{width:11px;height:11px;border-radius:50%;
   border:1px solid rgba(0,0,0,.2);flex:none}
-.opt.allopt{font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.1em;
+.opt.allopt{font-family:"Roboto Mono",monospace;font-size:12px;letter-spacing:.1em;
   text-transform:uppercase;color:var(--ink-soft)}
 .opt.allopt[aria-pressed="true"]{color:var(--accent)}
 .panelfoot{grid-column:1/-1;display:flex;justify-content:flex-end;gap:18px;
   padding-top:6px;border-top:1px solid var(--line);margin-top:4px}
-.clearbtn{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.14em;
+.clearbtn{font-family:"Roboto Mono",monospace;font-size:11px;letter-spacing:.14em;
   text-transform:uppercase;color:var(--ink-soft);background:transparent;border:0;
   cursor:pointer;padding:12px 0}
 .clearbtn:hover{color:var(--ink)}
@@ -132,14 +132,14 @@ header{position:sticky;top:0;z-index:60;background:rgba(237,235,228,.86);
 .card:hover .frame img{transform:scale(1.04)}
 .meta{padding:12px 2px 0;display:flex;justify-content:space-between;gap:14px}
 .meta .l{min-width:0}
-.brand{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.14em;
+.brand{font-family:"Roboto Mono",monospace;font-size:11px;letter-spacing:.14em;
   text-transform:uppercase;color:var(--ink-soft)}
-.pname{font-size:14px;margin-top:3px;font-weight:400;letter-spacing:-0.01em;
+.pname{font-size:13px;margin-top:3px;font-weight:400;letter-spacing:0;
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.sub{font-family:"Space Mono",monospace;font-size:11px;color:var(--ink-soft);
+.sub{font-family:"Roboto Mono",monospace;font-size:11px;color:var(--ink-soft);
   margin-top:5px;display:flex;align-items:center;gap:7px}
 .dot{width:10px;height:10px;border-radius:50%;border:1px solid rgba(0,0,0,.18);flex:none}
-.price{font-family:"Space Mono",monospace;font-size:13px;white-space:nowrap}
+.price{font-family:"Roboto Mono",monospace;font-size:13px;white-space:nowrap}
 @media(max-width:1200px){.grid{column-count:3}}
 @media(max-width:820px){.grid{column-count:2}}
 @media(max-width:460px){.grid{column-count:2;column-gap:14px}
@@ -152,11 +152,11 @@ header{position:sticky;top:0;z-index:60;background:rgba(237,235,228,.86);
 .scatter .card .frame img{width:auto;max-width:100%;max-height:100%;object-fit:contain}
 .scatter .card{touch-action:none}
 .scatter .tag{position:absolute;top:8px;left:8px;z-index:2;
-  font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.12em;
+  font-family:"Roboto Mono",monospace;font-size:10px;letter-spacing:.12em;
   background:var(--paper);border:1px solid var(--line);padding:2px 7px;border-radius:100px}
 .scatter .meta{opacity:0;transition:.2s}
 .scatter .card:hover .meta{opacity:1}
-.hint{font-family:"Space Mono",monospace;font-size:11px;color:var(--ink-soft);
+.hint{font-family:"Roboto Mono",monospace;font-size:11px;color:var(--ink-soft);
   text-align:center;padding:6px 0 18px;letter-spacing:.08em}
 @media(max-width:720px){.scatter{display:grid;grid-template-columns:1fr 1fr;gap:18px;min-height:0}
   .scatter .card{position:static!important;width:auto;transform:none!important}
@@ -176,10 +176,10 @@ header{position:sticky;top:0;z-index:60;background:rgba(237,235,228,.86);
 .sheet .big img{max-width:100%;max-height:64vh;object-fit:contain;mix-blend-mode:multiply}
 .sheet .info{padding:clamp(22px,3vw,40px);position:relative}
 .sheet .info h2{margin:14px 0 2px;font-weight:400;font-size:clamp(20px,2.4vw,26px);
-  letter-spacing:-0.02em;line-height:1.02}
+  letter-spacing:0;line-height:1.15}
 .spec{margin-top:24px;border-top:1px solid var(--line)}
 .spec .row{display:flex;justify-content:space-between;gap:16px;padding:11px 0;
-  border-bottom:1px solid var(--line);font-family:"Space Mono",monospace;font-size:13px}
+  border-bottom:1px solid var(--line);font-family:"Roboto Mono",monospace;font-size:13px}
 .spec .row .k{color:var(--ink-soft);letter-spacing:.08em;text-transform:uppercase;font-size:11px}
 .close{position:absolute;top:14px;right:16px;border:1px solid var(--line);background:transparent;
   width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:16px;line-height:1}
@@ -189,7 +189,7 @@ header{position:sticky;top:0;z-index:60;background:rgba(237,235,228,.86);
 
 footer{border-top:1px solid var(--line);padding:34px clamp(18px,5vw,56px);
   display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;
-  font-family:"Space Mono",monospace;font-size:11px;color:var(--ink-soft);letter-spacing:.06em}
+  font-family:"Roboto Mono",monospace;font-size:11px;color:var(--ink-soft);letter-spacing:.06em}
 
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}

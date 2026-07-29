@@ -1,10 +1,32 @@
 {
-  "generated_at": "2026-07-27T14:45:42.053Z",
-  "count": 49,
+  "generated_at": "2026-07-29T19:10:47.628Z",
+  "count": 50,
   "brands": 24,
   "owned": 45,
-  "wishlist": 4,
+  "wishlist": 5,
   "items": [
+    {
+      "id": "3ac80662-348e-8092-b09f-f461cd40ac3e",
+      "name": "Bomber Jacket",
+      "brand": "Massimo Dutti",
+      "categories": [
+        "Jacket"
+      ],
+      "color": "navy",
+      "size": "S",
+      "price": "130,00 €",
+      "seasons": [
+        "Übergang",
+        "Sommer",
+        "Winter"
+      ],
+      "formality": "Smart",
+      "era": "",
+      "status": "Wishlist",
+      "link": "https://www.massimodutti.com/at/bomberjacke-aus-reinem-leinen-mit-puffarmeln-l06704505?pelement=61731639&colorId=407",
+      "worn": null,
+      "image": "images/068062364ad6bb6c.jpg"
+    },
     {
       "id": "3a980662-348e-8014-aca7-caa405d806d2",
       "name": "Wrap Skirt",
@@ -90,7 +112,7 @@
       "era": "Letzte 2 Jahre",
       "status": "Owned",
       "link": "",
-      "worn": null,
+      "worn": 1,
       "image": "images/ad84a91eceaa7233.jpg",
       "own_photo": true
     },

@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-29T19:18:34.622Z",
-  "count": 50,
+  "generated_at": "2026-07-29T19:58:54.779Z",
+  "count": 49,
   "brands": 24,
   "owned": 45,
-  "wishlist": 5,
+  "wishlist": 4,
   "items": [
     {
       "id": "3ac80662-348e-8092-b09f-f461cd40ac3e",
@@ -226,27 +226,6 @@
       "image": "images/dfab38d3ab17bd4c.jpg"
     },
     {
-      "id": "3a480662-348e-8031-92ed-ebc8fb745167",
-      "name": "Cotton Pants Oversized",
-      "brand": "Arket",
-      "categories": [
-        "Trousers"
-      ],
-      "color": "White",
-      "size": "34",
-      "price": "79,00 €",
-      "seasons": [
-        "Sommer",
-        "Übergang"
-      ],
-      "formality": "Casual",
-      "era": "",
-      "status": "Wishlist",
-      "link": "https://www.arket.com/de-at/product/cotton-pleat-knee-trousers-white-1347990002/",
-      "worn": null,
-      "image": "images/3b647144e18fe8dc.jpg"
-    },
-    {
       "id": "3a380662-348e-8061-b0f1-dbc2c8b5c550",
       "name": "Utility Shorts",
       "brand": "Arket",
@@ -265,7 +244,8 @@
       "status": "Wishlist",
       "link": "https://www.arket.com/de-at/product/soft-utility-shorts-white-1346679001/",
       "worn": null,
-      "image": "images/429dc9ce5af88a0a.jpg"
+      "image": "images/8d7a79d14c83a378.png",
+      "own_photo": true
     },
     {
       "id": "3a380662-348e-8005-98a8-e1f46c180c4c",
@@ -413,7 +393,7 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/0f374bc36db20856.jpg"
+      "image": ""
     },
     {
       "id": "3a280662-348e-8075-b339-c2011e437b02",
@@ -561,7 +541,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/53adf7695790cecc.jpg"
+      "image": "images/994b5a3d8a48ce1b.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-814b-93e4-c4246e49e8c1",
@@ -583,7 +564,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/9476906bbe972495.jpg"
+      "image": "images/eb5fba0c227708b1.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-815f-82a4-d9146ca5fea0",
@@ -605,7 +587,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/a224d76d797177fc.jpg"
+      "image": "images/303a2dcd7b5cba0b.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-8165-8927-c6d7ad642724",
@@ -627,7 +610,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/441416217b324358.jpeg"
+      "image": "images/86047e9e32774998.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-816e-a7e4-c7e9b7548980",
@@ -761,7 +745,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/582a911195b26498.jpg"
+      "image": "images/afc93d1768c454c5.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-8097-98bc-dcc92ea54e26",
@@ -782,7 +767,8 @@
       "status": "Owned",
       "link": "",
       "worn": 1,
-      "image": "images/a15825c4ad9246a8.avif"
+      "image": "images/725e83a72680a655.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-8148-b2bb-d144337f46c7",
@@ -845,7 +831,8 @@
       "status": "Owned",
       "link": "",
       "worn": 1,
-      "image": "images/fd288cc8adf9f487.jpg"
+      "image": "images/3973a5ee2a0ff5cb.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-8172-bc46-d3a0fea08be2",
@@ -865,7 +852,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/d17a953c506b3ff4.jpg"
+      "image": "images/fcf1cc6109a691b4.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-8178-988e-ccba113e0175",
@@ -887,7 +875,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/fc270b507f9948ee.jpg"
+      "image": "images/409fdbf97bd6964a.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-81d2-8b87-c554393b39e0",
@@ -907,7 +896,8 @@
       "status": "Owned",
       "link": "",
       "worn": 2,
-      "image": "images/bbb3c65f72976e80.jpg"
+      "image": "images/9c848e1d4395a5ca.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-81fe-b6d7-dc497d1dfe59",
@@ -951,7 +941,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/1d343a73f59cf116.jpg"
+      "image": "images/10213004570f9c3d.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-8188-b0e2-dcdd15507296",
@@ -973,7 +964,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/75b678258c1506e7.jpg"
+      "image": "images/0c4cb4a484b28adb.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-814d-a536-e7ac94b611cb",
@@ -995,7 +987,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/d800032f81f95d47.jpg"
+      "image": "images/b30388945ac8ee3e.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-81c4-971f-e745eb649344",
@@ -1017,7 +1010,8 @@
       "status": "Owned",
       "link": "",
       "worn": 1,
-      "image": "images/9fabba17ebaca0a4.jpg"
+      "image": "images/a34a55dd563b3501.png",
+      "own_photo": true
     },
     {
       "id": "3a080662-348e-811e-bf18-d65f6f75129c",
@@ -1040,7 +1034,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/7289aa6b95ab1a6d.jpg"
+      "image": "images/3700481301fd7ec1.png",
+      "own_photo": true
     },
     {
       "id": "3a080662-348e-8182-a1d1-fcf445e2c979",
@@ -1062,7 +1057,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/2e9d47eeffeec424.jpg"
+      "image": "images/2ae791005538c0c9.png",
+      "own_photo": true
     },
     {
       "id": "3a080662-348e-81bc-88b6-f1f56e9a2009",
@@ -1084,7 +1080,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/f994abc95834f679.jpg"
+      "image": "images/a0c5e7ed0820e113.png",
+      "own_photo": true
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T12:49:02.872Z",
+  "generated_at": "2026-07-30T12:51:14.728Z",
   "count": 47,
   "brands": 24,
   "owned": 43,
@@ -964,7 +964,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": ""
+      "image": "images/409fdbf97bd6964a.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-81d2-8b87-c554393b39e0",
@@ -1013,7 +1014,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": ""
+      "image": "images/954c54fdf7bf5e6c.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-815e-961b-f6edd05383d0",

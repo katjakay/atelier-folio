@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-30T12:22:54.676Z",
-  "count": 48,
+  "generated_at": "2026-07-30T12:33:23.950Z",
+  "count": 47,
   "brands": 24,
-  "owned": 44,
+  "owned": 43,
   "wishlist": 4,
   "items": [
     {
@@ -160,28 +160,6 @@
       "link": "",
       "worn": 1,
       "image": "images/996c7b9f749c685a.png",
-      "own_photo": true
-    },
-    {
-      "id": "3a580662-348e-8088-bae8-dbd94d392be7",
-      "name": "Light Black Pants",
-      "brand": "Uniqlo",
-      "categories": [
-        "Trousers"
-      ],
-      "color": "Black",
-      "size": "XS",
-      "price": "19,90 €",
-      "seasons": [
-        "Übergang",
-        "Sommer"
-      ],
-      "formality": "Casual",
-      "era": "Älter",
-      "status": "Owned",
-      "link": "",
-      "worn": 1,
-      "image": "images/7e669f093bd02cc7.png",
       "own_photo": true
     },
     {

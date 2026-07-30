@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T10:29:28.309Z",
+  "generated_at": "2026-07-30T10:39:45.218Z",
   "count": 48,
   "brands": 24,
   "owned": 44,
@@ -351,7 +351,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/6c1efe9cc3b7a028.jpg"
+      "image": "images/afc64edb7ed2b12b.png",
+      "own_photo": true
     },
     {
       "id": "3a380662-348e-8016-9a7d-f627f392c782",
@@ -372,7 +373,8 @@
       "status": "Owned",
       "link": "",
       "worn": 1,
-      "image": "images/a6493143b29f2aa2.jpg"
+      "image": "images/0ef19a56f0113bef.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-8030-ba55-c22acfea1de4",
@@ -415,7 +417,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/361c8a35953ecff3.jpg"
+      "image": "images/b689ddbabdc77d54.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-801c-b034-db93ae0779cd",
@@ -437,7 +440,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/82b78f714b5c9cf5.jpg"
+      "image": "images/333018e640a57193.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-80e9-b220-f661e834229e",
@@ -458,7 +462,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/fe5bb9a60eb27de7.jpg"
+      "image": "images/53aa468843992f15.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-80ff-b07c-eadd5a27eeb2",
@@ -480,7 +485,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/04007aed0ee12ad8.jpg"
+      "image": "images/764585e8d30fdafe.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-80b1-be91-f04d0a808dd7",
@@ -501,7 +507,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/cfd95545363707fa.jpg"
+      "image": "images/019c35e9671c1f3f.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-808c-b6cc-f9f9a80f72f8",
@@ -616,7 +623,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/53d5305d678ceba7.jpg"
+      "image": "images/4565d36561c25c48.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-8198-be60-c2bc2f1119e4",
@@ -637,7 +645,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/1e4072206943d1b0.jpg"
+      "image": "images/d96a6d422a9a851c.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-81ad-8621-e3f015d23f5a",
@@ -659,7 +668,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/2697aafae6670839.jpg"
+      "image": "images/5cabd3bc262e6f06.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-81ed-82de-cafff333167b",
@@ -681,7 +691,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/3e2d6ad673287a9c.jpg"
+      "image": "images/dc227feff17b678f.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-81ef-8ce9-fd6af3c6465c",
@@ -705,7 +716,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/4fedf3b519dfae47.jpg"
+      "image": "images/7a5d2af9bf4014d7.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-80bd-abf1-d9c72e70a455",
@@ -773,7 +785,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/4159769f790ac473.jpg"
+      "image": "images/fbe096645764d9a4.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-8162-a57a-d1b8b2bb7a3c",
@@ -793,7 +806,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/b59ccec8948eb7e0.jpg"
+      "image": "images/47488b29574edb92.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-816d-8652-d76d09049d9d",
@@ -901,7 +915,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/e7988bb04eedea6e.jpg"
+      "image": "images/954c54fdf7bf5e6c.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-815e-961b-f6edd05383d0",

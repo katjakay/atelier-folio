@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T11:21:19.046Z",
+  "generated_at": "2026-07-30T12:07:14.808Z",
   "count": 48,
   "brands": 24,
   "owned": 44,
@@ -69,7 +69,7 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/bf21fa4c095c034c.jpg",
+      "image": "images/bf21fa4c095c034c.png",
       "own_photo": true
     },
     {
@@ -114,7 +114,7 @@
       "status": "Owned",
       "link": "",
       "worn": 1,
-      "image": "images/ad84a91eceaa7233.jpg",
+      "image": "images/ad84a91eceaa7233.png",
       "own_photo": true
     },
     {
@@ -245,8 +245,7 @@
       "status": "Wishlist",
       "link": "https://www.arket.com/de-at/product/soft-utility-shorts-white-1346679001/",
       "worn": null,
-      "image": "images/8d7a79d14c83a378.png",
-      "own_photo": true
+      "image": ""
     },
     {
       "id": "3a380662-348e-8005-98a8-e1f46c180c4c",

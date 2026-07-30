@@ -45,16 +45,6 @@ header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.86);
 .hdr-r{display:flex;align-items:center;gap:clamp(14px,2vw,26px)}
 @media(max-width:560px){.count{display:none}}
 
-/* hero — quiet, small, Paloma-Wool scale */
-.hero{padding:clamp(40px,7vw,72px) clamp(18px,5vw,56px) clamp(22px,3vw,34px);
-  position:relative}
-.hero h1{margin:10px 0 0;font-weight:500;letter-spacing:0;line-height:1.2;
-  font-size:clamp(23px,2.6vw,32px)}
-.hero h1 em{font-style:italic;color:var(--ink);font-weight:400}
-.hero .lede{max-width:46ch;margin:14px 0 0;color:var(--ink-soft);
-  font-size:clamp(13px,1.3vw,15px);line-height:1.5}
-.hero .eyebrow{font-size:10px;letter-spacing:.28em}
-
 /* controls — editorial drop-down panel */
 .filterbar{position:sticky;top:53px;z-index:50;
   background:rgba(255,255,255,.9);backdrop-filter:blur(8px);
@@ -115,28 +105,25 @@ header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.86);
 }
 
 /* stage */
-.stage{padding:22px clamp(18px,5vw,56px) 60px;position:relative;min-height:60vh}
+.stage{padding:34px clamp(18px,5vw,56px) 60px;position:relative;min-height:60vh}
 
 /* index grid */
 /* masonry index — cut-out images, no frame */
 .grid{column-count:4;column-gap:clamp(34px,5vw,72px)}
 .card{break-inside:avoid;-webkit-column-break-inside:avoid;page-break-inside:avoid;
   display:block;cursor:pointer;margin:0 0 clamp(48px,6vw,96px);animation:rise .5s both}
-.card .frame{overflow:hidden;display:flex;align-items:center;justify-content:center}
+.card .frame{overflow:hidden;display:flex;align-items:center;justify-content:center;
+  position:relative}
 .card .frame img{display:block;width:100%;height:auto;
   transition:transform .5s cubic-bezier(.2,.7,.2,1)}
 .card .frame.empty{min-height:180px;border:1px solid var(--line)}
 .card:hover .frame img{transform:scale(1.04)}
-.meta{padding:14px 2px 0;display:flex;justify-content:space-between;gap:14px}
-.meta .l{min-width:0}
-.brand{font-family:"Roboto Mono",monospace;font-size:11px;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--ink-soft)}
-.pname{font-size:13px;margin-top:3px;font-weight:400;letter-spacing:0;
-  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.sub{font-family:"Roboto Mono",monospace;font-size:11px;color:var(--ink-soft);
-  margin-top:5px;display:flex;align-items:center;gap:7px}
-.dot{width:10px;height:10px;border-radius:50%;border:1px solid rgba(0,0,0,.18);flex:none}
-.price{font-family:"Roboto Mono",monospace;font-size:13px;white-space:nowrap}
+.brandtag{position:absolute;top:10px;left:10px;z-index:2;
+  font-family:"Roboto Mono",monospace;font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink);
+  opacity:0;transition:opacity .22s;pointer-events:none}
+.card:hover .brandtag,.card:focus-visible .brandtag{opacity:1}
+@media(hover:none){.brandtag{opacity:1}}
 @media(max-width:1200px){.grid{column-count:3}}
 @media(max-width:820px){.grid{column-count:2;column-gap:clamp(24px,5vw,44px)}}
 @media(max-width:460px){.grid{column-count:2;column-gap:20px}
@@ -151,8 +138,6 @@ header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.86);
 .scatter .tag{position:absolute;top:8px;left:8px;z-index:2;
   font-family:"Roboto Mono",monospace;font-size:10px;letter-spacing:.12em;
   background:var(--paper);border:1px solid var(--line);padding:2px 7px;border-radius:100px}
-.scatter .meta{opacity:0;transition:.2s}
-.scatter .card:hover .meta{opacity:1}
 .hint{font-family:"Roboto Mono",monospace;font-size:11px;color:var(--ink-soft);
   text-align:center;padding:6px 0 18px;letter-spacing:.08em}
 @media(max-width:720px){.scatter{display:grid;grid-template-columns:1fr 1fr;gap:18px;min-height:0}
@@ -211,11 +196,7 @@ footer{border-top:1px solid var(--line);padding:34px clamp(18px,5vw,56px);
   </div>
 </header>
 
-<section class="hero">
-  <p class="eyebrow">Personal archive — 2026</p>
-  <h1>Apparel <em>inventory</em></h1>
-  <p class="lede">Every garment, shoe and accessory I own.</p>
-</section>
+
 
 <div class="filterbar">
   <div class="row">
@@ -323,14 +304,9 @@ function cardEl(d,i){
   el.style.animationDelay=(i*0.03)+'s';
   el.tabIndex=0;
   el.innerHTML=`
-    <div class="frame${d.image?'':' empty'}">${d.image?`<img loading="lazy" src="${d.image}" alt="${esc(d.brand)} ${esc(d.name)}">`:`<span class="mono" style="font-size:11px;color:var(--ink-soft);letter-spacing:.14em">NO IMAGE</span>`}</div>
-    <div class="meta">
-      <div class="l">
-        <div class="brand">${esc(d.brand)}</div>
-        <div class="pname">${esc(d.name)}</div>
-        <div class="sub"><span class="dot" style="background:${swatch(d.color)}"></span>${esc(d.color)} · ${esc(d.categories[0])}</div>
-      </div>
-      <div class="price">${esc(d.price)}</div>
+    <div class="frame${d.image?'':' empty'}">
+      ${d.brand?`<span class="brandtag">${esc(d.brand)}</span>`:''}
+      ${d.image?`<img loading="lazy" src="${d.image}" alt="${esc(d.brand)} ${esc(d.name)}">`:`<span class="mono" style="font-size:11px;color:var(--ink-soft);letter-spacing:.14em">NO IMAGE</span>`}
     </div>`;
   const open=()=>openSheet(d);
   el.onclick=open;

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T12:33:23.950Z",
+  "generated_at": "2026-07-30T12:49:02.872Z",
   "count": 47,
   "brands": 24,
   "owned": 43,
@@ -11,6 +11,9 @@
       "brand": "Massimo Dutti",
       "categories": [
         "Jacket"
+      ],
+      "colors": [
+        "navy"
       ],
       "color": "navy",
       "size": "S",
@@ -34,7 +37,10 @@
       "categories": [
         "Skirt"
       ],
-      "color": "Beige",
+      "colors": [
+        "beige"
+      ],
+      "color": "beige",
       "size": "S",
       "price": "",
       "seasons": [
@@ -55,6 +61,9 @@
       "brand": "Zara",
       "categories": [
         "Long-sleeve top"
+      ],
+      "colors": [
+        "white"
       ],
       "color": "white",
       "size": "S",
@@ -79,7 +88,10 @@
       "categories": [
         "T-Shirt"
       ],
-      "color": "Blue",
+      "colors": [
+        "blue"
+      ],
+      "color": "blue",
       "size": "S",
       "price": "8,95 €",
       "seasons": [
@@ -101,6 +113,9 @@
       "brand": "Zara",
       "categories": [
         "Shorts"
+      ],
+      "colors": [
+        "black"
       ],
       "color": "black",
       "size": "S",
@@ -124,7 +139,10 @@
       "categories": [
         "Top"
       ],
-      "color": "White",
+      "colors": [
+        "white"
+      ],
+      "color": "white",
       "size": "XS",
       "price": "",
       "seasons": [
@@ -147,7 +165,10 @@
       "categories": [
         "Trousers"
       ],
-      "color": "Grey",
+      "colors": [
+        "grey"
+      ],
+      "color": "grey",
       "size": "34",
       "price": "",
       "seasons": [
@@ -167,7 +188,10 @@
       "name": "Asymmetric Cupro Shirt",
       "brand": "Paloma Wool",
       "categories": [],
-      "color": "Navy",
+      "colors": [
+        "navy"
+      ],
+      "color": "navy",
       "size": "",
       "price": "",
       "seasons": [
@@ -189,7 +213,10 @@
       "categories": [
         "Bag"
       ],
-      "color": "Black",
+      "colors": [
+        "black"
+      ],
+      "color": "black",
       "size": "",
       "price": "34,90 €",
       "seasons": [
@@ -211,7 +238,10 @@
       "categories": [
         "Shorts"
       ],
-      "color": "White",
+      "colors": [
+        "white"
+      ],
+      "color": "white",
       "size": "34",
       "price": "41,00 €",
       "seasons": [
@@ -232,7 +262,10 @@
       "categories": [
         "Top"
       ],
-      "color": "Azur Blue",
+      "colors": [
+        "blue"
+      ],
+      "color": "blue",
       "size": "S",
       "price": "90,00 €",
       "seasons": [
@@ -252,6 +285,9 @@
       "brand": "HM",
       "categories": [
         "Hoodie"
+      ],
+      "colors": [
+        "grey"
       ],
       "color": "grey",
       "size": "XS",
@@ -275,6 +311,9 @@
       "categories": [
         "Trousers"
       ],
+      "colors": [
+        "white"
+      ],
       "color": "white",
       "size": "XS",
       "price": "39,90 €",
@@ -295,6 +334,9 @@
       "brand": "Massimo Dutti",
       "categories": [
         "Top"
+      ],
+      "colors": [
+        "white"
       ],
       "color": "white",
       "size": "XS",
@@ -318,6 +360,9 @@
       "categories": [
         "Top"
       ],
+      "colors": [
+        "white"
+      ],
       "color": "white",
       "size": "XS",
       "price": "12,90 €",
@@ -340,6 +385,9 @@
       "categories": [
         "Top"
       ],
+      "colors": [
+        "grey"
+      ],
       "color": "grey",
       "size": "XS",
       "price": "12,90 €",
@@ -361,6 +409,9 @@
       "brand": "Uniqlo",
       "categories": [
         "Trousers"
+      ],
+      "colors": [
+        "white"
       ],
       "color": "white",
       "size": "XS",
@@ -385,7 +436,10 @@
       "categories": [
         "Coat"
       ],
-      "color": "navy / brown",
+      "colors": [
+        "navy"
+      ],
+      "color": "navy",
       "size": "XS",
       "price": "239,00 €",
       "seasons": [
@@ -405,6 +459,9 @@
       "brand": "Mango",
       "categories": [
         "Trousers"
+      ],
+      "colors": [
+        "white"
       ],
       "color": "white",
       "size": "36",
@@ -429,6 +486,9 @@
       "categories": [
         "Knits"
       ],
+      "colors": [
+        "black"
+      ],
       "color": "black",
       "size": "1",
       "price": "165,00 €",
@@ -451,7 +511,10 @@
       "categories": [
         "Trousers"
       ],
-      "color": "dark blue",
+      "colors": [
+        "navy"
+      ],
+      "color": "navy",
       "size": "25",
       "price": "49,00 €",
       "seasons": [
@@ -473,6 +536,9 @@
       "brand": "And wander",
       "categories": [
         "Jacket"
+      ],
+      "colors": [
+        "white"
       ],
       "color": "white",
       "size": "S",
@@ -496,6 +562,9 @@
       "categories": [
         "Top"
       ],
+      "colors": [
+        "navy"
+      ],
       "color": "navy",
       "size": "XS",
       "price": "29,00 €",
@@ -518,6 +587,9 @@
       "brand": "Dr. Martens",
       "categories": [
         "Shoes"
+      ],
+      "colors": [
+        "black"
       ],
       "color": "black",
       "size": "",
@@ -543,7 +615,10 @@
         "Clogs",
         "Shoes"
       ],
-      "color": "stone / taupe",
+      "colors": [
+        "taupe"
+      ],
+      "color": "taupe",
       "size": "37",
       "price": "120,00 €",
       "seasons": [
@@ -566,7 +641,10 @@
         "Shoes",
         "Sneakers"
       ],
-      "color": "black / white calf hair",
+      "colors": [
+        "brown"
+      ],
+      "color": "brown",
       "size": "",
       "price": "90,00 €",
       "seasons": [
@@ -589,7 +667,10 @@
         "Shoes",
         "Sneakers"
       ],
-      "color": "sage",
+      "colors": [
+        "green"
+      ],
+      "color": "green",
       "size": "",
       "price": "120, 00 €",
       "seasons": [
@@ -613,7 +694,10 @@
         "Sandals",
         "Shoes"
       ],
-      "color": "cognac",
+      "colors": [
+        "brown"
+      ],
+      "color": "brown",
       "size": "36",
       "price": "100,00 €",
       "seasons": [
@@ -635,7 +719,10 @@
         "Shoes",
         "Sandals"
       ],
-      "color": "honey, transluzent",
+      "colors": [
+        "brown"
+      ],
+      "color": "brown",
       "size": "37",
       "price": "24, 00 €",
       "seasons": [
@@ -657,6 +744,9 @@
       "categories": [
         "Shoes",
         "Sneakers"
+      ],
+      "colors": [
+        "white"
       ],
       "color": "white",
       "size": "",
@@ -682,7 +772,10 @@
         "Sneakers",
         "Sports"
       ],
-      "color": "pale yellow / silver / blue",
+      "colors": [
+        "yellow"
+      ],
+      "color": "yellow",
       "size": "",
       "price": "80,00 €",
       "seasons": [
@@ -704,6 +797,9 @@
       "brand": "COS",
       "categories": [
         "Blouse"
+      ],
+      "colors": [
+        "white"
       ],
       "color": "white",
       "size": "34",
@@ -728,6 +824,9 @@
       "categories": [
         "Shoes"
       ],
+      "colors": [
+        "black"
+      ],
       "color": "black",
       "size": "37",
       "price": "90,00 €",
@@ -750,6 +849,9 @@
       "categories": [
         "Sports bra",
         "Sports"
+      ],
+      "colors": [
+        "black"
       ],
       "color": "black",
       "size": "XS",
@@ -774,7 +876,10 @@
       "categories": [
         "Jacket"
       ],
-      "color": "light greige",
+      "colors": [
+        "beige"
+      ],
+      "color": "beige",
       "size": "34",
       "price": "180,00 €",
       "seasons": [
@@ -794,6 +899,9 @@
       "brand": "And wander",
       "categories": [
         "Trousers"
+      ],
+      "colors": [
+        "black"
       ],
       "color": "black",
       "size": "S",
@@ -816,6 +924,9 @@
       "categories": [
         "Shoes"
       ],
+      "colors": [
+        "orange"
+      ],
       "color": "orange",
       "size": "37",
       "price": "205,00 €",
@@ -837,6 +948,9 @@
       "categories": [
         "Trousers"
       ],
+      "colors": [
+        "grey"
+      ],
       "color": "grey",
       "size": "XS",
       "price": "39,90 €",
@@ -850,8 +964,7 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/409fdbf97bd6964a.png",
-      "own_photo": true
+      "image": ""
     },
     {
       "id": "3a280662-348e-81d2-8b87-c554393b39e0",
@@ -859,6 +972,9 @@
       "brand": "Camper",
       "categories": [
         "Shoes"
+      ],
+      "colors": [
+        "black"
       ],
       "color": "black",
       "size": "37",
@@ -881,7 +997,10 @@
       "categories": [
         "Trousers"
       ],
-      "color": "dark brown",
+      "colors": [
+        "brown"
+      ],
+      "color": "brown",
       "size": "XS",
       "price": "39,90 €",
       "seasons": [
@@ -894,8 +1013,7 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/954c54fdf7bf5e6c.png",
-      "own_photo": true
+      "image": ""
     },
     {
       "id": "3a280662-348e-815e-961b-f6edd05383d0",
@@ -904,7 +1022,10 @@
       "categories": [
         "Top"
       ],
-      "color": "braun",
+      "colors": [
+        "brown"
+      ],
+      "color": "brown",
       "size": "S",
       "price": "50,00 €",
       "seasons": [
@@ -927,7 +1048,10 @@
       "categories": [
         "Shorts"
       ],
-      "color": "night indigo/white",
+      "colors": [
+        "white"
+      ],
+      "color": "white",
       "size": "30/32 (XS)",
       "price": "39,95 €",
       "seasons": [
@@ -950,7 +1074,10 @@
       "categories": [
         "Shorts"
       ],
-      "color": "better scarlet/white",
+      "colors": [
+        "red"
+      ],
+      "color": "red",
       "size": "30/32 (XS)",
       "price": "39,95 €",
       "seasons": [
@@ -973,7 +1100,10 @@
       "categories": [
         "Top"
       ],
-      "color": "Weiß",
+      "colors": [
+        "white"
+      ],
+      "color": "white",
       "size": "XS",
       "price": "29,00 €",
       "seasons": [
@@ -996,6 +1126,9 @@
       "categories": [
         "Bodysuit",
         "Sports"
+      ],
+      "colors": [
+        "black"
       ],
       "color": "black",
       "size": "M",
@@ -1020,7 +1153,10 @@
       "categories": [
         "Sports bra"
       ],
-      "color": "aurora coffee",
+      "colors": [
+        "brown"
+      ],
+      "color": "brown",
       "size": "S",
       "price": "44,95 €",
       "seasons": [
@@ -1043,7 +1179,10 @@
       "categories": [
         "Socks"
       ],
-      "color": "scampi",
+      "colors": [
+        "pink"
+      ],
+      "color": "pink",
       "size": "37-38",
       "price": "15,00 €",
       "seasons": [

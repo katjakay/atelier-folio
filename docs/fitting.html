@@ -4,19 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fitting Room — Atelier Folio</title>
-  <link rel="manifest" href="manifest.webmanifest">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="Folio">
-<meta name="theme-color" content="#EDEBE4">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#EDEBE4; --panel:#F6F5F1; --ink:#17140E; --ink-soft:#5B564C;
-  --line:#D8D3C7; --accent:#6E6CEB; --chip:#E3DFD5;
+  --paper:#FFFFFF; --panel:#FAFAF9; --ink:#17140E; --ink-soft:#5B564C;
+  --line:#E9E9E6; --accent:#6E6CEB; --chip:#F0F0EE;
   --good:#3F7D58; --warn:#B5762A; --bad:#A8443B;
 }
 *{box-sizing:border-box}
@@ -52,9 +46,8 @@ h1 em{font-style:italic;color:var(--ink);font-weight:400}
 
 .item{padding:clamp(30px,4vw,52px) 0;border-bottom:1px solid var(--line);
   display:grid;grid-template-columns:220px 1fr;gap:clamp(22px,3.5vw,48px)}
-.shot{background:var(--panel);border:1px solid var(--line);padding:14px;
-  display:flex;align-items:center;justify-content:center;min-height:200px}
-.shot img{width:100%;height:auto;display:block;mix-blend-mode:multiply}
+.shot{display:flex;align-items:center;justify-content:center;min-height:160px}
+.shot img{width:100%;height:auto;display:block}
 .shot .none{font-family:"Roboto Mono",monospace;font-size:11px;
   letter-spacing:.14em;color:var(--ink-soft)}
 
@@ -102,7 +95,7 @@ footer{padding:40px 0 70px;font-family:"Roboto Mono",monospace;font-size:11px;
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Folio">
-<meta name="theme-color" content="#EDEBE4">
+<meta name="theme-color" content="#FFFFFF">
 </head>
 <body>
 

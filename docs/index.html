@@ -4,24 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Atelier Folio — a wardrobe, catalogued</title>
-  <link rel="manifest" href="manifest.webmanifest">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="Folio">
-<meta name="theme-color" content="#EDEBE4">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#EDEBE4;
+  --paper:#FFFFFF;
   --panel:#F6F5F1;
   --ink:#17140E;
   --ink-soft:#5B564C;
-  --line:#D8D3C7;
+  --line:#E9E9E6;
   --accent:#6E6CEB;
-  --chip:#E3DFD5;
+  --chip:#F0F0EE;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -41,7 +35,7 @@ a{color:inherit}
   transform:translate(-50%,-50%);transition:transform .12s ease, opacity .2s;mix-blend-mode:multiply}
 
 /* header */
-header{position:sticky;top:0;z-index:60;background:rgba(237,235,228,.86);
+header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.86);
   backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .bar{display:flex;align-items:baseline;justify-content:space-between;
   gap:20px;padding:16px clamp(18px,5vw,56px)}
@@ -63,7 +57,7 @@ header{position:sticky;top:0;z-index:60;background:rgba(237,235,228,.86);
 
 /* controls — editorial drop-down panel */
 .filterbar{position:sticky;top:53px;z-index:50;
-  background:rgba(237,235,228,.9);backdrop-filter:blur(8px);
+  background:rgba(255,255,255,.9);backdrop-filter:blur(8px);
   border-bottom:1px solid var(--line)}
 .filterbar .row{display:flex;align-items:center;justify-content:space-between;
   gap:20px;padding:11px clamp(18px,5vw,56px)}
@@ -124,19 +118,16 @@ header{position:sticky;top:0;z-index:60;background:rgba(237,235,228,.86);
 .stage{padding:22px clamp(18px,5vw,56px) 60px;position:relative;min-height:60vh}
 
 /* index grid */
-/* masonry index */
-.grid{column-count:4;column-gap:clamp(16px,2vw,30px)}
+/* masonry index — cut-out images, no frame */
+.grid{column-count:4;column-gap:clamp(34px,5vw,72px)}
 .card{break-inside:avoid;-webkit-column-break-inside:avoid;page-break-inside:avoid;
-  display:block;cursor:pointer;margin:0 0 clamp(20px,2.4vw,38px);animation:rise .5s both}
-.card .frame{background:var(--panel);border:1px solid var(--line);overflow:hidden;
-  padding:14px;display:flex;align-items:center;justify-content:center;
-  transition:box-shadow .35s}
-.card .frame img{display:block;width:100%;height:auto;mix-blend-mode:multiply;
+  display:block;cursor:pointer;margin:0 0 clamp(48px,6vw,96px);animation:rise .5s both}
+.card .frame{overflow:hidden;display:flex;align-items:center;justify-content:center}
+.card .frame img{display:block;width:100%;height:auto;
   transition:transform .5s cubic-bezier(.2,.7,.2,1)}
-.card .frame.empty{min-height:200px}
-.card:hover .frame{box-shadow:0 26px 50px -34px rgba(0,0,0,.55)}
+.card .frame.empty{min-height:180px;border:1px solid var(--line)}
 .card:hover .frame img{transform:scale(1.04)}
-.meta{padding:12px 2px 0;display:flex;justify-content:space-between;gap:14px}
+.meta{padding:14px 2px 0;display:flex;justify-content:space-between;gap:14px}
 .meta .l{min-width:0}
 .brand{font-family:"Roboto Mono",monospace;font-size:11px;letter-spacing:.14em;
   text-transform:uppercase;color:var(--ink-soft)}
@@ -147,9 +138,9 @@ header{position:sticky;top:0;z-index:60;background:rgba(237,235,228,.86);
 .dot{width:10px;height:10px;border-radius:50%;border:1px solid rgba(0,0,0,.18);flex:none}
 .price{font-family:"Roboto Mono",monospace;font-size:13px;white-space:nowrap}
 @media(max-width:1200px){.grid{column-count:3}}
-@media(max-width:820px){.grid{column-count:2}}
-@media(max-width:460px){.grid{column-count:2;column-gap:14px}
-  .card{margin-bottom:18px}.card .frame{padding:10px}}
+@media(max-width:820px){.grid{column-count:2;column-gap:clamp(24px,5vw,44px)}}
+@media(max-width:460px){.grid{column-count:2;column-gap:20px}
+  .card{margin-bottom:36px}}
 
 /* scatter */
 .scatter{position:relative;min-height:1200px}
@@ -177,9 +168,9 @@ header{position:sticky;top:0;z-index:60;background:rgba(237,235,228,.86);
 .sheet{background:var(--paper);border:1px solid var(--line);max-width:920px;width:100%;
   max-height:90vh;overflow:auto;display:grid;grid-template-columns:1.1fr .9fr;
   animation:rise .3s both}
-.sheet .big{background:var(--panel);border-right:1px solid var(--line);
+.sheet .big{background:var(--paper);border-right:1px solid var(--line);
   display:flex;align-items:center;justify-content:center;padding:34px;min-height:340px}
-.sheet .big img{max-width:100%;max-height:64vh;object-fit:contain;mix-blend-mode:multiply}
+.sheet .big img{max-width:100%;max-height:64vh;object-fit:contain}
 .sheet .info{padding:clamp(22px,3vw,40px);position:relative}
 .sheet .info h2{margin:14px 0 2px;font-weight:400;font-size:clamp(20px,2.4vw,26px);
   letter-spacing:0;line-height:1.15}
@@ -205,7 +196,7 @@ footer{border-top:1px solid var(--line);padding:34px clamp(18px,5vw,56px);
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Folio">
-<meta name="theme-color" content="#EDEBE4">
+<meta name="theme-color" content="#FFFFFF">
 </head>
 <body>
 <div class="cursor" id="cursor" aria-hidden="true"></div>

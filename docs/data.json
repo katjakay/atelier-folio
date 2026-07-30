@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-30T09:59:21.600Z",
-  "count": 49,
+  "generated_at": "2026-07-30T10:29:28.309Z",
+  "count": 48,
   "brands": 24,
-  "owned": 45,
+  "owned": 44,
   "wishlist": 4,
   "items": [
     {
@@ -46,7 +46,8 @@
       "status": "Owned",
       "link": "",
       "worn": 1,
-      "image": ""
+      "image": "images/5b7b25e29c1aa958.png",
+      "own_photo": true
     },
     {
       "id": "3a780662-348e-8033-b5d1-e35ce046420d",
@@ -158,7 +159,7 @@
       "status": "Owned",
       "link": "",
       "worn": 1,
-      "image": "images/996c7b9f749c685a.jpeg",
+      "image": "images/996c7b9f749c685a.png",
       "own_photo": true
     },
     {
@@ -307,7 +308,7 @@
       "status": "Owned",
       "link": "",
       "worn": 1,
-      "image": "images/ca5e8fab8fe9d20e.jpeg",
+      "image": "images/ca5e8fab8fe9d20e.png",
       "own_photo": true
     },
     {
@@ -359,7 +360,7 @@
       "categories": [
         "Top"
       ],
-      "color": "brown",
+      "color": "grey",
       "size": "XS",
       "price": "12,90 €",
       "seasons": [
@@ -393,7 +394,8 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": ""
+      "image": "images/7704beb559d2b041.png",
+      "own_photo": true
     },
     {
       "id": "3a280662-348e-8075-b339-c2011e437b02",
@@ -457,26 +459,6 @@
       "link": "",
       "worn": null,
       "image": "images/fe5bb9a60eb27de7.jpg"
-    },
-    {
-      "id": "3a280662-348e-80e8-bc9d-f7e98c013ef5",
-      "name": "Boiled Merino Sweater",
-      "brand": "A Day's March",
-      "categories": [
-        "Knits"
-      ],
-      "color": "coffee",
-      "size": "",
-      "price": "120,00 €",
-      "seasons": [
-        "Winter"
-      ],
-      "formality": "Smart",
-      "era": "Letzte 2 Jahre",
-      "status": "Owned",
-      "link": "",
-      "worn": null,
-      "image": "images/319d9ad4e1391a4a.jpg"
     },
     {
       "id": "3a280662-348e-80ff-b07c-eadd5a27eeb2",

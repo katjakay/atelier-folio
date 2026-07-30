@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T10:49:44.570Z",
+  "generated_at": "2026-07-30T10:55:17.320Z",
   "count": 48,
   "brands": 24,
   "owned": 44,
@@ -288,7 +288,7 @@
       "status": "Owned",
       "link": "",
       "worn": null,
-      "image": "images/3fd3774ab1fc4252.jpg"
+      "image": ""
     },
     {
       "id": "3a380662-348e-808d-bc5f-f5ec246949b8",
@@ -491,7 +491,7 @@
     {
       "id": "3a280662-348e-80b1-be91-f04d0a808dd7",
       "name": "All-weather Jacke",
-      "brand": "and wander",
+      "brand": "And wander",
       "categories": [
         "Jacket"
       ],
@@ -767,7 +767,7 @@
     {
       "id": "3a280662-348e-8148-b2bb-d144337f46c7",
       "name": "OPTIME WORKOUT STRAPPY LIGHT SUPPORT BRA",
-      "brand": "adidas Performance",
+      "brand": "Adidas Performance",
       "categories": [
         "Sports bra",
         "Sports"
@@ -812,7 +812,7 @@
     {
       "id": "3a280662-348e-816d-8652-d76d09049d9d",
       "name": "crinkled nylon pants",
-      "brand": "and wander",
+      "brand": "And wander",
       "categories": [
         "Trousers"
       ],
@@ -944,7 +944,7 @@
     {
       "id": "3a280662-348e-8188-b0e2-dcdd15507296",
       "name": "FIREBIRD Shorts",
-      "brand": "adidas Originals",
+      "brand": "Adidas Originals",
       "categories": [
         "Shorts"
       ],
@@ -967,7 +967,7 @@
     {
       "id": "3a280662-348e-814d-a536-e7ac94b611cb",
       "name": "FIREBIRD Shorts",
-      "brand": "adidas Originals",
+      "brand": "Adidas Originals",
       "categories": [
         "Shorts"
       ],
@@ -1037,7 +1037,7 @@
     {
       "id": "3a080662-348e-8182-a1d1-fcf445e2c979",
       "name": "Sport-BH mit mittlerer Stützkraft",
-      "brand": "adidas Performance",
+      "brand": "Adidas Performance",
       "categories": [
         "Sports bra"
       ],

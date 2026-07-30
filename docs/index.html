@@ -252,7 +252,7 @@ function opts(id,key,values,withDot){
 function buildChrome(){
   opts('catset','cat',[...new Set(DATA.flatMap(d=>d.categories))].sort());
   opts('brandset','brand',[...new Set(DATA.map(d=>d.brand).filter(Boolean))].sort());
-  opts('colourset','colour',[...new Set(DATA.map(d=>d.color).filter(Boolean))].sort(),true);
+  opts('colourset','colour',[...new Set(DATA.flatMap(d=>d.colors||[]).filter(Boolean))].sort(),true);
   opts('seasonset','season',[...new Set(DATA.flatMap(d=>d.seasons||[]))]);
   opts('formset','form',[...new Set(DATA.map(d=>d.formality).filter(Boolean))]);
   opts('eraset','era',[...new Set(DATA.map(d=>d.era).filter(Boolean))]);
@@ -262,7 +262,7 @@ function filtered(){
   return DATA.filter(d=>
     (state.cat==="All"||d.categories.includes(state.cat))&&
     (state.brand==="All"||d.brand===state.brand)&&
-    (state.colour==="All"||d.color===state.colour)&&
+    (state.colour==="All"||(d.colors||[]).includes(state.colour))&&
     (state.season==="All"||(d.seasons||[]).includes(state.season))&&
     (state.form==="All"||d.formality===state.form)&&
     (state.era==="All"||d.era===state.era));
@@ -332,7 +332,7 @@ function makeDraggable(el){
 /* lightbox */
 const lb=document.getElementById('lb'),sheet=document.getElementById('sheet');
 function openSheet(d){
-  const rows=[["Brand",d.brand],["Category",d.categories.join(" / ")],["Colour",d.color],["Size",d.size],
+  const rows=[["Brand",d.brand],["Category",d.categories.join(" / ")],["Colour",(d.colors||[]).join(" / ")||d.color||"—"],["Size",d.size],
     ["Price",d.price],["Season",(d.seasons||[]).join(" / ")||"—"],["Wear",d.formality||"—"],["Era",d.era||"—"],["Worn",d.worn==null?"—":d.worn+"×"],["Image",d.own_photo?"own photo":d.image?"retailer":"—"],["Per wear",cpw(d)]];
   sheet.innerHTML=`
     <div class="big">${d.image?`<img src="${d.image}" alt="${esc(d.brand)} ${esc(d.name)}">`:`<span class="mono" style="font-size:12px;color:var(--ink-soft);letter-spacing:.14em">NO IMAGE</span>`}</div>

@@ -1,10 +1,85 @@
 {
-  "generated_at": "2026-07-30T12:51:14.728Z",
-  "count": 47,
-  "brands": 24,
-  "owned": 43,
+  "generated_at": "2026-07-31T06:41:06.731Z",
+  "count": 49,
+  "brands": 26,
+  "owned": 45,
   "wishlist": 4,
   "items": [
+    {
+      "id": "3ad80662-348e-8058-a488-e38f541b216c",
+      "name": "Soft Cayetano Bag",
+      "brand": "Paloma Wool",
+      "categories": [],
+      "colors": [
+        "brown"
+      ],
+      "color": "brown",
+      "size": "",
+      "price": "260, 00 €",
+      "seasons": [
+        "Sommer",
+        "Winter",
+        "Übergang"
+      ],
+      "formality": "Smart",
+      "era": "",
+      "status": "Wishlist",
+      "link": "",
+      "worn": null,
+      "image": "images/73a112f31fbe9b13.jpg"
+    },
+    {
+      "id": "3ad80662-348e-800d-8aad-c977e3157659",
+      "name": "Drummer Bag",
+      "brand": "APC",
+      "categories": [
+        "Bag"
+      ],
+      "colors": [
+        "brown"
+      ],
+      "color": "brown",
+      "size": "",
+      "price": "580,00 €",
+      "seasons": [
+        "Sommer",
+        "Übergang",
+        "Winter"
+      ],
+      "formality": "Smart",
+      "era": "",
+      "status": "Wishlist",
+      "link": "https://www.apcstore.de/products/tasche-drummer-small-kbd-pxceo-f67073",
+      "worn": null,
+      "image": "images/52eeac2e26d34162.png",
+      "own_photo": true
+    },
+    {
+      "id": "3ad80662-348e-808a-9900-fc18c5dc2569",
+      "name": "Rain Jacket",
+      "brand": "Pas Normal",
+      "categories": [
+        "Jacket"
+      ],
+      "colors": [
+        "brown"
+      ],
+      "color": "brown",
+      "size": "XS",
+      "price": "200, 00 €",
+      "seasons": [
+        "Sommer",
+        "Übergang",
+        "Winter"
+      ],
+      "formality": "Casual",
+      "era": "Älter",
+      "status": "Owned",
+      "link": "",
+      "worn": null,
+      "image": "images/b067ca56cb62b2e3.png",
+      "own_photo": true
+    },
     {
       "id": "3ac80662-348e-8092-b09f-f461cd40ac3e",
       "name": "Bomber Jacket",
@@ -28,7 +103,8 @@
       "status": "Wishlist",
       "link": "https://www.massimodutti.com/at/bomberjacke-aus-reinem-leinen-mit-puffarmeln-l06704505?pelement=61731639&colorId=407",
       "worn": null,
-      "image": "images/068062364ad6bb6c.jpg"
+      "image": "images/85a79d1788a47be1.png",
+      "own_photo": true
     },
     {
       "id": "3a980662-348e-8014-aca7-caa405d806d2",
@@ -199,7 +275,7 @@
         "Übergang",
         "Winter"
       ],
-      "formality": "",
+      "formality": "Smart",
       "era": "Letzte 2 Jahre",
       "status": "Owned",
       "link": "",
@@ -226,34 +302,11 @@
       ],
       "formality": "Smart",
       "era": "",
-      "status": "Wishlist",
+      "status": "Owned",
       "link": "https://www.comptoirdescotonniers.com/on/demandware.static/-/Sites-cdc-master/default/dw0c0f278e/5WBA024P37_H091_AP1.jpg",
       "worn": null,
-      "image": "images/dfab38d3ab17bd4c.jpg"
-    },
-    {
-      "id": "3a380662-348e-8061-b0f1-dbc2c8b5c550",
-      "name": "Utility Shorts",
-      "brand": "Arket",
-      "categories": [
-        "Shorts"
-      ],
-      "colors": [
-        "white"
-      ],
-      "color": "white",
-      "size": "34",
-      "price": "41,00 €",
-      "seasons": [
-        "Sommer",
-        "Übergang"
-      ],
-      "formality": "Casual",
-      "era": "Unbekannt",
-      "status": "Wishlist",
-      "link": "https://www.arket.com/de-at/product/soft-utility-shorts-white-1346679001/",
-      "worn": null,
-      "image": ""
+      "image": "images/e810c6b5d2ea66ea.png",
+      "own_photo": true
     },
     {
       "id": "3a380662-348e-8005-98a8-e1f46c180c4c",
@@ -277,7 +330,8 @@
       "status": "Wishlist",
       "link": "https://flore-flore.com/products/esme-tank-azur-blue?variant=54657521844553",
       "worn": null,
-      "image": "images/8c1e518eb9d28cf6.png"
+      "image": "images/b580e7a506872b93.png",
+      "own_photo": true
     },
     {
       "id": "3a380662-348e-8091-b40b-dafe9c2e1f21",

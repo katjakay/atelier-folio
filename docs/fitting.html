@@ -373,7 +373,6 @@ fetch("data.json?v="+Date.now())
         rowsByItem[wi] = rows;
 
         const stackHtml = `<div class="outfit">
-          <p class="plabel">Als Outfit</p>
           <div class="stack" data-item="${wi}">
             ${rows.map((row,ri)=>{
               const n = row.items.length;

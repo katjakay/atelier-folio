@@ -108,9 +108,10 @@ body.mode-numbers .visview{display:none}
 .sarrow:hover{color:var(--ink)}
 .sarrow:disabled{opacity:.25;cursor:default}
 .sarrow.spacer{visibility:hidden;pointer-events:none}
-.sfig{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0}
-.sfig img{max-width:100%;max-height:150px;object-fit:contain;display:block}
-.srow[data-slot="shoe"] .sfig img{max-height:64px}
+.sfig{display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:6px;min-width:0;height:150px}
+.sfig img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+.srow[data-slot="shoe"] .sfig{height:64px}
 .sfig .snone{font-family:"Roboto Mono",monospace;font-size:11px;color:var(--ink-soft);
   padding:14px 0}
 

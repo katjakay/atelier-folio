@@ -38,11 +38,33 @@ h1 em{font-style:italic;color:var(--ink);font-weight:400}
 .lede{max-width:52ch;margin:22px 0 0;color:var(--ink-soft);
   font-size:clamp(15px,1.5vw,17px)}
 
-.baseline{display:flex;flex-wrap:wrap;gap:clamp(20px,4vw,54px);
-  padding:22px 0 34px;border-bottom:1px dotted var(--ink)}
-.stat .n{font-family:"Roboto Mono",monospace;font-size:clamp(20px,2.4vw,26px);font-weight:400}
-.stat .k{font-family:"Roboto Mono",monospace;font-size:10px;letter-spacing:.16em;
-  text-transform:uppercase;color:var(--ink-soft);margin-top:4px}
+/* dashboard */
+.dash{padding:22px 0 34px;border-bottom:1px dotted var(--ink)}
+.dashgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:22px 30px}
+.dcard .n{font-family:"Roboto Mono",monospace;font-size:clamp(26px,3.4vw,38px);
+  font-weight:400;line-height:1}
+.dcard .k{font-family:"Roboto Mono",monospace;font-size:10px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-soft);margin-top:6px}
+.dcard .seasonbar{margin-top:10px;height:6px;background:var(--chip);position:relative;
+  overflow:hidden;border-radius:2px}
+.dcard .seasonbar i{position:absolute;inset:0 auto 0 0;background:var(--accent);
+  display:block;border-radius:2px}
+.slots{margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:16px 30px}
+.slot .lab{font-family:"Roboto Mono",monospace;font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-soft)}
+.slot .n{font-family:"Roboto Mono",monospace;font-size:19px;margin-top:4px}
+
+/* view toggle */
+.modebar{display:flex;justify-content:flex-end;padding:18px 0 0}
+.modetoggle{display:flex;gap:4px;border:1px solid var(--line);border-radius:100px;padding:3px}
+.modetoggle button{font-family:"Roboto Mono",monospace;font-size:12px;border:0;
+  background:transparent;color:var(--ink-soft);padding:6px 16px;border-radius:100px;cursor:pointer}
+.modetoggle button[aria-pressed="true"]{background:var(--accent);color:#fff}
+.numview,.visview{display:block}
+body.mode-visual .numview{display:none}
+body.mode-numbers .visview{display:none}
 
 .item{padding:clamp(30px,4vw,52px) 0;border-bottom:1px dotted var(--ink);
   display:grid;grid-template-columns:220px 1fr;gap:clamp(22px,3.5vw,48px)}
@@ -73,6 +95,22 @@ h1 em{font-style:italic;color:var(--ink);font-weight:400}
 .why b{color:var(--ink);font-weight:500}
 .overlap{margin-top:12px;font-family:"Roboto Mono",monospace;font-size:11.5px;
   color:var(--ink-soft)}
+
+/* pairs-with preview */
+.pairs{margin-top:26px;border-top:1px dotted var(--line);padding-top:20px}
+.pairs .plabel{font-family:"Roboto Mono",monospace;font-size:10px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-soft);margin:0 0 12px}
+.pairgroup{margin-bottom:16px}
+.pairgroup .gname{font-family:"Roboto Mono",monospace;font-size:10.5px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:8px}
+.pairgroup:last-child{margin-bottom:0}
+.prow{display:flex;flex-wrap:wrap;gap:10px}
+.pchip{display:flex;align-items:center;gap:7px;border:1px solid var(--line);
+  padding:5px 10px 5px 5px;border-radius:100px}
+.pchip img{width:26px;height:26px;object-fit:contain;display:block}
+.pchip .pn{font-size:12px;letter-spacing:0;max-width:130px;overflow:hidden;
+  text-overflow:ellipsis;white-space:nowrap}
+.pnone{font-family:"Roboto Mono",monospace;font-size:11.5px;color:var(--ink-soft)}
 
 .empty{padding:70px 0 90px;color:var(--ink-soft);max-width:56ch}
 .empty code{background:var(--chip);padding:2px 6px;font-size:13px}
@@ -113,7 +151,13 @@ footer{padding:40px 0 70px;font-family:"Roboto Mono",monospace;font-size:11px;
       womit es sich überschneidet.</p>
   </section>
 
-  <div class="baseline" id="baseline"></div>
+  <div class="dash" id="dash"></div>
+  <div class="modebar">
+    <div class="modetoggle" role="group" aria-label="Ansicht">
+      <button id="mNum" aria-pressed="true">Numbers</button>
+      <button id="mVis" aria-pressed="false">Visual</button>
+    </div>
+  </div>
   <div id="list"></div>
 
   <footer id="foot">wird geladen …</footer>
@@ -181,6 +225,36 @@ const esc = s => String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">"
 const bar = (pct,cls="") =>
   `<div class="bar"><i class="${cls}" style="width:${Math.max(2,Math.min(100,pct))}%"></i></div>`;
 
+/* view mode toggle */
+document.body.classList.add('mode-numbers');
+const mNum=document.getElementById('mNum'),mVis=document.getElementById('mVis');
+mNum.onclick=()=>{document.body.classList.replace('mode-visual','mode-numbers');
+  mNum.setAttribute('aria-pressed','true');mVis.setAttribute('aria-pressed','false');};
+mVis.onclick=()=>{document.body.classList.replace('mode-numbers','mode-visual');
+  mVis.setAttribute('aria-pressed','true');mNum.setAttribute('aria-pressed','false');};
+
+/* which owned pieces would this wishlist item actually combine with */
+function pairsWith(w, owned){
+  const wSlot = slotOf(w);
+  const targetSlots = wSlot==="top" ? ["bottom","shoe","outer"]
+    : wSlot==="bottom" ? ["top","shoe","outer"]
+    : wSlot==="shoe" ? ["top","bottom","outer"]
+    : ["top","bottom","shoe"]; // outer or other: show everything it could sit over
+
+  const groups = {};
+  targetSlots.forEach(slot=>{
+    groups[slot] = owned.filter(d=>{
+      if(slotOf(d)!==slot) return false;
+      if(!formOk(w.formality,d.formality)) return false;
+      if(wSlot!=="outer" && slotOf(w)!=="other"){
+        if(!shareSeason(w.seasons,d.seasons)) return false;
+      }
+      return true;
+    });
+  });
+  return groups;
+}
+
 /* ---------- Rendern ---------- */
 fetch("data.json?v="+Date.now())
   .then(r=>{ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); })
@@ -195,11 +269,31 @@ fetch("data.json?v="+Date.now())
       perSeason[s] = outfits(owned.filter(d=>(d.seasons||[]).includes(s)));
     });
 
-    document.getElementById("baseline").innerHTML =
-      `<div class="stat"><div class="n">${owned.length}</div><div class="k">Teile im Schrank</div></div>
-       <div class="stat"><div class="n">${base}</div><div class="k">mögliche Outfits</div></div>` +
-      SEASONS.map(s=>`<div class="stat"><div class="n">${perSeason[s]}</div>
-        <div class="k">davon ${s}</div></div>`).join("");
+    const maxSeason = Math.max(1, ...SEASONS.map(s=>perSeason[s]));
+    const slotCounts = {
+      top: owned.filter(d=>slotOf(d)==="top").length,
+      bottom: owned.filter(d=>slotOf(d)==="bottom").length,
+      shoe: owned.filter(d=>slotOf(d)==="shoe").length,
+      outer: owned.filter(d=>slotOf(d)==="outer").length,
+    };
+    const slotLabel = {top:"Oberteile",bottom:"Unterteile",shoe:"Schuhe",outer:"Jacken/Mäntel"};
+
+    document.getElementById("dash").innerHTML = `
+      <div class="dashgrid">
+        <div class="dcard"><div class="n">${owned.length}</div><div class="k">Teile im Schrank</div></div>
+        <div class="dcard"><div class="n">${base}</div><div class="k">mögliche Outfits</div></div>
+        ${SEASONS.map(s=>`
+          <div class="dcard">
+            <div class="n">${perSeason[s]}</div>
+            <div class="k">${s}</div>
+            <div class="seasonbar"><i style="width:${perSeason[s]/maxSeason*100}%"></i></div>
+          </div>`).join("")}
+      </div>
+      <div class="slots">
+        ${Object.keys(slotLabel).map(k=>`
+          <div class="slot"><div class="lab">${slotLabel[k]}</div><div class="n">${slotCounts[k]}</div></div>
+        `).join("")}
+      </div>`;
 
     const list = document.getElementById("list");
 
@@ -261,6 +355,27 @@ fetch("data.json?v="+Date.now())
         const rel = Math.round(delta / Math.max(base,1) * 100);
         const redPct = sameSlot ? twins.length / sameSlot * 100 : 0;
 
+        const slotLabel = {top:"Oberteile",bottom:"Unterteile",shoe:"Schuhe",outer:"Jacken/Mäntel"};
+        const groups = pairsWith(w, owned);
+        const groupKeys = Object.keys(groups);
+        const anyPairs = groupKeys.some(k=>groups[k].length);
+
+        const pairsHtml = `<div class="pairs">
+          <p class="plabel">Passt zusammen mit</p>
+          ${ anyPairs ? groupKeys.map(k=>{
+              const items = groups[k];
+              if(!items.length) return `<div class="pairgroup"><p class="gname">${slotLabel[k]}</p>
+                <p class="pnone">nichts Passendes im Schrank</p></div>`;
+              return `<div class="pairgroup"><p class="gname">${slotLabel[k]} (${items.length})</p>
+                <div class="prow">${items.slice(0,8).map(d=>`
+                  <span class="pchip">${d.image?`<img src="${esc(d.image)}" alt="">`:""}
+                    <span class="pn">${esc(d.name)}</span></span>
+                `).join("")}${items.length>8?`<span class="pchip"><span class="pn">+${items.length-8} weitere</span></span>`:""}</div>
+              </div>`;
+            }).join("")
+            : `<p class="pnone">Keine passenden Teile im Schrank — Saison oder Anlass passt zu nichts, das du besitzt.</p>` }
+        </div>`;
+
         return `<article class="item">
           <div class="shot">${ w.image
             ? `<img src="${esc(w.image)}" alt="${esc(w.name)}">`
@@ -277,31 +392,35 @@ fetch("data.json?v="+Date.now())
             </div>
             <span class="verdict ${cls}">${verdict}</span>
 
-            <div class="metrics">
-              <div class="metric">
-                <span class="lab">Neue Outfits</span>
-                ${bar(rel*3, delta===0?"bad":"")}
-                <span class="val">+${delta} &nbsp;<span style="color:var(--ink-soft)">(${rel}%)</span></span>
+            <div class="numview">
+              <div class="metrics">
+                <div class="metric">
+                  <span class="lab">Neue Outfits</span>
+                  ${bar(rel*3, delta===0?"bad":"")}
+                  <span class="val">+${delta} &nbsp;<span style="color:var(--ink-soft)">(${rel}%)</span></span>
+                </div>
+                <div class="metric">
+                  <span class="lab">Preis pro Outfit</span>
+                  ${bar(cpo==null?0:Math.min(100,cpo*12), cpo!=null&&cpo>8?"warn":"")}
+                  <span class="val">${cpo==null?"—":(cpo<10?cpo.toFixed(2):Math.round(cpo))+" €"}</span>
+                </div>
+                <div class="metric">
+                  <span class="lab">Redundanz</span>
+                  ${bar(redPct, redPct>50?"bad":redPct>25?"warn":"")}
+                  <span class="val">${twins.length} von ${sameSlot} ähnlich</span>
+                </div>
               </div>
-              <div class="metric">
-                <span class="lab">Preis pro Outfit</span>
-                ${bar(cpo==null?0:Math.min(100,cpo*12), cpo!=null&&cpo>8?"warn":"")}
-                <span class="val">${cpo==null?"—":(cpo<10?cpo.toFixed(2):Math.round(cpo))+" €"}</span>
-              </div>
-              <div class="metric">
-                <span class="lab">Redundanz</span>
-                ${bar(redPct, redPct>50?"bad":redPct>25?"warn":"")}
-                <span class="val">${twins.length} von ${sameSlot} ähnlich</span>
-              </div>
+
+              <p class="why">${why}</p>
+              ${ seasonGain ? `<p class="overlap">Dünnste abgedeckte Saison:
+                  ${seasonGain.s} — dort bisher ${seasonGain.before} Outfits.</p>` : "" }
+              ${ twins.length ? `<p class="overlap">Überschneidet sich mit:
+                  ${twins.slice(0,4).map(d=>esc(d.name)).join(" · ")}${twins.length>4?" …":""}</p>` : "" }
+              ${ w.link ? `<p class="overlap"><a href="${esc(w.link)}" target="_blank"
+                  rel="noopener">Produktseite →</a></p>` : "" }
             </div>
 
-            <p class="why">${why}</p>
-            ${ seasonGain ? `<p class="overlap">Dünnste abgedeckte Saison:
-                ${seasonGain.s} — dort bisher ${seasonGain.before} Outfits.</p>` : "" }
-            ${ twins.length ? `<p class="overlap">Überschneidet sich mit:
-                ${twins.slice(0,4).map(d=>esc(d.name)).join(" · ")}${twins.length>4?" …":""}</p>` : "" }
-            ${ w.link ? `<p class="overlap"><a href="${esc(w.link)}" target="_blank"
-                rel="noopener">Produktseite →</a></p>` : "" }
+            <div class="visview">${pairsHtml}</div>
           </div>
         </article>`;
       }).join("");

@@ -74,9 +74,6 @@ body.mode-numbers .visview{display:none}
   letter-spacing:.14em;color:var(--ink-soft)}
 
 .title{font-size:clamp(16px,1.8vw,19px);letter-spacing:0;margin:6px 0 0;font-weight:400}
-.facts{font-family:"Roboto Mono",monospace;font-size:12px;color:var(--ink-soft);
-  margin-top:8px;display:flex;flex-wrap:wrap;gap:10px}
-.facts b{font-weight:400;color:var(--ink)}
 
 .verdict{display:inline-block;font-family:"Roboto Mono",monospace;font-size:11px;
   letter-spacing:.16em;text-transform:uppercase;padding:6px 12px;margin-top:18px;
@@ -97,14 +94,14 @@ body.mode-numbers .visview{display:none}
   color:var(--ink-soft)}
 
 /* outfit stepper — top / bottom / shoe stacked, wishlist item fixed */
-.outfit{margin-top:26px;border-top:1px dotted var(--line);padding-top:22px}
+.outfit{margin-top:26px;padding-top:22px}
 .outfit .plabel{font-family:"Roboto Mono",monospace;font-size:10px;letter-spacing:.16em;
   text-transform:uppercase;color:var(--ink-soft);margin:0 0 18px}
 .stack{display:flex;flex-direction:column;align-items:center;gap:0;max-width:260px;
   margin:0 auto}
 .srow{display:grid;grid-template-columns:32px 1fr 32px;align-items:center;
   gap:6px;width:100%;padding:10px 0}
-.srow+.srow{border-top:1px dotted var(--line)}
+
 .sarrow{background:transparent;border:0;cursor:pointer;color:var(--ink-soft);
   font-family:"Roboto Mono",monospace;font-size:18px;line-height:1;padding:8px 4px;
   display:flex;align-items:center;justify-content:center}
@@ -112,12 +109,8 @@ body.mode-numbers .visview{display:none}
 .sarrow:disabled{opacity:.25;cursor:default}
 .sarrow.spacer{visibility:hidden;pointer-events:none}
 .sfig{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0}
-.sfig img{max-width:100%;max-height:108px;object-fit:contain;display:block}
-.sfig .sname{font-size:11px;color:var(--ink-soft);letter-spacing:0;text-align:center;
-  max-width:170px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.sfig .spos{font-family:"Roboto Mono",monospace;font-size:10px;color:var(--ink-soft);
-  letter-spacing:.06em}
-.sfig.fixed .sname{color:var(--ink);font-weight:500}
+.sfig img{max-width:100%;max-height:150px;object-fit:contain;display:block}
+.srow[data-slot="shoe"] .sfig img{max-height:64px}
 .sfig .snone{font-family:"Roboto Mono",monospace;font-size:11px;color:var(--ink-soft);
   padding:14px 0}
 
@@ -393,11 +386,9 @@ fetch("data.json?v="+Date.now())
               const fig = !item0
                 ? `<div class="sfig"><span class="snone">kein passendes ${row.label.toLowerCase()} im Schrank</span></div>`
                 : `<div class="sfig${row.fixed?" fixed":""}" data-fig="${wi}-${ri}">
-                    ${item0.image?`<img src="${esc(item0.image)}" alt="">`:`<span class="snone">NO IMAGE</span>`}
-                    <span class="sname">${esc(item0.name)}</span>
-                    ${row.fixed?`<span class="spos">Wunschteil</span>`:`<span class="spos">1/${n}</span>`}
+                    ${item0.image?`<img src="${esc(item0.image)}" alt="${esc(item0.name)}">`:`<span class="snone">NO IMAGE</span>`}
                   </div>`;
-              return `<div class="srow">${arrows}${fig}${arrowsR}</div>`;
+              return `<div class="srow" data-slot="${row.slot}">${arrows}${fig}${arrowsR}</div>`;
             }).join("")}
           </div>
         </div>`;
@@ -409,13 +400,6 @@ fetch("data.json?v="+Date.now())
           <div>
             <p class="eyebrow">${esc(w.brand||"—")}</p>
             <h2 class="title">${esc(w.name)}</h2>
-            <div class="facts">
-              <span><b>${esc((w.categories||[]).join(" / ")||"ohne Kategorie")}</b></span>
-              <span>${esc(w.color||"—")}</span>
-              <span>${esc((w.seasons||[]).join(" · ")||"keine Saison")}</span>
-              <span>${esc(w.formality||"—")}</span>
-              <span><b>${esc(w.price||"kein Preis")}</b></span>
-            </div>
             <span class="verdict ${cls}">${verdict}</span>
 
             <div class="numview">
@@ -466,9 +450,7 @@ fetch("data.json?v="+Date.now())
           const item = row.items[next];
           const fig = list.querySelector(`.sfig[data-fig="${wi}-${ri}"]`);
           if(!fig) return;
-          fig.innerHTML = `${item.image?`<img src="${esc(item.image)}" alt="">`:`<span class="snone">NO IMAGE</span>`}
-            <span class="sname">${esc(item.name)}</span>
-            <span class="spos">${next+1}/${n}</span>`;
+          fig.innerHTML = item.image?`<img src="${esc(item.image)}" alt="${esc(item.name)}">`:`<span class="snone">NO IMAGE</span>`;
         });
       });
     }

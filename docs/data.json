@@ -1,10 +1,54 @@
 {
-  "generated_at": "2026-08-01T06:25:55.383Z",
-  "count": 49,
-  "brands": 26,
-  "owned": 45,
-  "wishlist": 4,
+  "generated_at": "2026-08-04T09:44:01.327Z",
+  "count": 51,
+  "brands": 27,
+  "owned": 46,
+  "wishlist": 5,
   "items": [
+    {
+      "id": "3b280662-348e-80c6-863e-d2174d62c4a4",
+      "name": "Omato Long Sleeve Tee",
+      "brand": "Baserange",
+      "categories": [
+        "Long-sleeve top"
+      ],
+      "colors": [
+        "red"
+      ],
+      "color": "red",
+      "size": "XS",
+      "price": "90,00 €",
+      "seasons": [
+        "Übergang",
+        "Winter"
+      ],
+      "formality": "Casual",
+      "era": "",
+      "status": "Wishlist",
+      "link": "",
+      "worn": null,
+      "image": "images/992b20dcbf115819.png",
+      "own_photo": true
+    },
+    {
+      "id": "3b080662-348e-80a0-85ec-c82448ad9987",
+      "name": "Fine Cotton Rib",
+      "brand": "Baserange",
+      "categories": [],
+      "colors": [
+        "blue"
+      ],
+      "color": "blue",
+      "size": "",
+      "price": "",
+      "seasons": [],
+      "formality": "",
+      "era": "",
+      "status": "Owned",
+      "link": "",
+      "worn": null,
+      "image": ""
+    },
     {
       "id": "3ad80662-348e-8058-a488-e38f541b216c",
       "name": "Soft Cayetano Bag",

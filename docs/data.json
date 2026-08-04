@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-04T09:44:01.327Z",
-  "count": 51,
-  "brands": 27,
-  "owned": 46,
+  "generated_at": "2026-08-04T10:30:13.756Z",
+  "count": 50,
+  "brands": 26,
+  "owned": 45,
   "wishlist": 5,
   "items": [
     {
@@ -25,40 +25,23 @@
       "formality": "Casual",
       "era": "",
       "status": "Wishlist",
-      "link": "",
+      "link": "https://baserange.com/products/omato-long-sleeve-tee-in-my-red-brown",
       "worn": null,
       "image": "images/992b20dcbf115819.png",
       "own_photo": true
     },
     {
-      "id": "3b080662-348e-80a0-85ec-c82448ad9987",
-      "name": "Fine Cotton Rib",
-      "brand": "Baserange",
-      "categories": [],
-      "colors": [
-        "blue"
-      ],
-      "color": "blue",
-      "size": "",
-      "price": "",
-      "seasons": [],
-      "formality": "",
-      "era": "",
-      "status": "Owned",
-      "link": "",
-      "worn": null,
-      "image": ""
-    },
-    {
       "id": "3ad80662-348e-8058-a488-e38f541b216c",
       "name": "Soft Cayetano Bag",
       "brand": "Paloma Wool",
-      "categories": [],
+      "categories": [
+        "Bag"
+      ],
       "colors": [
         "brown"
       ],
       "color": "brown",
-      "size": "",
+      "size": "0",
       "price": "260, 00 €",
       "seasons": [
         "Sommer",
@@ -68,9 +51,10 @@
       "formality": "Smart",
       "era": "",
       "status": "Wishlist",
-      "link": "",
+      "link": "https://palomawool.com/products/soft-cayetano-leather-bag-darkborwn",
       "worn": null,
-      "image": "images/73a112f31fbe9b13.jpg"
+      "image": "images/09ccfe1d645ee6d1.png",
+      "own_photo": true
     },
     {
       "id": "3ad80662-348e-800d-8aad-c977e3157659",
@@ -83,7 +67,7 @@
         "brown"
       ],
       "color": "brown",
-      "size": "",
+      "size": "0",
       "price": "580,00 €",
       "seasons": [
         "Sommer",
@@ -307,13 +291,15 @@
       "id": "3a480662-348e-801c-b9f1-efc0cee0c850",
       "name": "Asymmetric Cupro Shirt",
       "brand": "Paloma Wool",
-      "categories": [],
+      "categories": [
+        "Top"
+      ],
       "colors": [
         "navy"
       ],
       "color": "navy",
-      "size": "",
-      "price": "",
+      "size": "S",
+      "price": "110, 00 €",
       "seasons": [
         "Sommer",
         "Übergang",
@@ -337,7 +323,7 @@
         "black"
       ],
       "color": "black",
-      "size": "",
+      "size": "0",
       "price": "34,90 €",
       "seasons": [
         "Sommer",
@@ -370,7 +356,7 @@
         "Sommer"
       ],
       "formality": "Casual",
-      "era": "Unbekannt",
+      "era": "",
       "status": "Wishlist",
       "link": "https://flore-flore.com/products/esme-tank-azur-blue?variant=54657521844553",
       "worn": null,
@@ -690,7 +676,7 @@
         "black"
       ],
       "color": "black",
-      "size": "",
+      "size": "37",
       "price": "150,00 €",
       "seasons": [
         "Sommer",
@@ -743,7 +729,7 @@
         "brown"
       ],
       "color": "brown",
-      "size": "",
+      "size": "37",
       "price": "90,00 €",
       "seasons": [
         "Sommer",
@@ -769,7 +755,7 @@
         "green"
       ],
       "color": "green",
-      "size": "",
+      "size": "37.5",
       "price": "120, 00 €",
       "seasons": [
         "Sommer",
@@ -847,8 +833,8 @@
         "white"
       ],
       "color": "white",
-      "size": "",
-      "price": "",
+      "size": "37",
+      "price": "110,00 €",
       "seasons": [
         "Sommer",
         "Übergang"
@@ -874,7 +860,7 @@
         "yellow"
       ],
       "color": "yellow",
-      "size": "",
+      "size": "37.5",
       "price": "80,00 €",
       "seasons": [
         "Sommer",

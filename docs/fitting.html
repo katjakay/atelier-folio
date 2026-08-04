@@ -96,21 +96,30 @@ body.mode-numbers .visview{display:none}
 .overlap{margin-top:12px;font-family:"Roboto Mono",monospace;font-size:11.5px;
   color:var(--ink-soft)}
 
-/* pairs-with preview */
-.pairs{margin-top:26px;border-top:1px dotted var(--line);padding-top:20px}
-.pairs .plabel{font-family:"Roboto Mono",monospace;font-size:10px;letter-spacing:.16em;
-  text-transform:uppercase;color:var(--ink-soft);margin:0 0 12px}
-.pairgroup{margin-bottom:16px}
-.pairgroup .gname{font-family:"Roboto Mono",monospace;font-size:10.5px;
-  letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:8px}
-.pairgroup:last-child{margin-bottom:0}
-.prow{display:flex;flex-wrap:wrap;gap:10px}
-.pchip{display:flex;align-items:center;gap:7px;border:1px solid var(--line);
-  padding:5px 10px 5px 5px;border-radius:100px}
-.pchip img{width:26px;height:26px;object-fit:contain;display:block}
-.pchip .pn{font-size:12px;letter-spacing:0;max-width:130px;overflow:hidden;
-  text-overflow:ellipsis;white-space:nowrap}
-.pnone{font-family:"Roboto Mono",monospace;font-size:11.5px;color:var(--ink-soft)}
+/* outfit stepper — top / bottom / shoe stacked, wishlist item fixed */
+.outfit{margin-top:26px;border-top:1px dotted var(--line);padding-top:22px}
+.outfit .plabel{font-family:"Roboto Mono",monospace;font-size:10px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-soft);margin:0 0 18px}
+.stack{display:flex;flex-direction:column;align-items:center;gap:0;max-width:260px;
+  margin:0 auto}
+.srow{display:grid;grid-template-columns:32px 1fr 32px;align-items:center;
+  gap:6px;width:100%;padding:10px 0}
+.srow+.srow{border-top:1px dotted var(--line)}
+.sarrow{background:transparent;border:0;cursor:pointer;color:var(--ink-soft);
+  font-family:"Roboto Mono",monospace;font-size:18px;line-height:1;padding:8px 4px;
+  display:flex;align-items:center;justify-content:center}
+.sarrow:hover{color:var(--ink)}
+.sarrow:disabled{opacity:.25;cursor:default}
+.sarrow.spacer{visibility:hidden;pointer-events:none}
+.sfig{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0}
+.sfig img{max-width:100%;max-height:108px;object-fit:contain;display:block}
+.sfig .sname{font-size:11px;color:var(--ink-soft);letter-spacing:0;text-align:center;
+  max-width:170px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sfig .spos{font-family:"Roboto Mono",monospace;font-size:10px;color:var(--ink-soft);
+  letter-spacing:.06em}
+.sfig.fixed .sname{color:var(--ink);font-weight:500}
+.sfig .snone{font-family:"Roboto Mono",monospace;font-size:11px;color:var(--ink-soft);
+  padding:14px 0}
 
 .empty{padding:70px 0 90px;color:var(--ink-soft);max-width:56ch}
 .empty code{background:var(--chip);padding:2px 6px;font-size:13px}
@@ -233,26 +242,34 @@ mNum.onclick=()=>{document.body.classList.replace('mode-visual','mode-numbers');
 mVis.onclick=()=>{document.body.classList.replace('mode-numbers','mode-visual');
   mVis.setAttribute('aria-pressed','true');mNum.setAttribute('aria-pressed','false');};
 
-/* which owned pieces would this wishlist item actually combine with */
-function pairsWith(w, owned){
+/* build the outfit stack: top / bottom / shoe, stepping through owned pieces
+   that would combine with the wishlist item. The wishlist item occupies its
+   own row fixed if it's a top/bottom/shoe; if it's a coat/jacket or
+   unclassifiable, it gets its own row above the three, still fixed. */
+function outfitRows(w, owned){
   const wSlot = slotOf(w);
-  const targetSlots = wSlot==="top" ? ["bottom","shoe","outer"]
-    : wSlot==="bottom" ? ["top","shoe","outer"]
-    : wSlot==="shoe" ? ["top","bottom","outer"]
-    : ["top","bottom","shoe"]; // outer or other: show everything it could sit over
+  const rowSlots = ["top","bottom","shoe"];
 
-  const groups = {};
-  targetSlots.forEach(slot=>{
-    groups[slot] = owned.filter(d=>{
+  const rows = rowSlots.map(slot=>{
+    if(slot===wSlot){
+      return { slot, fixed:true, items:[w], label: rowLabel(slot) };
+    }
+    const candidates = owned.filter(d=>{
       if(slotOf(d)!==slot) return false;
       if(!formOk(w.formality,d.formality)) return false;
-      if(wSlot!=="outer" && slotOf(w)!=="other"){
-        if(!shareSeason(w.seasons,d.seasons)) return false;
-      }
+      if(!shareSeason(w.seasons,d.seasons)) return false;
       return true;
     });
+    return { slot, fixed:false, items:candidates, label: rowLabel(slot) };
   });
-  return groups;
+
+  if(wSlot!=="top"&&wSlot!=="bottom"&&wSlot!=="shoe"){
+    rows.unshift({ slot:"wish", fixed:true, items:[w], label:"Jacke/Mantel" });
+  }
+  return rows;
+}
+function rowLabel(slot){
+  return slot==="top"?"Oberteil":slot==="bottom"?"Unterteil":"Schuh";
 }
 
 /* ---------- Rendern ---------- */
@@ -305,7 +322,10 @@ fetch("data.json?v="+Date.now())
         <code>Season</code>, <code>Formality</code>, <code>Price</code> — desto schärfer
         rechnet diese Seite. Ohne Kategorie kann sie gar nichts sagen.</p></div>`;
     } else {
-      list.innerHTML = wish.map(w=>{
+      const rowsByItem = [];
+      const stepIx = {}; // "wi-ri" -> current index into row.items
+
+      list.innerHTML = wish.map((w,wi)=>{
         const slot  = slotOf(w);
         const delta = outfits(owned.concat([w])) - base;
         const price = eur(w.price);
@@ -355,25 +375,31 @@ fetch("data.json?v="+Date.now())
         const rel = Math.round(delta / Math.max(base,1) * 100);
         const redPct = sameSlot ? twins.length / sameSlot * 100 : 0;
 
-        const slotLabel = {top:"Oberteile",bottom:"Unterteile",shoe:"Schuhe",outer:"Jacken/Mäntel"};
-        const groups = pairsWith(w, owned);
-        const groupKeys = Object.keys(groups);
-        const anyPairs = groupKeys.some(k=>groups[k].length);
+        const rows = outfitRows(w, owned);
+        rowsByItem[wi] = rows;
 
-        const pairsHtml = `<div class="pairs">
-          <p class="plabel">Passt zusammen mit</p>
-          ${ anyPairs ? groupKeys.map(k=>{
-              const items = groups[k];
-              if(!items.length) return `<div class="pairgroup"><p class="gname">${slotLabel[k]}</p>
-                <p class="pnone">nichts Passendes im Schrank</p></div>`;
-              return `<div class="pairgroup"><p class="gname">${slotLabel[k]} (${items.length})</p>
-                <div class="prow">${items.slice(0,8).map(d=>`
-                  <span class="pchip">${d.image?`<img src="${esc(d.image)}" alt="">`:""}
-                    <span class="pn">${esc(d.name)}</span></span>
-                `).join("")}${items.length>8?`<span class="pchip"><span class="pn">+${items.length-8} weitere</span></span>`:""}</div>
-              </div>`;
-            }).join("")
-            : `<p class="pnone">Keine passenden Teile im Schrank — Saison oder Anlass passt zu nichts, das du besitzt.</p>` }
+        const stackHtml = `<div class="outfit">
+          <p class="plabel">Als Outfit</p>
+          <div class="stack" data-item="${wi}">
+            ${rows.map((row,ri)=>{
+              const n = row.items.length;
+              const item0 = row.items[0];
+              const arrows = row.fixed
+                ? `<button class="sarrow spacer">‹</button>`
+                : `<button class="sarrow" data-act="prev" data-item="${wi}" data-row="${ri}" ${n<=1?"disabled":""}>‹</button>`;
+              const arrowsR = row.fixed
+                ? `<button class="sarrow spacer">›</button>`
+                : `<button class="sarrow" data-act="next" data-item="${wi}" data-row="${ri}" ${n<=1?"disabled":""}>›</button>`;
+              const fig = !item0
+                ? `<div class="sfig"><span class="snone">kein passendes ${row.label.toLowerCase()} im Schrank</span></div>`
+                : `<div class="sfig${row.fixed?" fixed":""}" data-fig="${wi}-${ri}">
+                    ${item0.image?`<img src="${esc(item0.image)}" alt="">`:`<span class="snone">NO IMAGE</span>`}
+                    <span class="sname">${esc(item0.name)}</span>
+                    ${row.fixed?`<span class="spos">Wunschteil</span>`:`<span class="spos">1/${n}</span>`}
+                  </div>`;
+              return `<div class="srow">${arrows}${fig}${arrowsR}</div>`;
+            }).join("")}
+          </div>
         </div>`;
 
         return `<article class="item">
@@ -420,10 +446,31 @@ fetch("data.json?v="+Date.now())
                   rel="noopener">Produktseite →</a></p>` : "" }
             </div>
 
-            <div class="visview">${pairsHtml}</div>
+            <div class="visview">${stackHtml}</div>
           </div>
         </article>`;
       }).join("");
+
+      list.querySelectorAll(".sarrow[data-act]").forEach(btn=>{
+        btn.addEventListener("click", ()=>{
+          const wi = +btn.dataset.item, ri = +btn.dataset.row;
+          const row = rowsByItem[wi][ri];
+          const n = row.items.length;
+          if(n<=1) return;
+          const key = wi+"-"+ri;
+          const cur = stepIx[key] || 0;
+          const dir = btn.dataset.act==="next" ? 1 : -1;
+          const next = (cur + dir + n) % n;
+          stepIx[key] = next;
+
+          const item = row.items[next];
+          const fig = list.querySelector(`.sfig[data-fig="${wi}-${ri}"]`);
+          if(!fig) return;
+          fig.innerHTML = `${item.image?`<img src="${esc(item.image)}" alt="">`:`<span class="snone">NO IMAGE</span>`}
+            <span class="sname">${esc(item.name)}</span>
+            <span class="spos">${next+1}/${n}</span>`;
+        });
+      });
     }
 
     document.getElementById("foot").textContent =

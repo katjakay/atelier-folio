@@ -1,10 +1,35 @@
 {
-  "generated_at": "2026-08-04T10:30:13.756Z",
-  "count": 50,
-  "brands": 26,
-  "owned": 45,
+  "generated_at": "2026-08-05T15:30:08.264Z",
+  "count": 51,
+  "brands": 27,
+  "owned": 46,
   "wishlist": 5,
   "items": [
+    {
+      "id": "3b280662-348e-80ce-8ceb-cedcfb4dfa43",
+      "name": "Michigan Jacket",
+      "brand": "Carhartt",
+      "categories": [
+        "Jacket"
+      ],
+      "colors": [
+        "black"
+      ],
+      "color": "black",
+      "size": "XS",
+      "price": "109,00 €",
+      "seasons": [
+        "Übergang",
+        "Sommer"
+      ],
+      "formality": "Casual",
+      "era": "",
+      "status": "Owned",
+      "link": "",
+      "worn": null,
+      "image": "images/e43613a1b64c197e.png",
+      "own_photo": true
+    },
     {
       "id": "3b280662-348e-80c6-863e-d2174d62c4a4",
       "name": "Omato Long Sleeve Tee",

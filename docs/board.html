@@ -102,6 +102,14 @@ header{display:flex;align-items:center;justify-content:space-between;flex-wrap:w
   background:var(--accent);border:2px solid #fff;border-radius:50%;cursor:nwse-resize;
   display:none}
 .piece.sel .prsz{display:block}
+.player{position:absolute;top:-11px;display:none;align-items:center;justify-content:center;
+  width:22px;height:22px;border-radius:50%;background:#fff;border:1px solid var(--ink);
+  color:var(--ink);font-size:12px;line-height:1;cursor:pointer}
+.player:hover{background:var(--ink);color:#fff}
+.player:disabled{opacity:.3;cursor:default;background:#fff;color:var(--ink)}
+.piece.sel .player{display:flex}
+.pback{left:-11px}
+.pfwd{left:15px}
 .cempty{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
   text-align:center;padding:30px;pointer-events:none}
 .cempty p{font-size:12px;color:var(--ink-soft);line-height:1.7;max-width:26ch}
@@ -282,7 +290,8 @@ function addPiece(src, fx, fy){
 function renderCanvas(){
   [...canvas.querySelectorAll('.piece')].forEach(n=>n.remove());
   cempty.style.display = items.length ? 'none' : 'flex';
-  items.sort((a,b)=>a.z-b.z).forEach(it=>{
+  const sorted = items.sort((a,b)=>a.z-b.z);
+  sorted.forEach((it,idx)=>{
     const el = document.createElement('div');
     el.className = 'piece'+(it.id===selectedId?' sel':'');
     el.style.left = (it.x*100)+'%';
@@ -293,10 +302,14 @@ function renderCanvas(){
     el.dataset.id = it.id;
     el.innerHTML = `<img src="${esc(it.src)}" alt="">
       <button class="pdel" title="Remove">×</button>
+      <button class="player pback" title="Send backward" ${idx===0?'disabled':''}>‹</button>
+      <button class="player pfwd" title="Bring forward" ${idx===sorted.length-1?'disabled':''}>›</button>
       <span class="prsz" title="Resize"></span>`;
     canvas.appendChild(el);
     wireDrag(el, it);
     el.querySelector('.pdel').onclick = ev=>{ ev.stopPropagation(); removePiece(it.id); };
+    el.querySelector('.pback').onclick = ev=>{ ev.stopPropagation(); moveLayer(it.id,-1); };
+    el.querySelector('.pfwd').onclick = ev=>{ ev.stopPropagation(); moveLayer(it.id,1); };
     el.querySelector('.prsz').addEventListener('pointerdown', ev=> startResize(ev, el, it));
   });
 }
@@ -306,11 +319,18 @@ function selectPiece(id){
   [...canvas.querySelectorAll('.piece')].forEach(el=>{
     el.classList.toggle('sel', el.dataset.id===id);
   });
-  if(id){
-    const it = items.find(x=>x.id===id);
-    const el = canvas.querySelector(`.piece[data-id="${id}"]`);
-    if(it && el){ it.z = zTop++; el.style.zIndex = it.z; }
-  }
+}
+
+/* step a piece one layer forward (+1) or backward (-1) through the stack */
+function moveLayer(id, dir){
+  const sorted = [...items].sort((a,b)=>a.z-b.z);
+  const idx = sorted.findIndex(x=>x.id===id);
+  const swapIdx = idx + dir;
+  if(idx<0 || swapIdx<0 || swapIdx>=sorted.length) return;
+  const tmp = sorted[idx].z;
+  sorted[idx].z = sorted[swapIdx].z;
+  sorted[swapIdx].z = tmp;
+  renderCanvas();
 }
 function removePiece(id){
   items = items.filter(x=>x.id!==id);
@@ -321,7 +341,7 @@ function removePiece(id){
 function wireDrag(el, it){
   let sx,sy,ox,oy,dragging=false;
   el.addEventListener('pointerdown', e=>{
-    if(e.target.classList.contains('prsz') || e.target.classList.contains('pdel')) return;
+    if(e.target.closest('.prsz,.pdel,.player')) return;
     dragging = true; el.setPointerCapture(e.pointerId);
     sx=e.clientX; sy=e.clientY; ox=it.x; oy=it.y;
     selectPiece(it.id);

@@ -308,7 +308,8 @@ function selectPiece(id){
   });
   if(id){
     const it = items.find(x=>x.id===id);
-    if(it){ it.z = zTop++; renderCanvas(); }
+    const el = canvas.querySelector(`.piece[data-id="${id}"]`);
+    if(it && el){ it.z = zTop++; el.style.zIndex = it.z; }
   }
 }
 function removePiece(id){

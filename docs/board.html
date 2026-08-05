@@ -321,7 +321,7 @@ function removePiece(id){
 function wireDrag(el, it){
   let sx,sy,ox,oy,dragging=false;
   el.addEventListener('pointerdown', e=>{
-    if(e.target.classList.contains('prsz')) return;
+    if(e.target.classList.contains('prsz') || e.target.classList.contains('pdel')) return;
     dragging = true; el.setPointerCapture(e.pointerId);
     sx=e.clientX; sy=e.clientY; ox=it.x; oy=it.y;
     selectPiece(it.id);

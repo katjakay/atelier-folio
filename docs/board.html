@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Board — Atelier Folio</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Folio">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FFFFFF; --panel:#FAFAF9; --ink:#17140E; --ink-soft:#5B564C;
+  --line:#E9E9E6; --accent:#6E6CEB; --chip:#F0F0EE; --warn:#B5762A;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Roboto Mono",ui-monospace,monospace;font-size:14px;line-height:1.5;
+  letter-spacing:0;overflow:hidden}
+a{color:inherit}
+button,input{font-family:inherit}
+
+/* header */
+header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;
+  gap:10px 20px;padding:14px clamp(14px,3vw,22px);border-bottom:1px dotted var(--ink)}
+.wordmark{font-weight:700;font-size:16px;letter-spacing:.01em;text-transform:uppercase;
+  text-decoration:none;flex:none}
+.navlinks{display:flex;gap:16px;flex-wrap:wrap}
+.navlinks a{font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+  text-decoration:none;color:var(--ink-soft)}
+.navlinks a:hover{color:var(--ink)}
+
+.toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.nameinput{border:1px solid var(--line);background:transparent;padding:8px 12px;
+  font-size:12px;letter-spacing:.04em;color:var(--ink);width:160px}
+.nameinput:focus{outline:1px solid var(--accent)}
+.btn{font-family:"Roboto Mono",monospace;font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;border:1px solid var(--ink);background:transparent;
+  color:var(--ink);padding:8px 14px;cursor:pointer;white-space:nowrap}
+.btn:hover{background:var(--ink);color:#fff}
+.btn.primary{background:var(--ink);color:#fff}
+.btn.primary:hover{background:var(--accent);border-color:var(--accent)}
+.btn:disabled{opacity:.3;cursor:default;background:transparent;color:var(--ink)}
+.selectwrap{position:relative}
+.boardsmenu{position:absolute;top:calc(100% + 6px);right:0;background:var(--paper);
+  border:1px solid var(--ink);min-width:220px;max-height:300px;overflow:auto;
+  display:none;z-index:80}
+.boardsmenu.open{display:block}
+.brow{display:flex;align-items:center;justify-content:space-between;gap:8px;
+  padding:9px 12px;font-size:12px;border-bottom:1px dotted var(--line);cursor:pointer}
+.brow:hover{background:var(--panel)}
+.brow .bx{color:var(--ink-soft);cursor:pointer;padding:0 4px}
+.brow .bx:hover{color:var(--warn)}
+.emptymenu{padding:12px;font-size:11.5px;color:var(--ink-soft)}
+
+/* layout: drawer + canvas viewport */
+.wrap{display:flex;height:calc(100vh - 57px)}
+.drawer{width:min(280px,32vw);border-right:1px dotted var(--ink);
+  display:flex;flex-direction:column;flex:none}
+.drawer .dhead{padding:14px 16px 10px;border-bottom:1px dotted var(--line)}
+.dtitle{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
+.dhint{font-size:11px;color:var(--ink-soft);margin-top:6px;line-height:1.5}
+.dfilters{display:flex;flex-wrap:wrap;gap:6px;padding:10px 16px;border-bottom:1px dotted var(--line)}
+.dchip{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;
+  border:1px solid var(--line);background:transparent;color:var(--ink-soft);
+  padding:4px 10px;border-radius:100px;cursor:pointer}
+.dchip[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.dgrid{flex:1;overflow:auto;padding:12px;display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:10px;align-content:start}
+.dpiece{border:1px solid var(--line);background:var(--panel);cursor:grab;
+  aspect-ratio:1;display:flex;align-items:center;justify-content:center;
+  padding:8px;position:relative;touch-action:none}
+.dpiece img{max-width:100%;max-height:100%;object-fit:contain;pointer-events:none}
+.dpiece .wtag{position:absolute;top:3px;left:3px;font-size:8px;letter-spacing:.06em;
+  color:#fff;background:var(--accent);padding:1px 5px;border-radius:100px}
+.dpiece:active{cursor:grabbing}
+.dempty{grid-column:1/-1;font-size:11.5px;color:var(--ink-soft);padding:20px 4px}
+
+/* canvas */
+.stagewrap{flex:1;overflow:auto;display:flex;align-items:flex-start;
+  justify-content:center;padding:32px 20px;background:var(--panel)}
+.canvas{position:relative;background:var(--paper);border:1px solid var(--line);
+  width:min(560px,86vw);aspect-ratio:1080/1350;flex:none;
+  box-shadow:0 30px 60px -40px rgba(0,0,0,.25);overflow:hidden}
+.canvas.dragover{outline:2px dashed var(--accent);outline-offset:-2px}
+.piece{position:absolute;cursor:grab;touch-action:none}
+.piece img{width:100%;height:100%;object-fit:contain;display:block;pointer-events:none;
+  filter:drop-shadow(0 10px 18px rgba(0,0,0,.14))}
+.piece.sel{outline:1px dashed var(--accent);outline-offset:4px}
+.piece:active{cursor:grabbing}
+.pdel{position:absolute;top:-11px;right:-11px;width:22px;height:22px;border-radius:50%;
+  background:var(--ink);color:#fff;border:0;font-size:12px;line-height:1;cursor:pointer;
+  display:none;align-items:center;justify-content:center}
+.piece.sel .pdel{display:flex}
+.prsz{position:absolute;bottom:-8px;right:-8px;width:16px;height:16px;
+  background:var(--accent);border:2px solid #fff;border-radius:50%;cursor:nwse-resize;
+  display:none}
+.piece.sel .prsz{display:block}
+.cempty{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:30px;pointer-events:none}
+.cempty p{font-size:12px;color:var(--ink-soft);line-height:1.7;max-width:26ch}
+
+.status{font-size:10.5px;color:var(--ink-soft);padding:0 4px}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);
+  background:var(--ink);color:#fff;font-size:12px;letter-spacing:.04em;
+  padding:11px 18px;border-radius:4px;opacity:0;pointer-events:none;
+  transition:opacity .25s;z-index:200;max-width:80vw;text-align:center}
+.toast.show{opacity:1}
+
+@media(max-width:760px){
+  .wrap{flex-direction:column;height:auto}
+  .drawer{width:100%;border-right:0;border-bottom:1px dotted var(--ink);max-height:220px}
+  .stagewrap{padding:20px 14px}
+  header{padding:12px 14px}
+  .navlinks{order:3;width:100%}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a class="wordmark" href="index.html">ATELIER · FOLIO</a>
+  <div class="navlinks">
+    <a href="index.html">← Inventory</a>
+    <a href="fitting.html">Fitting room</a>
+  </div>
+  <div class="toolbar">
+    <input class="nameinput" id="boardName" value="Untitled board" maxlength="60">
+    <div class="selectwrap">
+      <button class="btn" id="boardsBtn">Boards ▾</button>
+      <div class="boardsmenu" id="boardsMenu"></div>
+    </div>
+    <button class="btn" id="newBtn">New</button>
+    <button class="btn primary" id="saveBtn">Save</button>
+    <button class="btn" id="exportBtn">Export PNG</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <aside class="drawer">
+    <div class="dhead">
+      <p class="dtitle">Your pieces</p>
+      <p class="dhint">Drag onto the board. On touch: tap a piece, then tap the board to place it.</p>
+    </div>
+    <div class="dfilters" id="dfilters"></div>
+    <div class="dgrid" id="dgrid"></div>
+  </aside>
+
+  <div class="stagewrap">
+    <div class="canvas" id="canvas">
+      <div class="cempty" id="cempty"><p>Drag pieces here to start building a look.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const CANVAS_W = 1080, CANVAS_H = 1350; // 4:5 — Instagram portrait
+const STORE_KEY = 'atelier-folio-boards';
+
+const canvas = document.getElementById('canvas');
+const dgrid = document.getElementById('dgrid');
+const dfilters = document.getElementById('dfilters');
+const cempty = document.getElementById('cempty');
+const toastEl = document.getElementById('toast');
+
+let PIECES = [];      // wardrobe items from data.json
+let items = [];       // pieces currently placed on the board {id,src,x,y,w,h,ar,z}
+let selectedId = null;
+let currentBoardId = null;
+let zTop = 1;
+let pendingTapPiece = null; // for touch "tap to place" flow
+
+function toast(msg){
+  toastEl.textContent = msg;
+  toastEl.classList.add('show');
+  clearTimeout(toast._t);
+  toast._t = setTimeout(()=>toastEl.classList.remove('show'), 2200);
+}
+function uid(){ return 'p'+Math.random().toString(36).slice(2,9)+Date.now().toString(36); }
+
+/* ---------- load wardrobe ---------- */
+fetch('data.json?v='+Date.now())
+  .then(r=>r.json())
+  .then(payload=>{
+    PIECES = (payload.items||[]).filter(d=>d.image);
+    buildFilters();
+    renderDrawer('All');
+    loadBoardsMenu();
+  })
+  .catch(()=>{ dgrid.innerHTML = '<p class="dempty">Could not load your wardrobe. Try reloading.</p>'; });
+
+function buildFilters(){
+  const cats = [...new Set(PIECES.flatMap(d=>d.categories||[]))].sort();
+  dfilters.innerHTML = '';
+  ['All',...cats].forEach(c=>{
+    const b = document.createElement('button');
+    b.className = 'dchip'; b.textContent = c;
+    b.setAttribute('aria-pressed', c==='All');
+    b.onclick = ()=>{
+      [...dfilters.children].forEach(x=>x.setAttribute('aria-pressed', x===b));
+      renderDrawer(c);
+    };
+    dfilters.appendChild(b);
+  });
+}
+
+function renderDrawer(cat){
+  const list = cat==='All' ? PIECES : PIECES.filter(d=>(d.categories||[]).includes(cat));
+  if(!list.length){ dgrid.innerHTML = '<p class="dempty">Nothing here.</p>'; return; }
+  dgrid.innerHTML = '';
+  list.forEach(d=>{
+    const el = document.createElement('div');
+    el.className = 'dpiece';
+    el.draggable = true;
+    el.innerHTML = `${d.status==='Wishlist'?'<span class="wtag">WISH</span>':''}<img src="${esc(d.image)}" alt="${esc(d.name)}">`;
+    el.addEventListener('dragstart', e=>{
+      e.dataTransfer.setData('text/plain', d.image);
+      e.dataTransfer.effectAllowed = 'copy';
+    });
+    // touch fallback: tap piece, then tap canvas to place at centre-ish of tap
+    el.addEventListener('click', ()=>{
+      if(matchMedia('(pointer:coarse)').matches){
+        pendingTapPiece = d.image;
+        toast('Tap the board to place it');
+      }
+    });
+    dgrid.appendChild(el);
+  });
+}
+
+/* ---------- drop / tap-to-place onto canvas ---------- */
+canvas.addEventListener('dragover', e=>{ e.preventDefault(); canvas.classList.add('dragover'); });
+canvas.addEventListener('dragleave', ()=> canvas.classList.remove('dragover'));
+canvas.addEventListener('drop', e=>{
+  e.preventDefault(); canvas.classList.remove('dragover');
+  const src = e.dataTransfer.getData('text/plain');
+  if(!src) return;
+  const rect = canvas.getBoundingClientRect();
+  const fx = (e.clientX-rect.left)/rect.width, fy = (e.clientY-rect.top)/rect.height;
+  addPiece(src, fx, fy);
+});
+canvas.addEventListener('click', e=>{
+  if(pendingTapPiece && e.target===canvas){
+    const rect = canvas.getBoundingClientRect();
+    const fx = (e.clientX-rect.left)/rect.width, fy = (e.clientY-rect.top)/rect.height;
+    addPiece(pendingTapPiece, fx, fy);
+    pendingTapPiece = null;
+  } else if(e.target===canvas){
+    selectPiece(null);
+  }
+});
+
+function addPiece(src, fx, fy){
+  const img = new Image();
+  img.onload = ()=>{
+    const ar = img.naturalWidth / img.naturalHeight; // width/height
+    const wFrac = 0.30;
+    const hFrac = (wFrac*CANVAS_W/ar) / CANVAS_H;
+    const it = {
+      id: uid(), src,
+      x: Math.min(Math.max(fx-wFrac/2,0),1-wFrac),
+      y: Math.min(Math.max(fy-hFrac/2,0),1-hFrac),
+      w: wFrac, h: hFrac, ar, z: zTop++
+    };
+    items.push(it);
+    renderCanvas();
+    selectPiece(it.id);
+  };
+  img.onerror = ()=> toast('Could not load that image');
+  img.src = src;
+}
+
+/* ---------- render placed pieces ---------- */
+function renderCanvas(){
+  [...canvas.querySelectorAll('.piece')].forEach(n=>n.remove());
+  cempty.style.display = items.length ? 'none' : 'flex';
+  items.sort((a,b)=>a.z-b.z).forEach(it=>{
+    const el = document.createElement('div');
+    el.className = 'piece'+(it.id===selectedId?' sel':'');
+    el.style.left = (it.x*100)+'%';
+    el.style.top = (it.y*100)+'%';
+    el.style.width = (it.w*100)+'%';
+    el.style.height = (it.h*100)+'%';
+    el.style.zIndex = it.z;
+    el.dataset.id = it.id;
+    el.innerHTML = `<img src="${esc(it.src)}" alt="">
+      <button class="pdel" title="Remove">×</button>
+      <span class="prsz" title="Resize"></span>`;
+    canvas.appendChild(el);
+    wireDrag(el, it);
+    el.querySelector('.pdel').onclick = ev=>{ ev.stopPropagation(); removePiece(it.id); };
+    el.querySelector('.prsz').addEventListener('pointerdown', ev=> startResize(ev, el, it));
+  });
+}
+
+function selectPiece(id){
+  selectedId = id;
+  [...canvas.querySelectorAll('.piece')].forEach(el=>{
+    el.classList.toggle('sel', el.dataset.id===id);
+  });
+  if(id){
+    const it = items.find(x=>x.id===id);
+    if(it){ it.z = zTop++; renderCanvas(); }
+  }
+}
+function removePiece(id){
+  items = items.filter(x=>x.id!==id);
+  if(selectedId===id) selectedId=null;
+  renderCanvas();
+}
+
+function wireDrag(el, it){
+  let sx,sy,ox,oy,dragging=false;
+  el.addEventListener('pointerdown', e=>{
+    if(e.target.classList.contains('prsz')) return;
+    dragging = true; el.setPointerCapture(e.pointerId);
+    sx=e.clientX; sy=e.clientY; ox=it.x; oy=it.y;
+    selectPiece(it.id);
+  });
+  el.addEventListener('pointermove', e=>{
+    if(!dragging) return;
+    const rect = canvas.getBoundingClientRect();
+    it.x = ox + (e.clientX-sx)/rect.width;
+    it.y = oy + (e.clientY-sy)/rect.height;
+    el.style.left=(it.x*100)+'%'; el.style.top=(it.y*100)+'%';
+  });
+  const stop=()=>{ dragging=false; };
+  el.addEventListener('pointerup', stop);
+  el.addEventListener('pointercancel', stop);
+}
+
+function startResize(e, el, it){
+  e.stopPropagation(); e.preventDefault();
+  el.setPointerCapture(e.pointerId);
+  const rect = canvas.getBoundingClientRect();
+  const sx=e.clientX, ow=it.w;
+  function move(ev){
+    const dx = (ev.clientX-sx)/rect.width;
+    it.w = Math.max(0.06, Math.min(0.9, ow+dx));
+    it.h = (it.w*CANVAS_W/it.ar)/CANVAS_H;
+    el.style.width=(it.w*100)+'%'; el.style.height=(it.h*100)+'%';
+  }
+  function up(){
+    window.removeEventListener('pointermove', move);
+    window.removeEventListener('pointerup', up);
+  }
+  window.addEventListener('pointermove', move);
+  window.addEventListener('pointerup', up);
+}
+
+/* ---------- save / load boards (localStorage) ---------- */
+function readStore(){ try{ return JSON.parse(localStorage.getItem(STORE_KEY)||'{}'); }catch{ return {}; } }
+function writeStore(s){ localStorage.setItem(STORE_KEY, JSON.stringify(s)); }
+
+document.getElementById('saveBtn').onclick = ()=>{
+  const store = readStore();
+  const id = currentBoardId || uid();
+  store[id] = {
+    name: document.getElementById('boardName').value.trim() || 'Untitled board',
+    items: items.map(({id,...rest})=>({id,...rest})),
+    updated: Date.now()
+  };
+  writeStore(store);
+  currentBoardId = id;
+  toast('Board saved');
+  loadBoardsMenu();
+};
+
+document.getElementById('newBtn').onclick = ()=>{
+  items = []; selectedId=null; currentBoardId=null;
+  document.getElementById('boardName').value = 'Untitled board';
+  renderCanvas();
+};
+
+const boardsBtn = document.getElementById('boardsBtn');
+const boardsMenu = document.getElementById('boardsMenu');
+boardsBtn.onclick = ()=> boardsMenu.classList.toggle('open');
+document.addEventListener('click', e=>{
+  if(!boardsBtn.contains(e.target) && !boardsMenu.contains(e.target)) boardsMenu.classList.remove('open');
+});
+
+function loadBoardsMenu(){
+  const store = readStore();
+  const ids = Object.keys(store).sort((a,b)=>store[b].updated-store[a].updated);
+  if(!ids.length){ boardsMenu.innerHTML = '<p class="emptymenu">No saved boards yet.</p>'; return; }
+  boardsMenu.innerHTML = ids.map(id=>{
+    const b = store[id];
+    const d = new Date(b.updated);
+    return `<div class="brow" data-id="${id}">
+      <span>${esc(b.name)} <span style="color:var(--ink-soft)">· ${b.items.length} pcs</span></span>
+      <span class="bx" data-del="${id}">×</span>
+    </div>`;
+  }).join('');
+  [...boardsMenu.querySelectorAll('.brow')].forEach(row=>{
+    row.addEventListener('click', e=>{
+      if(e.target.dataset.del){
+        e.stopPropagation();
+        const s = readStore(); delete s[e.target.dataset.del]; writeStore(s);
+        loadBoardsMenu();
+        if(e.target.dataset.del===currentBoardId){ document.getElementById('newBtn').click(); }
+        return;
+      }
+      const id = row.dataset.id;
+      const b = readStore()[id];
+      if(!b) return;
+      currentBoardId = id;
+      document.getElementById('boardName').value = b.name;
+      items = b.items.map(it=>({...it}));
+      zTop = Math.max(1,...items.map(i=>i.z+1));
+      selectedId = null;
+      renderCanvas();
+      boardsMenu.classList.remove('open');
+    });
+  });
+}
+
+/* ---------- export as PNG ---------- */
+document.getElementById('exportBtn').onclick = async ()=>{
+  if(!items.length){ toast('Nothing on the board yet'); return; }
+  const off = document.createElement('canvas');
+  off.width = CANVAS_W; off.height = CANVAS_H;
+  const ctx = off.getContext('2d');
+  ctx.fillStyle = '#FFFFFF';
+  ctx.fillRect(0,0,CANVAS_W,CANVAS_H);
+
+  let skipped = 0;
+  const sorted = [...items].sort((a,b)=>a.z-b.z);
+  for(const it of sorted){
+    const exportable = !/^https?:\/\//i.test(it.src); // relative = same-origin = safe to export
+    if(!exportable){
+      skipped++;
+      ctx.strokeStyle = '#D8D3C7'; ctx.setLineDash([6,5]);
+      ctx.strokeRect(it.x*CANVAS_W, it.y*CANVAS_H, it.w*CANVAS_W, it.h*CANVAS_H);
+      ctx.setLineDash([]);
+      continue;
+    }
+    try{
+      await new Promise((resolve,reject)=>{
+        const img = new Image();
+        img.onload = ()=>{
+          ctx.drawImage(img, it.x*CANVAS_W, it.y*CANVAS_H, it.w*CANVAS_W, it.h*CANVAS_H);
+          resolve();
+        };
+        img.onerror = reject;
+        img.src = it.src;
+      });
+    }catch{ skipped++; }
+  }
+
+  let url;
+  try{ url = off.toDataURL('image/png'); }
+  catch{ toast('Export blocked — a linked image is not exportable'); return; }
+
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = (document.getElementById('boardName').value.trim()||'board').replace(/[^\w-]+/g,'_')+'.png';
+  a.click();
+
+  toast(skipped ? `Exported — ${skipped} piece${skipped>1?'s':''} skipped (not mirrored yet)` : 'Exported');
+};
+
+function esc(s){ return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+</script>
+</body>
+</html>

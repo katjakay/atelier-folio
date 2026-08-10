@@ -1,10 +1,53 @@
 {
-  "generated_at": "2026-08-10T09:46:06.667Z",
-  "count": 51,
+  "generated_at": "2026-08-10T10:50:07.544Z",
+  "count": 53,
   "brands": 27,
   "owned": 46,
-  "wishlist": 5,
+  "wishlist": 7,
   "items": [
+    {
+      "id": "3b880662-348e-81fd-9c67-c263896e1f5d",
+      "name": "Test test",
+      "brand": "",
+      "categories": [],
+      "colors": [],
+      "color": "",
+      "size": "",
+      "price": "",
+      "seasons": [],
+      "formality": "",
+      "era": "",
+      "status": "Wishlist",
+      "link": "",
+      "worn": null,
+      "image": "images/9620764f1a1ab062.png",
+      "own_photo": true
+    },
+    {
+      "id": "3b880662-348e-81ce-8d14-e5256ba25c23",
+      "name": "Brooke Callahan Skirt",
+      "brand": "Brooke Callahan",
+      "categories": [
+        "Skirt"
+      ],
+      "colors": [
+        "blue"
+      ],
+      "color": "blue",
+      "size": "XS",
+      "price": "115,00 €",
+      "seasons": [
+        "Sommer",
+        "Übergang"
+      ],
+      "formality": "Casual",
+      "era": "",
+      "status": "Wishlist",
+      "link": "https://www.brookecallahan.com/products/straight-skirt-turquoise?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAdGRleATmhQ1wZG9mAmZkaWQWUMO3TH4ZAl8coPYd9jD_jvn67ggzNmV4dG4DYWVtAjExAHNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp7gkpYJSYXCZQ0iP7rCdsiynPfiGWL0yh9KCZU-RvqQvywmFOhgpoNCqoA5V_aem_S-BOKogb_xdMXj-y37vQlQ",
+      "worn": null,
+      "image": "images/2c9a22f217020e90.png",
+      "own_photo": true
+    },
     {
       "id": "3b280662-348e-80ce-8ceb-cedcfb4dfa43",
       "name": "Michigan Jacket",

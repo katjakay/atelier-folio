@@ -120,7 +120,7 @@ footer{padding:40px 0 60px;font-size:11px;color:var(--ink-soft)}
     <label class="filepick" id="filepick">
       <span class="camicon">📷</span>
       <span class="btn primary">Take or choose a photo</span>
-      <input type="file" accept="image/*" capture="environment" id="fileInput">
+      <input type="file" accept="image/*" id="fileInput">
     </label>
   </div>
 
@@ -251,7 +251,7 @@ function reset(){
     <label class="filepick" id="filepick">
       <span class="camicon">📷</span>
       <span class="btn primary">Take or choose a photo</span>
-      <input type="file" accept="image/*" capture="environment" id="fileInput">
+      <input type="file" accept="image/*" id="fileInput">
     </label>`;
   document.getElementById('fileInput').addEventListener('change', async e=>{
     const file = e.target.files[0];

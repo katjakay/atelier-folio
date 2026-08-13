@@ -1,26 +1,33 @@
 {
-  "generated_at": "2026-08-11T05:04:03.895Z",
+  "generated_at": "2026-08-13T12:41:34.252Z",
   "count": 53,
-  "brands": 27,
-  "owned": 46,
-  "wishlist": 7,
+  "brands": 28,
+  "owned": 47,
+  "wishlist": 6,
   "items": [
     {
-      "id": "3b880662-348e-81fd-9c67-c263896e1f5d",
-      "name": "Test test",
-      "brand": "",
-      "categories": [],
-      "colors": [],
-      "color": "",
-      "size": "",
-      "price": "",
-      "seasons": [],
-      "formality": "",
-      "era": "",
-      "status": "Wishlist",
-      "link": "",
+      "id": "3bb80662-348e-8122-8e2e-fb4c09e5e3c8",
+      "name": "Ripped Tanktop",
+      "brand": "Weekday",
+      "categories": [
+        "Top"
+      ],
+      "colors": [
+        "blue"
+      ],
+      "color": "blue",
+      "size": "XS",
+      "price": "12,99 €",
+      "seasons": [
+        "Übergang",
+        "Sommer"
+      ],
+      "formality": "Casual",
+      "era": "Letzte 2 Jahre",
+      "status": "Owned",
+      "link": "https://www.weekday.com/de-at/p/women/basics/sleeveless-tops/ribbed-v-neck-tank-top-dark-blue-1336093010/",
       "worn": null,
-      "image": "images/9620764f1a1ab062.png",
+      "image": "images/e4f301e2be242a4b.png",
       "own_photo": true
     },
     {

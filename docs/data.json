@@ -1,10 +1,28 @@
 {
-  "generated_at": "2026-08-15T07:01:30.540Z",
-  "count": 53,
+  "generated_at": "2026-08-15T07:04:07.403Z",
+  "count": 54,
   "brands": 28,
-  "owned": 47,
+  "owned": 48,
   "wishlist": 6,
   "items": [
+    {
+      "id": "3bd80662-348e-815c-b125-eab8d78802bd",
+      "name": "Chunky Flip Flops",
+      "brand": "",
+      "categories": [],
+      "colors": [],
+      "color": "",
+      "size": "",
+      "price": "",
+      "seasons": [],
+      "formality": "",
+      "era": "",
+      "status": "Owned",
+      "link": "",
+      "worn": null,
+      "image": "images/aff6e4d77404c349.png",
+      "own_photo": true
+    },
     {
       "id": "3bb80662-348e-8122-8e2e-fb4c09e5e3c8",
       "name": "Ripped Tanktop",
